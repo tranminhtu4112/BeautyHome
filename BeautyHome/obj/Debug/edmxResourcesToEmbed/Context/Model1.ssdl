@@ -48,7 +48,8 @@
     <Property Name="product_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="type_product_id" Type="bigint" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
-    <Property Name="description" Type="nvarchar" MaxLength="200" />
+    <Property Name="descriptionDetails" Type="nvarchar" MaxLength="200" />
+    <Property Name="description" Type="nvarchar" MaxLength="500" />
     <Property Name="evaluate" Type="char" MaxLength="10" />
     <Property Name="amount" Type="float" />
     <Property Name="price" Type="float" />
@@ -66,11 +67,12 @@
       <PropertyRef Name="user_id" />
     </Key>
     <Property Name="user_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="user_name" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="user_name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="password" Type="varchar" MaxLength="256" Nullable="false" />
     <Property Name="full_name" Type="nvarchar" MaxLength="50" />
     <Property Name="address" Type="nvarchar" MaxLength="200" />
     <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="phone" Type="varchar" MaxLength="11" />
     <Property Name="role" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK__comment_p__produ__32E0915F">

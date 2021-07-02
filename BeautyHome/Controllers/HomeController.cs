@@ -92,5 +92,11 @@ namespace BeautyHome.Controllers
             }
             return View();
         }
+        //Logout
+        public ActionResult Logout()
+        {
+            Session.Clear();//remove session
+            return RedirectToAction("Login");
+        }
     }
 }
