@@ -1,0 +1,448 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Mobile Header -->
+<div class="mobile-header mobile-header-bg-color--golden section-fluid d-lg-block d-xl-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <!-- Start Mobile Left Side -->
+                <div class="mobile-header-left">
+                    <ul class="mobile-menu-logo">
+                        <li>
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img src="~/assets/images/logo/logo_black.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Left Side -->
+                <!-- Start Mobile Right Side -->
+                <div class="mobile-right-side">
+                    <ul class="header-action-link action-color--black action-hover-color--golden">
+                        <li>
+                            <a href="#search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-add-cart" class="offcanvas-toggle">
+                                <i class="icon-bag"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu">
+                                <i class="icon-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Right Side -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Mobile Header -->
+<!--  Start Offcanvas Mobile Menu Section -->
+<div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-mobile-menu-wrapper">
+        <!-- Start Mobile contact Info -->
+        <div class="mobile-contact-info">
+            <div class="logo">
+                <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+            </div>
+
+            <address class="address">
+                <span>Địa chỉ: 18DTHC4.</span>
+                <span>Điện thoại: 0123456789, 0123456789</span>
+                <span>Email: Thaiminhtoexcellent@gmail.com</span>
+            </address>
+
+            <ul class="social-link">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="user-link">
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="checkout.html">Thanh Toán</a></li>
+            </ul>
+        </div>
+        <!-- End Mobile contact Info -->
+
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-about" class="offcanvas offcanvas-rightside offcanvas-mobile-about-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <!-- Start Mobile contact Info -->
+    <div class="mobile-contact-info">
+        <div class="logo">
+            <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+        </div>
+
+        <address class="address">
+            <span>Địa chỉ: 18DTHC4.</span>
+            <span>Điện thoại: 0123456789, 0123456789</span>
+            <span>Email: Thaiminhtoexcellent@gmail.com</span>
+        </address>
+
+        <ul class="social-link">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+
+        <ul class="user-link">
+            <li><a href="cart.html">Giỏ Hàng</a></li>
+            <li><a href="checkout.html">Thanh Toán</a></li>
+        </ul>
+    </div>
+    <!-- End Mobile contact Info -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Addcart Section -->
+<div id="offcanvas-add-cart" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start  Offcanvas Addcart Wrapper -->
+    <div class="offcanvas-add-cart-wrapper">
+        <h4 class="offcanvas-title">Giỏ Hàng</h4>
+        <ul class="offcanvas-cart">
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">3 x </span>
+                            <span class="offcanvas-cart-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <div class="offcanvas-cart-total-price">
+            <span class="offcanvas-cart-total-price-text">Subtotal:</span>
+            <span class="offcanvas-cart-total-price-value">$170.00</span>
+        </div>
+        <ul class="offcanvas-cart-action-button">
+            <li><a href="cart.html" class="btn btn-block btn-golden">Xem Giỏ Hàng</a></li>
+            <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Thanh Toán</a></li>
+        </ul>
+    </div> <!-- End  Offcanvas Addcart Wrapper -->
+
+</div> <!-- End  Offcanvas Addcart Section -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-wishlish" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div>
+    <!-- ENd Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-wishlist-wrapper">
+        <h4 class="offcanvas-title">Wishlist</h4>
+        <ul class="offcanvas-wishlist">
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Wheel</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Vails</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">3 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Shock Absorber</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <ul class="offcanvas-wishlist-action-button">
+            <li><a href="#" class="btn btn-block btn-golden">View wishlist</a></li>
+        </ul>
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+
+</div> <!-- End Offcanvas Mobile Menu Section -->
+<!-- Start Offcanvas Search Bar Section -->
+<div id="search" class="search-modal">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" placeholder="Nhập thông tin tại đây" />
+        <button type="submit" class="btn btn-lg btn-golden">Tìm Kiếm</button>
+    </form>
+</div>
+<!-- End Offcanvas Search Bar Section -->
+<!-- Offcanvas Overlay -->
+<div class="offcanvas-overlay"></div>
+
+<!-- ...:::: Start Breadcrumb Section:::... -->
+<div class="breadcrumb-section breadcrumb-bg-color--golden">
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="breadcrumb-title">Giỏ Hàng</h3>
+                    <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                        <nav aria-label="breadcrumb">
+                            <ul>
+                                <li><a href="index.html">Trang Chủ</a></li>
+                                <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                <li class="active" aria-current="page">Giỏ Hàng</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- ...:::: End Breadcrumb Section:::... -->
+<!-- ...:::: Start Cart Section:::... -->
+<div class="cart-section">
+    <!-- Start Cart Table -->
+    <div class="cart-table-wrapper" data-aos="fade-up" data-aos-delay="0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table_desc">
+                        <div class="table_page table-responsive">
+                            <table>
+                                <!-- Start Cart Table Head -->
+                                <thead>
+                                    <tr>
+                                        <th class="product_remove">Xóa</th>
+                                        <th class="product_thumb">Ảnh</th>
+                                        <th class="product_name">Sản Phẩm</th>
+                                        <th class="product-price">Giá</th>
+                                        <th class="product_quantity">Số Lượng</th>
+                                        <th class="product_total">Tổng</th>
+                                    </tr>
+                                </thead> <!-- End Cart Table Head -->
+                                <tbody>
+                                    <!-- Start Cart Single Item-->
+                                    <tr>
+                                        <td class="product_remove">
+                                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                        <td class="product_thumb">
+                                            <a href="product-details-default.html">
+                                                <img src="~/assets/images/product/default/home-1/default-1.jpg"
+                                                     alt="">
+                                            </a>
+                                        </td>
+                                        <td class="product_name">
+                                            <a href="product-details-default.html">
+                                                Handbag
+                                                fringilla
+                                            </a>
+                                        </td>
+                                        <td class="product-price">$65.00</td>
+                                        <td class="product_quantity">
+                                            <label>Quantity</label> <input min="1"
+                                                                           max="100" value="1" type="number">
+                                        </td>
+                                        <td class="product_total">$130.00</td>
+                                    </tr> <!-- End Cart Single Item-->
+                                    <!-- Start Cart Single Item-->
+                                    <tr>
+                                        <td class="product_remove">
+                                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                        <td class="product_thumb">
+                                            <a href="product-details-default.html">
+                                                <img src="~/assets/images/product/default/home-1/default-2.jpg"
+                                                     alt="">
+                                            </a>
+                                        </td>
+                                        <td class="product_name">
+                                            <a href="product-details-default.html">
+                                                Handbags
+                                                justo
+                                            </a>
+                                        </td>
+                                        <td class="product-price">$90.00</td>
+                                        <td class="product_quantity">
+                                            <label>Quantity</label> <input min="1"
+                                                                           max="100" value="1" type="number">
+                                        </td>
+                                        <td class="product_total">$180.00</td>
+                                    </tr> <!-- End Cart Single Item-->
+                                    <!-- Start Cart Single Item-->
+                                    <tr>
+                                        <td class="product_remove">
+                                            <a href="#"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                        <td class="product_thumb">
+                                            <a href="product-details-default.html">
+                                                <img src="~/assets/images/product/default/home-1/default-3.jpg"
+                                                     alt="">
+                                            </a>
+                                        </td>
+                                        <td class="product_name">
+                                            <a href="product-details-default.html">
+                                                Handbag
+                                                elit
+                                            </a>
+                                        </td>
+                                        <td class="product-price">$80.00</td>
+                                        <td class="product_quantity">
+                                            <label>Quantity</label> <input min="1"
+                                                                           max="100" value="1" type="number">
+                                        </td>
+                                        <td class="product_total">$160.00</td>
+                                    </tr> <!-- End Cart Single Item-->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="cart_submit">
+                            <button class="btn btn-md btn-golden" type="submit">thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Cart Table -->
+    <!-- Start Coupon Start -->
+    <div class="coupon_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="coupon_code left" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Coupon</h3>
+                        <div class="coupon_inner">
+                            <p>Enter your coupon code if you have one.</p>
+                            <input class="mb-2" placeholder="Coupon code" type="text">
+                            <button type="submit" class="btn btn-md btn-golden">Thêm Coupon</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
+                        <h3>Cart Totals</h3>
+                        <div class="coupon_inner">
+                            <div class="cart_subtotal">
+                                <p>Subtotal</p>
+                                <p class="cart_amount">$215.00</p>
+                            </div>
+                            <div class="cart_subtotal ">
+                                <p>Shipping</p>
+                                <p class="cart_amount"><span>Flat Rate:</span> $255.00</p>
+                            </div>
+                            <a href="#">Calculate shipping</a>
+
+                            <div class="cart_subtotal">
+                                <p>Total</p>
+                                <p class="cart_amount">$215.00</p>
+                            </div>
+                            <div class="checkout_btn">
+                                <a href="#" class="btn btn-md btn-golden">Hoàn thành thanh toán</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Coupon Start -->
+</div> <!-- ...:::: End Cart Section:::... -->

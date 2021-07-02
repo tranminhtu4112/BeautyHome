@@ -1,0 +1,437 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Mobile Header -->
+<div class="mobile-header mobile-header-bg-color--golden section-fluid d-lg-block d-xl-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <!-- Start Mobile Left Side -->
+                <div class="mobile-header-left">
+                    <ul class="mobile-menu-logo">
+                        <li>
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img src="~/assets/images/logo/logo_black.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Left Side -->
+                <!-- Start Mobile Right Side -->
+                <div class="mobile-right-side">
+                    <ul class="header-action-link action-color--black action-hover-color--golden">
+                        <li>
+                            <a href="#search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-wishlish" class="offcanvas-toggle">
+                                <i class="icon-heart"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-add-cart" class="offcanvas-toggle">
+                                <i class="icon-bag"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu">
+                                <i class="icon-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Right Side -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Mobile Header -->
+<!--  Start Offcanvas Mobile Menu Section -->
+<div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-mobile-menu-wrapper">
+        <!-- Start Mobile Menu  -->
+        <div class="mobile-menu-bottom">
+            <!-- Start Mobile Menu Nav -->
+            <div class="offcanvas-menu">
+                <ul>
+                    <li>
+                        <a href="index.html"><span>Trang Chủ</span></a>
+                    </li>
+                    <li>
+                        <a href="shop-grid-sidebar-left.html"><span>Sản Phẩm</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span>Giới Thiệu</span></a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"><span>Liên Hệ</span></a>
+                    </li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="my-account.html">Account</a></li>
+                </ul>
+            </div> <!-- End Mobile Menu Nav -->
+        </div> <!-- End Mobile Menu -->
+        <!-- Start Mobile contact Info -->
+        <div class="mobile-contact-info">
+            <div class="logo">
+                <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+            </div>
+
+            <address class="address">
+                <span>Địa chỉ: 18DTHC4.</span>
+                <span>Điện thoại: 0123456789, 0123456789</span>
+                <span>Email: Thaiminhtoexcellent@gmail.com</span>
+            </address>
+
+            <ul class="social-link">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="user-link">
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="checkout.html">Thanh Toán</a></li>
+            </ul>
+        </div>
+        <!-- End Mobile contact Info -->
+
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-about" class="offcanvas offcanvas-rightside offcanvas-mobile-about-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <!-- Start Mobile contact Info -->
+    <div class="mobile-contact-info">
+        <div class="logo">
+            <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+        </div>
+
+        <address class="address">
+            <span>Địa chỉ: 18DTHC4.</span>
+            <span>Điện thoại: 0123456789, 0123456789</span>
+            <span>Email: Thaiminhtoexcellent@gmail.com</span>
+        </address>
+
+        <ul class="social-link">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+
+        <ul class="user-link">
+            <li><a href="cart.html">Giỏ Hàng</a></li>
+            <li><a href="checkout.html">Thanh Toán</a></li>
+        </ul>
+    </div>
+    <!-- End Mobile contact Info -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Addcart Section -->
+<div id="offcanvas-add-cart" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start  Offcanvas Addcart Wrapper -->
+    <div class="offcanvas-add-cart-wrapper">
+        <h4 class="offcanvas-title">Giỏ hàng</h4>
+        <ul class="offcanvas-cart">
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">3 x </span>
+                            <span class="offcanvas-cart-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <div class="offcanvas-cart-total-price">
+            <span class="offcanvas-cart-total-price-text">Tổng Tiền :</span>
+            <span class="offcanvas-cart-total-price-value">$170.00</span>
+        </div>
+        <ul class="offcanvas-cart-action-button">
+            <li><a href="cart.html" class="btn btn-block btn-golden">Xem giỏ hàng</a></li>
+            <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Thanh toán</a></li>
+        </ul>
+    </div> <!-- End  Offcanvas Addcart Wrapper -->
+
+</div> <!-- End  Offcanvas Addcart Section -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-wishlish" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- ENd Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-wishlist-wrapper">
+        <h4 class="offcanvas-title">Wishlist</h4>
+        <ul class="offcanvas-wishlist">
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Wheel</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Vails</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">3 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Shock Absorber</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <ul class="offcanvas-wishlist-action-button">
+            <li><a href="#" class="btn btn-block btn-golden">View wishlist</a></li>
+        </ul>
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+
+</div> <!-- End Offcanvas Mobile Menu Section -->
+<!-- Start Offcanvas Search Bar Section -->
+<div id="search" class="search-modal">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" placeholder="Nhập thông tin tại đây" />
+        <button type="submit" class="btn btn-lg btn-golden">Tìm Kiếm</button>
+    </form>
+</div>
+<!-- End Offcanvas Search Bar Section -->
+<!-- Offcanvas Overlay -->
+<div class="offcanvas-overlay"></div>
+
+<!-- ...:::: Start Breadcrumb Section:::... -->
+<div class="breadcrumb-section breadcrumb-bg-color--golden">
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="breadcrumb-title">So Sánh Sản Phẩm</h3>
+                    <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                        <nav aria-label="breadcrumb">
+                            <ul>
+                                <li><a href="index.html">Trang Chủ</a></li>
+                                <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                <li class="active" aria-current="page">Đối Chiếu Thanh Toán</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- ...:::: End Breadcrumb Section:::... -->
+<!-- ...:::: Start Compare Section:::... -->
+<div class="compare-section">
+    <!-- Start Cart Table -->
+    <div class="compare-table-wrapper" data-aos="fade-up" data-aos-delay="0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="table_desc">
+                        <div class="table_page table-responsive compare-table">
+                            <table class="table mb-0">
+                                <tbody>
+                                    <tr>
+                                        <td class="first-column">Sản Phẩm</td>
+                                        <td class="product-image-title">
+                                            <a href="product-details-default.html" class="image">
+                                                <img src="~/assets/images/product/default/home-1/default-1.jpg"
+                                                     alt="Compare Product">
+                                            </a>
+                                            <a href="shop-grid-sidebar-left.html" class="category">Furniture</a>
+                                            <a href="product-details-default.html" class="title">Rinosin title</a>
+                                        </td>
+                                        <td class="product-image-title">
+                                            <a href="product-details-default.html" class="image">
+                                                <img src="~/assets/images/product/default/home-1/default-2.jpg"
+                                                     alt="Compare Product">
+                                            </a>
+                                            <a href="shop-grid-sidebar-left.html" class="category">Furniture</a>
+                                            <a href="product-details-default.html" class="title">Macro title</a>
+                                        </td>
+                                        <td class="product-image-title">
+                                            <a href="product-details-default.html" class="image">
+                                                <img src="~/assets/images/product/default/home-1/default-3.jpg"
+                                                     alt="Compare Product">
+                                            </a>
+                                            <a href="shop-grid-sidebar-left.html" class="category">Furniture</a>
+                                            <a href="product-details-default.html" class="title">Oakley title</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-column">Mô Tả</td>
+                                        <td class="pro-desc">
+                                            <p>back-end nha tú</p>
+                                        </td>
+                                        <td class="pro-desc">
+                                            <p>back-end nha tú</p>
+                                        </td>
+                                        <td class="pro-desc">
+                                            <p>back-end nha tú</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-column">Giá</td>
+                                        <td class="pro-price">$225</td>
+                                        <td class="pro-price">back-end nha tú</td>
+                                        <td class="pro-price">back-end nha tú</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-column">Màu Sắc</td>
+                                        <td class="pro-color">Black</td>
+                                        <td class="pro-color">back-end nha tú</td>
+                                        <td class="pro-color">back-end nha tú</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-column">Thêm Vào Giỏ</td>
+                                        <td class="pro-addtocart">
+                                            <a href="#" class="btn btn-md btn-golden"
+                                               data-bs-toggle="modal" data-bs-target="#modalAddcart">
+                                                <span>
+                                                    ADD TO
+                                                    CART
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td class="pro-addtocart">
+                                            <a href="#" class="btn btn-md btn-golden"
+                                               data-bs-toggle="modal" data-bs-target="#modalAddcart">
+                                                <span>
+                                                    ADD TO
+                                                    CART
+                                                </span>
+                                            </a>
+                                        </td>
+                                        <td class="pro-addtocart">
+                                            <a href="#" class="btn btn-md btn-golden"
+                                               data-bs-toggle="modal" data-bs-target="#modalAddcart">
+                                                <span>
+                                                    ADD TO
+                                                    CART
+                                                </span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="first-column">Xóa</td>
+                                        <td class="pro-remove"><button><i class="fa fa-trash-o"></i></button></td>
+                                        <td class="pro-remove"><button><i class="fa fa-trash-o"></i></button></td>
+                                        <td class="pro-remove"><button><i class="fa fa-trash-o"></i></button></td>
+                                    </tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End Cart Table -->
+</div> <!-- ...:::: Start Compare Section:::... -->
