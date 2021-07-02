@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SQL_BeautyHomeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="comment_product">
+          <Key>
+            <PropertyRef Name="comment_puduct_id" />
+          </Key>
+          <Property Name="comment_puduct_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_id" Type="bigint" />
+          <Property Name="user_id" Type="bigint" />
+          <Property Name="txt_comment" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="furniture">
+          <Key>
+            <PropertyRef Name="furniture_id" />
+          </Key>
+          <Property Name="furniture_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="image_product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="bigint" Nullable="false" />
+          <Property Name="url_Image1" Type="varchar" MaxLength="200" />
+          <Property Name="url_Image2" Type="varchar" MaxLength="200" />
+          <Property Name="url_Image3" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="order_id" />
+          </Key>
+          <Property Name="order_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="product_id" Type="bigint" />
+          <Property Name="user_id" Type="bigint" />
+          <Property Name="full_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="200" />
+          <Property Name="mail" Type="varchar" MaxLength="50" />
+          <Property Name="product_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="float" />
+          <Property Name="date_order" Type="datetime" />
+          <Property Name="datereceived" Type="datetime" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="type_product_id" Type="bigint" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="descriptionDetails" Type="nvarchar" MaxLength="200" />
+          <Property Name="description" Type="nvarchar" MaxLength="500" />
+          <Property Name="evaluate" Type="char" MaxLength="10" />
+          <Property Name="amount" Type="float" />
+          <Property Name="price" Type="float" />
+        </EntityType>
+        <EntityType Name="type_product">
+          <Key>
+            <PropertyRef Name="type_product_id" />
+          </Key>
+          <Property Name="type_product_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="furniture_id" Type="bigint" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="full_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar" MaxLength="200" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="phone" Type="varchar" MaxLength="11" />
+          <Property Name="role" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__comment_p__produ__32E0915F">
+          <End Role="product" Type="Self.product" Multiplicity="0..1" />
+          <End Role="comment_product" Type="Self.comment_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_id" />
+            </Principal>
+            <Dependent Role="comment_product">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__image_pro__produ__31EC6D26">
+          <End Role="product" Type="Self.product" Multiplicity="1" />
+          <End Role="image_product" Type="Self.image_product" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_id" />
+            </Principal>
+            <Dependent Role="image_product">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__order__product_i__33D4B598">
+          <End Role="product" Type="Self.product" Multiplicity="0..1" />
+          <End Role="order" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__order__user_id__34C8D9D1">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="order" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__product__type_pr__30F848ED">
+          <End Role="type_product" Type="Self.type_product" Multiplicity="0..1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="type_product">
+              <PropertyRef Name="type_product_id" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="type_product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__type_prod__furni__300424B4">
+          <End Role="furniture" Type="Self.furniture" Multiplicity="0..1" />
+          <End Role="type_product" Type="Self.type_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="furniture">
+              <PropertyRef Name="furniture_id" />
+            </Principal>
+            <Dependent Role="type_product">
+              <PropertyRef Name="furniture_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SQL_BeautyHomeModelStoreContainer">
+          <EntitySet Name="comment_product" EntityType="Self.comment_product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="furniture" EntityType="Self.furniture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="image_product" EntityType="Self.image_product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="type_product" EntityType="Self.type_product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__comment_p__produ__32E0915F" Association="Self.FK__comment_p__produ__32E0915F">
+            <End Role="product" EntitySet="product" />
+            <End Role="comment_product" EntitySet="comment_product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__image_pro__produ__31EC6D26" Association="Self.FK__image_pro__produ__31EC6D26">
+            <End Role="product" EntitySet="product" />
+            <End Role="image_product" EntitySet="image_product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__order__product_i__33D4B598" Association="Self.FK__order__product_i__33D4B598">
+            <End Role="product" EntitySet="product" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <AssociationSet Name="FK__order__user_id__34C8D9D1" Association="Self.FK__order__user_id__34C8D9D1">
+            <End Role="user" EntitySet="user" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <AssociationSet Name="FK__product__type_pr__30F848ED" Association="Self.FK__product__type_pr__30F848ED">
+            <End Role="type_product" EntitySet="type_product" />
+            <End Role="product" EntitySet="product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__type_prod__furni__300424B4" Association="Self.FK__type_prod__furni__300424B4">
+            <End Role="furniture" EntitySet="furniture" />
+            <End Role="type_product" EntitySet="type_product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SQL_BeautyHomeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="comment_product">
+          <Key>
+            <PropertyRef Name="comment_puduct_id" />
+          </Key>
+          <Property Name="comment_puduct_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_id" Type="Int64" />
+          <Property Name="user_id" Type="Int64" />
+          <Property Name="txt_comment" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="product" Relationship="Self.FK__comment_p__produ__32E0915F" FromRole="comment_product" ToRole="product" />
+        </EntityType>
+        <EntityType Name="furniture">
+          <Key>
+            <PropertyRef Name="furniture_id" />
+          </Key>
+          <Property Name="furniture_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="type_product" Relationship="Self.FK__type_prod__furni__300424B4" FromRole="furniture" ToRole="type_product" />
+        </EntityType>
+        <EntityType Name="image_product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="Int64" Nullable="false" />
+          <Property Name="url_Image1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="url_Image2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="url_Image3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="product" Relationship="Self.FK__image_pro__produ__31EC6D26" FromRole="image_product" ToRole="product" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="order_id" />
+          </Key>
+          <Property Name="order_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="product_id" Type="Int64" />
+          <Property Name="user_id" Type="Int64" />
+          <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Double" />
+          <Property Name="date_order" Type="DateTime" Precision="3" />
+          <Property Name="datereceived" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="Int32" />
+          <NavigationProperty Name="product" Relationship="Self.FK__order__product_i__33D4B598" FromRole="order" ToRole="product" />
+          <NavigationProperty Name="user" Relationship="Self.FK__order__user_id__34C8D9D1" FromRole="order" ToRole="user" />
+        </EntityType>
+        <EntityType Name="product">
+          <Key>
+            <PropertyRef Name="product_id" />
+          </Key>
+          <Property Name="product_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="type_product_id" Type="Int64" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="descriptionDetails" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="evaluate" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="amount" Type="Double" />
+          <Property Name="price" Type="Double" />
+          <NavigationProperty Name="comment_product" Relationship="Self.FK__comment_p__produ__32E0915F" FromRole="product" ToRole="comment_product" />
+          <NavigationProperty Name="image_product" Relationship="Self.FK__image_pro__produ__31EC6D26" FromRole="product" ToRole="image_product" />
+          <NavigationProperty Name="orders" Relationship="Self.FK__order__product_i__33D4B598" FromRole="product" ToRole="order" />
+          <NavigationProperty Name="type_product" Relationship="Self.FK__product__type_pr__30F848ED" FromRole="product" ToRole="type_product" />
+        </EntityType>
+        <EntityType Name="type_product">
+          <Key>
+            <PropertyRef Name="type_product_id" />
+          </Key>
+          <Property Name="type_product_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="furniture_id" Type="Int64" />
+          <NavigationProperty Name="furniture" Relationship="Self.FK__type_prod__furni__300424B4" FromRole="type_product" ToRole="furniture" />
+          <NavigationProperty Name="products" Relationship="Self.FK__product__type_pr__30F848ED" FromRole="type_product" ToRole="product" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="role" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="orders" Relationship="Self.FK__order__user_id__34C8D9D1" FromRole="user" ToRole="order" />
+        </EntityType>
+        <Association Name="FK__comment_p__produ__32E0915F">
+          <End Role="product" Type="Self.product" Multiplicity="0..1" />
+          <End Role="comment_product" Type="Self.comment_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_id" />
+            </Principal>
+            <Dependent Role="comment_product">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__type_prod__furni__300424B4">
+          <End Role="furniture" Type="Self.furniture" Multiplicity="0..1" />
+          <End Role="type_product" Type="Self.type_product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="furniture">
+              <PropertyRef Name="furniture_id" />
+            </Principal>
+            <Dependent Role="type_product">
+              <PropertyRef Name="furniture_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__image_pro__produ__31EC6D26">
+          <End Role="product" Type="Self.product" Multiplicity="1" />
+          <End Role="image_product" Type="Self.image_product" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_id" />
+            </Principal>
+            <Dependent Role="image_product">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__order__product_i__33D4B598">
+          <End Role="product" Type="Self.product" Multiplicity="0..1" />
+          <End Role="order" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="product">
+              <PropertyRef Name="product_id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__order__user_id__34C8D9D1">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="order" Type="Self.order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="order">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__product__type_pr__30F848ED">
+          <End Role="type_product" Type="Self.type_product" Multiplicity="0..1" />
+          <End Role="product" Type="Self.product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="type_product">
+              <PropertyRef Name="type_product_id" />
+            </Principal>
+            <Dependent Role="product">
+              <PropertyRef Name="type_product_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BeautyHomeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="comment_product" EntityType="Self.comment_product" />
+          <EntitySet Name="furnitures" EntityType="Self.furniture" />
+          <EntitySet Name="image_product" EntityType="Self.image_product" />
+          <EntitySet Name="orders" EntityType="Self.order" />
+          <EntitySet Name="products" EntityType="Self.product" />
+          <EntitySet Name="type_product" EntityType="Self.type_product" />
+          <EntitySet Name="users" EntityType="Self.user" />
+          <AssociationSet Name="FK__comment_p__produ__32E0915F" Association="Self.FK__comment_p__produ__32E0915F">
+            <End Role="product" EntitySet="products" />
+            <End Role="comment_product" EntitySet="comment_product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__type_prod__furni__300424B4" Association="Self.FK__type_prod__furni__300424B4">
+            <End Role="furniture" EntitySet="furnitures" />
+            <End Role="type_product" EntitySet="type_product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__image_pro__produ__31EC6D26" Association="Self.FK__image_pro__produ__31EC6D26">
+            <End Role="product" EntitySet="products" />
+            <End Role="image_product" EntitySet="image_product" />
+          </AssociationSet>
+          <AssociationSet Name="FK__order__product_i__33D4B598" Association="Self.FK__order__product_i__33D4B598">
+            <End Role="product" EntitySet="products" />
+            <End Role="order" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__order__user_id__34C8D9D1" Association="Self.FK__order__user_id__34C8D9D1">
+            <End Role="user" EntitySet="users" />
+            <End Role="order" EntitySet="orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__product__type_pr__30F848ED" Association="Self.FK__product__type_pr__30F848ED">
+            <End Role="type_product" EntitySet="type_product" />
+            <End Role="product" EntitySet="products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SQL_BeautyHomeModelStoreContainer" CdmEntityContainer="BeautyHomeEntities">
+          <EntitySetMapping Name="comment_product">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.comment_product">
+              <MappingFragment StoreEntitySet="comment_product">
+                <ScalarProperty Name="comment_puduct_id" ColumnName="comment_puduct_id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="txt_comment" ColumnName="txt_comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="furnitures">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.furniture">
+              <MappingFragment StoreEntitySet="furniture">
+                <ScalarProperty Name="furniture_id" ColumnName="furniture_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="image_product">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.image_product">
+              <MappingFragment StoreEntitySet="image_product">
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="url_Image1" ColumnName="url_Image1" />
+                <ScalarProperty Name="url_Image2" ColumnName="url_Image2" />
+                <ScalarProperty Name="url_Image3" ColumnName="url_Image3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orders">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.order">
+              <MappingFragment StoreEntitySet="order">
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="full_name" ColumnName="full_name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+                <ScalarProperty Name="product_name" ColumnName="product_name" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="date_order" ColumnName="date_order" />
+                <ScalarProperty Name="datereceived" ColumnName="datereceived" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="products">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.product">
+              <MappingFragment StoreEntitySet="product">
+                <ScalarProperty Name="product_id" ColumnName="product_id" />
+                <ScalarProperty Name="type_product_id" ColumnName="type_product_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="descriptionDetails" ColumnName="descriptionDetails" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="evaluate" ColumnName="evaluate" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="price" ColumnName="price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="type_product">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.type_product">
+              <MappingFragment StoreEntitySet="type_product">
+                <ScalarProperty Name="type_product_id" ColumnName="type_product_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="furniture_id" ColumnName="furniture_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="user_name" ColumnName="user_name" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="full_name" ColumnName="full_name" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

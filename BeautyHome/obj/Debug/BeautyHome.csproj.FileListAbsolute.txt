@@ -77,3 +77,7 @@ C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.Cor
 C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.CopyComplete
 C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.dll
 C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.pdb
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.xml
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.xml

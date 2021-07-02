@@ -10,11 +10,12 @@ USE SQL_BeautyHome
 Create table [user]
 (
 	user_id Bigint NOT NULL IDENTITY(1,1),
-	user_name Varchar(10) NOT NULL,
+	user_name Varchar(50) NOT NULL,
 	password Varchar(256) NOT NULL,
 	full_name Nvarchar(50) NULL,
 	address Nvarchar(200) NULL,
 	email Varchar(50) NULL,
+	phone Varchar(11) NULL,
 	role int NOT NULL,
 Primary Key (user_id)
 ) 
@@ -69,7 +70,8 @@ Create table [product]
 	product_id Bigint NOT NULL IDENTITY(1,1),
 	type_product_id Bigint NULL,
 	name Nvarchar(50) NULL,
-	description Nvarchar(200) NULL,
+	descriptionDetails Nvarchar(200) NULL,
+	description Nvarchar(500) NULL,
 	evaluate Char(10) NULL,
 	amount Float NULL,
 	price Float NULL,
