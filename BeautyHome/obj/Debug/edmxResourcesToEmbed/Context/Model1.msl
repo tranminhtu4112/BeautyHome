@@ -52,6 +52,7 @@
           <ScalarProperty Name="product_id" ColumnName="product_id" />
           <ScalarProperty Name="type_product_id" ColumnName="type_product_id" />
           <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="descriptionDetails" ColumnName="descriptionDetails" />
           <ScalarProperty Name="description" ColumnName="description" />
           <ScalarProperty Name="evaluate" ColumnName="evaluate" />
           <ScalarProperty Name="amount" ColumnName="amount" />
@@ -77,6 +78,7 @@
           <ScalarProperty Name="full_name" ColumnName="full_name" />
           <ScalarProperty Name="address" ColumnName="address" />
           <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="role" ColumnName="role" />
         </MappingFragment>
       </EntityTypeMapping>
