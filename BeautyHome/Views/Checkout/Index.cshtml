@@ -1,0 +1,654 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Mobile Header -->
+<div class="mobile-header mobile-header-bg-color--golden section-fluid d-lg-block d-xl-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <!-- Start Mobile Left Side -->
+                <div class="mobile-header-left">
+                    <ul class="mobile-menu-logo">
+                        <li>
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img src="~/assets/images/logo/logo_black.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Left Side -->
+                <!-- Start Mobile Right Side -->
+                <div class="mobile-right-side">
+                    <ul class="header-action-link action-color--black action-hover-color--golden">
+                        <li>
+                            <a href="#search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-wishlish" class="offcanvas-toggle">
+                                <i class="icon-heart"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-add-cart" class="offcanvas-toggle">
+                                <i class="icon-bag"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu">
+                                <i class="icon-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Right Side -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Mobile Header -->
+<!--  Start Offcanvas Mobile Menu Section -->
+<div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-mobile-menu-wrapper">
+        <!-- Start Mobile Menu  -->
+        <div class="mobile-menu-bottom">
+            <!-- Start Mobile Menu Nav -->
+            <div class="offcanvas-menu">
+                <ul>
+                    <li>
+                        <a href="index.html"><span>Trang Chủ</span></a>
+                    </li>
+                    <li>
+                        <a href="shop-grid-sidebar-left.html"><span>Sản Phẩm</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span>Giới Thiệu</span></a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"><span>Liên Hệ</span></a>
+                    </li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="my-account.html">Account</a></li>
+                </ul>
+            </div> <!-- End Mobile Menu Nav -->
+        </div> <!-- End Mobile Menu -->
+        <!-- Start Mobile contact Info -->
+        <div class="mobile-contact-info">
+            <div class="logo">
+                <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+            </div>
+
+            <address class="address">
+                <span>Địa chỉ: 18DTHC4.</span>
+                <span>Điện thoại: 0123456789, 0123456789</span>
+                <span>Email: Thaiminhtoexcellent@gmail.com</span>
+            </address>
+
+            <ul class="social-link">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="user-link">
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="checkout.html">Thành Toán</a></li>
+            </ul>
+        </div>
+        <!-- End Mobile contact Info -->
+
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-about" class="offcanvas offcanvas-rightside offcanvas-mobile-about-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <!-- Start Mobile contact Info -->
+    <div class="mobile-contact-info">
+        <div class="logo">
+            <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+        </div>
+
+        <address class="address">
+            <span>Địa chỉ: 18DTHC4.</span>
+            <span>Điện thoại: 0123456789, 0123456789</span>
+            <span>Email: Thaiminhtoexcellent@gmail.com</span>
+        </address>
+
+        <ul class="social-link">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+
+        <ul class="user-link">
+            <li><a href="cart.html">Giỏ Hàng</a></li>
+            <li><a href="checkout.html">Thành Toán</a></li>
+        </ul>
+    </div>
+    <!-- End Mobile contact Info -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Addcart Section -->
+<div id="offcanvas-add-cart" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start  Offcanvas Addcart Wrapper -->
+    <div class="offcanvas-add-cart-wrapper">
+        <h4 class="offcanvas-title">Giỏ hàng</h4>
+        <ul class="offcanvas-cart">
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">3 x </span>
+                            <span class="offcanvas-cart-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <div class="offcanvas-cart-total-price">
+            <span class="offcanvas-cart-total-price-text">Tổng Tiền :</span>
+            <span class="offcanvas-cart-total-price-value">$170.00</span>
+        </div>
+        <ul class="offcanvas-cart-action-button">
+            <li><a href="cart.html" class="btn btn-block btn-golden">Xem giỏ hàng</a></li>
+            <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Thanh toán</a></li>
+        </ul>
+    </div> <!-- End  Offcanvas Addcart Wrapper -->
+
+</div> <!-- End  Offcanvas Addcart Section -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-wishlish" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- ENd Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-wishlist-wrapper">
+        <h4 class="offcanvas-title">Wishlist</h4>
+        <ul class="offcanvas-wishlist">
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Wheel</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Vails</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">3 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Shock Absorber</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <ul class="offcanvas-wishlist-action-button">
+            <li><a href="#" class="btn btn-block btn-golden">View wishlist</a></li>
+        </ul>
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+
+</div> <!-- End Offcanvas Mobile Menu Section -->
+<!-- Start Offcanvas Search Bar Section -->
+<div id="search" class="search-modal">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" placeholder="Nhập thông tin tại đây" />
+        <button type="submit" class="btn btn-lg btn-golden">Tìm Kiếm</button>
+    </form>
+</div>
+<!-- End Offcanvas Search Bar Section -->
+<!-- Offcanvas Overlay -->
+<div class="offcanvas-overlay"></div>
+
+<!-- ...:::: Start Breadcrumb Section:::... -->
+<div class="breadcrumb-section breadcrumb-bg-color--golden">
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="breadcrumb-title">Thanh Toán</h3>
+                    <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                        <nav aria-label="breadcrumb">
+                            <ul>
+                                <li><a href="index.html">Trang Chủ</a></li>
+                                <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                <li class="active" aria-current="page">Thanh Toán</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- ...:::: End Breadcrumb Section:::... -->
+<!-- ...:::: Start Checkout Section:::... -->
+<div class="checkout-section">
+    <div class="container">
+        <div class="row">
+            <!-- User Quick Action Form -->
+            <div class="col-12">
+                <div class="user-actions accordion" data-aos="fade-up" data-aos-delay="0">
+                    <h3>
+                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                        Phản hồi khách hàng?
+                        <a class="Returning" href="#" data-bs-toggle="collapse" data-bs-target="#checkout_login"
+                           aria-expanded="true">Nhấn vào đây để đăng nhập</a>
+                    </h3>
+                    <div id="checkout_login" class="collapse" data-parent="#checkout_login">
+                        <div class="checkout_info">
+                            <p>Nếu bạn đã mua sắm với chúng tôi trước đây, vui lòng nhập thông tin chi tiết của bạn vào ô bên dưới. Nếu bạn là khách hàng mới, vui lòng tiếp tục thanh toán &amp; Phần vận chuyển.</p>
+                            <form action="#">
+                                <div class="form_group default-form-box">
+                                    <label>Tên người dùng hoặc email <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                                <div class="form_group default-form-box">
+                                    <label>Mật khẩu <span>*</span></label>
+                                    <input type="password">
+                                </div>
+                                <div class="form_group group_3 default-form-box">
+                                    <button class="btn btn-md btn-black-default-hover" type="submit">Đăng nhập</button>
+                                    <label class="checkbox-default">
+                                        <input type="checkbox">
+                                        <span>Nhớ tôi</span>
+                                    </label>
+                                </div>
+                                <a href="#">Quên mật khẩu?</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="user-actions accordion" data-aos="fade-up" data-aos-delay="200">
+                    <h3>
+                        <i class="fa fa-file-o" aria-hidden="true"></i>
+                        Phản hồi khách hàng?
+                        <a class="Returning" href="#" data-bs-toggle="collapse" data-bs-target="#checkout_coupon"
+                           aria-expanded="true">Bấm vào đây để nhập mã của bạn</a>
+
+                    </h3>
+                    <div id="checkout_coupon" class="collapse checkout_coupon" data-parent="#checkout_coupon">
+                        <div class="checkout_info">
+                            <form action="#">
+                                <input placeholder="Coupon code" type="text">
+                                <button class="btn btn-md btn-black-default-hover" type="submit">
+                                    Áp dụng phiếu giảm giá
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- User Quick Action Form -->
+        </div>
+        <!-- Start User Details Checkout Form -->
+        <div class="checkout_form" data-aos="fade-up" data-aos-delay="400">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <form action="#">
+                        <h3>Chi tiết thanh toán</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="default-form-box">
+                                    <label>Họ <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="default-form-box">
+                                    <label>Tên <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="default-form-box">
+                                    <label>Tên Cty</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="default-form-box">
+                                    <label for="country">Quê Quán <span>*</span></label>
+                                    <select class="country_option nice-select wide" name="country" id="country">
+                                        <option value="2">Tây Ninh</option>
+                                        <option value="3">Thành Phó HCM</option>
+                                        <option value="4">Hà Nội</option>
+                                        <option value="5">Đà Nẵng</option>
+                                        <option value="6">Hải Phòng</option>
+                                        <option value="7">Long An</option>
+                                        <option value="8">Cần Thơ</option>
+                                        <option value="9">Nha Trang</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="default-form-box">
+                                    <label>Địa chỉ nhà <span>*</span></label>
+                                    <input placeholder="House number and street name" type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="default-form-box">
+                                    <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="default-form-box">
+                                    <label>Tỉnh/ Thành Phố <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="default-form-box">
+                                    <label>Quận/ Huyện <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="default-form-box">
+                                    <label>SĐT<span>*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="default-form-box">
+                                    <label> Địa chỉ Email <span>*</span></label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="checkbox-default" for="newAccount" data-bs-toggle="collapse"
+                                       data-bs-target="#newAccountPassword">
+                                    <input type="checkbox" id="newAccount">
+                                    <span>Tạo một tài khoản?</span>
+                                </label>
+                                <div id="newAccountPassword" class="collapse mt-3"
+                                     data-parent="#newAccountPassword">
+                                    <div class="card-body1 default-form-box">
+                                        <label> Mật khẩu tài khoản <span>*</span></label>
+                                        <input placeholder="password" type="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label class="checkbox-default" for="newShipping" data-bs-toggle="collapse"
+                                       data-bs-target="#anotherShipping">
+                                    <input type="checkbox" id="newShipping">
+                                    <span>Gửi đến một địa chỉ khác?</span>
+                                </label>
+
+                                <div id="anotherShipping" class="collapse mt-3" data-parent="#anotherShipping">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="default-form-box">
+                                                <label>Họ <span>*</span></label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="default-form-box">
+                                                <label>Tên <span>*</span></label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="default-form-box">
+                                                <label>Tên Cty</label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="select_form_select default-form-box">
+                                                <label for="countru_name">Quê Quán <span>*</span></label>
+                                                <select class="niceselect_option wide" name="cuntry"
+                                                        id="countru_name">
+                                                    <option value="2">Tây Ninh</option>
+                                                    <option value="3">Thành Phó HCM</option>
+                                                    <option value="4">Hà Nội</option>
+                                                    <option value="5">Đà Nẵng</option>
+                                                    <option value="6">Hải Phòng</option>
+                                                    <option value="7">Long An</option>
+                                                    <option value="8">Cần Thơ</option>
+                                                    <option value="9">Nha Trang</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="default-form-box">
+                                                <label>Địa chỉ <span>*</span></label>
+                                                <input placeholder="House number and street name" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="default-form-box">
+                                                <input placeholder="Apartment, suite, unit etc. (optional)"
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="default-form-box">
+                                                <label>Tỉnh/ Thành Phố <span>*</span></label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="default-form-box">
+                                                <label>Quân/ Huyện <span>*</span></label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="default-form-box">
+                                                <label>SĐT<span>*</span></label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="default-form-box">
+                                                <label> Địa Chỉ Email <span>*</span></label>
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="order-notes">
+                                    <label for="order_note">Ghi chú đơn hàng</label>
+                                    <textarea id="order_note"
+                                              placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: những lưu ý đặc biệt khi giao hàng."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <form action="#">
+                        <h3>Đơn đặt hàng của bạn</h3>
+                        <div class="order_table table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Sản Phẩm</th>
+                                        <th>Tổng Giá</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td> Handbag fringilla <strong> × 2</strong></td>
+                                        <td> $165.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td> Handbag justo <strong> × 2</strong></td>
+                                        <td> $50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td> Handbag elit <strong> × 2</strong></td>
+                                        <td> $50.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td> Handbag Rutrum <strong> × 1</strong></td>
+                                        <td> $50.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Tổng đơn đặt hàng</th>
+                                        <td>$215.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Đang chuyển hàng</th>
+                                        <td><strong>$5.00</strong></td>
+                                    </tr>
+                                    <tr class="order_total">
+                                        <th>Tổng đơn đặt hàng</th>
+                                        <td><strong>$220.00</strong></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="payment_method">
+                            <div class="panel-default">
+                                <label class="checkbox-default" for="currencyCod" data-bs-toggle="collapse"
+                                       data-bs-target="#methodCod">
+                                    <input type="checkbox" id="currencyCod">
+                                    <span>Thanh toán khi giao hàng</span>
+                                </label>
+
+                                <div id="methodCod" class="collapse" data-parent="#methodCod">
+                                    <div class="card-body1">
+                                        <p>Vui lòng kiểm tra lại kỹ các thông tin đơn hàng Tỉnh, Tp, Quận, Huyện, Địa chỉ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-default">
+                                <label class="checkbox-default" for="currencyPaypal" data-bs-toggle="collapse"
+                                       data-bs-target="#methodPaypal">
+                                    <input type="checkbox" id="currencyPaypal">
+                                    <span>PayPal</span>
+                                </label>
+                                <div id="methodPaypal" class="collapse " data-parent="#methodPaypal">
+                                    <div class="card-body1">
+                                        <p>Thanh toán qua PayPal; bạn có thể thanh toán bằng thẻ tín dụng của mình nếu bạn không có tài khoản Paypal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order_button pt-3">
+                                <button class="btn btn-md btn-black-default-hover" type="submit">
+                                    Tiến hành
+                                    PayPal
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> <!-- Start User Details Checkout Form -->
+    </div>
+</div><!-- ...:::: End Checkout Section:::... -->

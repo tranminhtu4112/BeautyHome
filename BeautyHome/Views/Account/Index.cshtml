@@ -1,0 +1,479 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Start Mobile Header -->
+<div class="mobile-header mobile-header-bg-color--golden section-fluid d-lg-block d-xl-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center justify-content-between">
+                <!-- Start Mobile Left Side -->
+                <div class="mobile-header-left">
+                    <ul class="mobile-menu-logo">
+                        <li>
+                            <a href="index.html">
+                                <div class="logo">
+                                    <img src="~/assets/images/logo/logo_black.png" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Left Side -->
+                <!-- Start Mobile Right Side -->
+                <div class="mobile-right-side">
+                    <ul class="header-action-link action-color--black action-hover-color--golden">
+                        <li>
+                            <a href="#search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-wishlish" class="offcanvas-toggle">
+                                <i class="icon-heart"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#offcanvas-add-cart" class="offcanvas-toggle">
+                                <i class="icon-bag"></i>
+                                <span class="item-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mobile-menu-offcanvas" class="offcanvas-toggle offside-menu">
+                                <i class="icon-menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End Mobile Right Side -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Mobile Header -->
+<!--  Start Offcanvas Mobile Menu Section -->
+<div id="mobile-menu-offcanvas" class="offcanvas offcanvas-rightside offcanvas-mobile-menu-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-mobile-menu-wrapper">
+        <!-- Start Mobile Menu  -->
+        <div class="mobile-menu-bottom">
+            <!-- Start Mobile Menu Nav -->
+            <div class="offcanvas-menu">
+                <ul>
+                    <li>
+                        <a href="index.html"><span>Trang Chủ</span></a>
+                    </li>
+                    <li>
+                        <a href="shop-grid-sidebar-left.html"><span>Sản Phẩm</span></a>
+                    </li>
+                    <li>
+                        <a href=""><span>Giới Thiệu</span></a>
+                    </li>
+                    <li>
+                        <a href="contact-us.html"><span>Liên Hệ</span></a>
+                    </li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="my-account.html">Accout</a></li>
+                </ul>
+            </div> <!-- End Mobile Menu Nav -->
+        </div> <!-- End Mobile Menu -->
+        <!-- Start Mobile contact Info -->
+        <div class="mobile-contact-info">
+            <div class="logo">
+                <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+            </div>
+
+            <address class="address">
+                <span>Địa chỉ: 18DTHC4.</span>
+                <span>Điện thoại: 0123456789, 0123456789</span>
+                <span>Email: Thaiminhtoexcellent@gmail.com</span>
+            </address>
+
+            <ul class="social-link">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+            <ul class="user-link">
+                <li><a href="cart.html">Giỏ Hàng</a></li>
+                <li><a href="checkout.html">Thanh Toán</a></li>
+            </ul>
+        </div>
+        <!-- End Mobile contact Info -->
+
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-about" class="offcanvas offcanvas-rightside offcanvas-mobile-about-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <!-- Start Mobile contact Info -->
+    <div class="mobile-contact-info">
+        <div class="logo">
+            <a href="index.html"><img src="~/assets/images/logo/logo_white.png" alt=""></a>
+        </div>
+
+        <address class="address">
+            <span>Địa chỉ: 18DTHC4.</span>
+            <span>Điện thoại: 0123456789, 0123456789</span>
+            <span>Email: Thaiminhtoexcellent@gmail.com</span>
+        </address>
+
+        <ul class="social-link">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+
+        <ul class="user-link">
+            <li><a href="cart.html">Giỏ Hàng</a></li>
+            <li><a href="checkout.html">Thanh Toán</a></li>
+        </ul>
+    </div>
+    <!-- End Mobile contact Info -->
+</div> <!-- ...:::: End Offcanvas Mobile Menu Section:::... -->
+<!-- Start Offcanvas Addcart Section -->
+<div id="offcanvas-add-cart" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- End Offcanvas Header -->
+    <!-- Start  Offcanvas Addcart Wrapper -->
+    <div class="offcanvas-add-cart-wrapper">
+        <h4 class="offcanvas-title">Giỏ Hàng</h4>
+        <ul class="offcanvas-cart">
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Wheel</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Car Vails</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">3 x </span>
+                            <span class="offcanvas-cart-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-cart-item-single">
+                <div class="offcanvas-cart-item-block">
+                    <a href="#" class="offcanvas-cart-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-cart-image">
+                    </a>
+                    <div class="offcanvas-cart-item-content">
+                        <a href="#" class="offcanvas-cart-item-link">Shock Absorber</a>
+                        <div class="offcanvas-cart-item-details">
+                            <span class="offcanvas-cart-item-details-quantity">1 x </span>
+                            <span class="offcanvas-cart-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-cart-item-delete text-right">
+                    <a href="#" class="offcanvas-cart-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <div class="offcanvas-cart-total-price">
+            <span class="offcanvas-cart-total-price-text">Subtotal:</span>
+            <span class="offcanvas-cart-total-price-value">$170.00</span>
+        </div>
+        <ul class="offcanvas-cart-action-button">
+            <li><a href="cart.html" class="btn btn-block btn-golden">Xem Giỏ Hàng</a></li>
+            <li><a href="compare.html" class=" btn btn-block btn-golden mt-5">Thanh Toán</a></li>
+        </ul>
+    </div> <!-- End  Offcanvas Addcart Wrapper -->
+
+</div> <!-- End  Offcanvas Addcart Section -->
+<!-- Start Offcanvas Mobile Menu Section -->
+<div id="offcanvas-wishlish" class="offcanvas offcanvas-rightside offcanvas-add-cart-section">
+    <!-- Start Offcanvas Header -->
+    <div class="offcanvas-header text-right">
+        <button class="offcanvas-close"><i class="ion-android-close"></i></button>
+    </div> <!-- ENd Offcanvas Header -->
+    <!-- Start Offcanvas Mobile Menu Wrapper -->
+    <div class="offcanvas-wishlist-wrapper">
+        <h4 class="offcanvas-title">Wishlist</h4>
+        <ul class="offcanvas-wishlist">
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-1/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Wheel</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$49.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-2/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Car Vails</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">3 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$500.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+            <li class="offcanvas-wishlist-item-single">
+                <div class="offcanvas-wishlist-item-block">
+                    <a href="#" class="offcanvas-wishlist-item-image-link">
+                        <img src="~/assets/images/product/default/home-3/default-1.jpg" alt=""
+                             class="offcanvas-wishlist-image">
+                    </a>
+                    <div class="offcanvas-wishlist-item-content">
+                        <a href="#" class="offcanvas-wishlist-item-link">Shock Absorber</a>
+                        <div class="offcanvas-wishlist-item-details">
+                            <span class="offcanvas-wishlist-item-details-quantity">1 x </span>
+                            <span class="offcanvas-wishlist-item-details-price">$350.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="offcanvas-wishlist-item-delete text-right">
+                    <a href="#" class="offcanvas-wishlist-item-delete"><i class="fa fa-trash-o"></i></a>
+                </div>
+            </li>
+        </ul>
+        <ul class="offcanvas-wishlist-action-button">
+            <li><a href="#" class="btn btn-block btn-golden">View wishlist</a></li>
+        </ul>
+    </div> <!-- End Offcanvas Mobile Menu Wrapper -->
+
+</div> <!-- End Offcanvas Mobile Menu Section -->
+<!-- Start Offcanvas Search Bar Section -->
+<div id="search" class="search-modal">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" placeholder="Nhập thông tin tìm kiếm ở đây" />
+        <button type="submit" class="btn btn-lg btn-golden">Tìm Kiếm</button>
+    </form>
+</div>
+<!-- End Offcanvas Search Bar Section -->
+<!-- Offcanvas Overlay -->
+<div class="offcanvas-overlay"></div>
+
+<!-- ...:::: Start Breadcrumb Section:::... -->
+<div class="breadcrumb-section breadcrumb-bg-color--golden">
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="breadcrumb-title">Tài Khoản</h3>
+                    <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                        <nav aria-label="breadcrumb">
+                            <ul>
+                                <li><a href="index.html">Trang Chủ</a></li>
+                                <li><a href="shop-grid-sidebar-left.html">Shop</a></li>
+                                <li class="active" aria-current="page">Tài Khoản</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- ...:::: End Breadcrumb Section:::... -->
+<!-- ...:::: Start Account Dashboard Section:::... -->
+<div class="account-dashboard">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-3 col-lg-3">
+                <!-- Nav tabs -->
+                <div class="dashboard_tab_button" data-aos="fade-up" data-aos-delay="0">
+                    <ul role="tablist" class="nav flex-column dashboard-list">
+                        <li>
+                            <a href="#dashboard" data-bs-toggle="tab"
+                               class="nav-link btn btn-block btn-md btn-black-default-hover active">Bản Điều Khiển</a>
+                        </li>
+                        <li>
+                            <a href="#orders" data-bs-toggle="tab"
+                               class="nav-link btn btn-block btn-md btn-black-default-hover">Đơn Hàng</a>
+                        </li>
+                        <li>
+                            <a href="#address" data-bs-toggle="tab"
+                               class="nav-link btn btn-block btn-md btn-black-default-hover">Địa Chỉ</a>
+                        </li>
+                        <li>
+                            <a href="#account-details" data-bs-toggle="tab"
+                               class="nav-link btn btn-block btn-md btn-black-default-hover">Chi Tiết Tài Khoản</a>
+                        </li>
+                        <li>
+                            <a href="login.html"
+                               class="nav-link btn btn-block btn-md btn-black-default-hover">Đăng Xuất</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-9">
+                <!-- Tab panes -->
+                <div class="tab-content dashboard_content" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tab-pane fade show active" id="dashboard">
+                        <h4>Bản Điều khiển </h4>
+                        <p>Từ trang tổng quan tài khoản của bạn. bạn có thể dễ dàng kiểm tra &amp; xem <a href="#">đơn đặt hàng</a>, của bản <a href="#">địa chỉ giao hàng và thanh toán</a> và <a href="#"> Chỉnh sửa mật khẩu và chi tiết tài khoản của bạn</a></p>
+                    </div>
+                    <div class="tab-pane fade" id="orders">
+                        <h4>Orders</h4>
+                        <div class="table_page table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Đơn Hàng</th>
+                                        <th>Ngày</th>
+                                        <th>Trang Thái</th>
+                                        <th>Tổng Tiền</th>
+                                        <th>Đang Tiến Hành</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>May 10, 2018</td>
+                                        <td><span class="success">Completed</span></td>
+                                        <td>$25.00 for 1 item </td>
+                                        <td><a href="cart.html" class="view">view</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>May 10, 2018</td>
+                                        <td>Processing</td>
+                                        <td>$17.00 for 1 item </td>
+                                        <td><a href="cart.html" class="view">view</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="address">
+                        <p>Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.</p>
+                        <h5 class="billing-address">Địa chỉ thanh toán</h5>
+                        <a href="#" class="view">Biên tập</a>
+                        <p><strong>Bobby Jackson</strong></p>
+                        <address>
+                            Địa: Nhập địa chỉ của bạn ở đây.
+                        </address>
+                    </div>
+                    <div class="tab-pane fade" id="account-details">
+                        <h3>Chi Tiết Tài Khoản </h3>
+                        <div class="login">
+                            <div class="login_form_container">
+                                <div class="account_login_form">
+                                    <form action="#">
+                                        <p>Bạn có sẵn sàng tạo một tài khoản? <a href="#">Đăng nhập thay thế!</a></p>
+                                        <div class="input-radio">
+                                            <span class="custom-radio">
+                                                <input type="radio" value="1"
+                                                       name="id_gender"> Nam.
+                                            </span>
+                                            <span class="custom-radio">
+                                                <input type="radio" value="1"
+                                                       name="id_gender"> Nữ.
+                                            </span>
+                                        </div> <br>
+                                        <div class="default-form-box mb-20">
+                                            <label>Họ</label>
+                                            <input type="text" name="first-name">
+                                        </div>
+                                        <div class="default-form-box mb-20">
+                                            <label>Tên</label>
+                                            <input type="text" name="last-name">
+                                        </div>
+                                        <div class="default-form-box mb-20">
+                                            <label>Email</label>
+                                            <input type="text" name="email-name">
+                                        </div>
+                                        <div class="default-form-box mb-20">
+                                            <label>Mật Khẩu</label>
+                                            <input type="password" name="user-password">
+                                        </div>
+                                        <div class="default-form-box mb-20">
+                                            <label>Ngày sinh</label>
+                                            <input type="date" name="birthday">
+                                        </div>
+                                        <span class="example">
+                                            (E.g.: 05/31/1970)
+                                        </span>
+                                        <br>
+                                        <label class="checkbox-default" for="offer">
+                                            <input type="checkbox" id="offer">
+                                            <span>Nhận ưu đãi từ các đối tác của chúng tôi</span>
+                                        </label>
+                                        <br>
+                                        <label class="checkbox-default checkbox-default-more-text" for="newsletter">
+                                            <input type="checkbox" id="newsletter">
+                                            <span>
+                                                Đăng ký nhận bản tin của chúng tôi<br><em>
+                                                    Bạn có thể hủy đăng ký bất kỳ lúc nào
+                                                    dễ dàng. Vì mục đích đó, vui lòng tìm thông tin liên hệ của chúng tôi trong thông báo pháp lý.
+                                                </em>
+                                            </span>
+                                        </label>
+                                        <div class="save_button mt-3">
+                                            <button class="btn btn-md btn-black-default-hover"
+                                                    type="submit">
+                                                Lưu
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- ...:::: End Account Dashboard Section:::... -->
