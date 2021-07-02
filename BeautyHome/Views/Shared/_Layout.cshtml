@@ -66,7 +66,7 @@
                                 <nav>
                                     <ul>
                                         <li class="has-dropdown">
-                                            <a class="active main-menu-link" href="index.html">Trang Chủ</a>
+                                            @Html.ActionLink("Trang Chủ","Index", "Home")
                                         </li>
                                         <li class="has-dropdown has-megaitem">
                                             <a href="shop-grid-sidebar-left.html">
@@ -80,19 +80,19 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about-us.html">Giới Thiệu</a>
+                                            @Html.ActionLink("Giỏ Hàng", "Index", "Cart")
                                         </li>
                                         <li>
-                                            <a href="contact-us.html">Liên Hệ</a>
+                                            @Html.ActionLink("Liên Hệ", "Index", "Contact")
                                         </li>
                                         <li>
-                                            <a href="cart.html">Giỏ Hàng</a>
+                                            @Html.ActionLink("Giới Thiệu", "Index", "About")
                                         </li>
                                         <li>
-                                            <a href="login.html">Login</a>
+                                            @Html.ActionLink("Tài Khoản", "Index", "Account")
                                         </li>
                                         <li>
-                                            <a href="my-account.html">Account</a>
+                                            @Html.ActionLink("Đăng Nhập", "Index", "Login")
                                         </li>
                                     </ul>
                                 </nav>
@@ -126,6 +126,8 @@
         @RenderBody()
     </header>
     <!-- Start Header Area -->
+
+
    
 
     <!-- Start Footer Section -->
