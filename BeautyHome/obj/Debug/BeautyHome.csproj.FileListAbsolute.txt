@@ -77,6 +77,12 @@ C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.Cor
 C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.CopyComplete
 C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.dll
 C:\Users\ASUS\Source\Repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.pdb
+<<<<<<< HEAD
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.xml
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.xml
+=======
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\BeautyHome.dll.config
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\BeautyHome.dll
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\BeautyHome.pdb
@@ -156,3 +162,4 @@ C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csp
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.CopyComplete
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.dll
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.pdb
+>>>>>>> 2657d1c1cdf41935483a1de83c328a405bf7e846
