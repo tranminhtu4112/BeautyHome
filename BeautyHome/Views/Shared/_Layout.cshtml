@@ -186,20 +186,26 @@
                 <div class="offcanvas-menu">
                     <ul>
                         <li>
-                            <a href="index.html"><span>Trang Chủ</span></a>
+                            @Html.ActionLink("Trang Chủ", "Index", "Home")
                         </li>
                         <li>
-                            <a href="shop-grid-sidebar-left.html"><span>Sản Phẩm</span></a>
+                            @Html.ActionLink("Sản Phẩm", "Index", "Product")
                         </li>
                         <li>
-                            <a href=""><span>Giới Thiệu</span></a>
+                            @Html.ActionLink("Giỏ Hàng", "Index", "Cart")
                         </li>
                         <li>
-                            <a href="contact-us.html"><span>Liên Hệ</span></a>
+                            @Html.ActionLink("Liên Hệ", "Index", "Contact")
                         </li>
-                        <li><a href="cart.html">Giỏ Hàng</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="my-account.html">Accout</a></li>
+                        <li>
+                            @Html.ActionLink("Giới Thiệu", "Index", "About")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Tài Khoản", "Index", "Account")
+                        </li>
+                        <li>
+                            @Html.ActionLink("Đăng Nhập", "Index", "Login")
+                        </li>
                     </ul>
                 </div> <!-- End Mobile Menu Nav -->
             </div> <!-- End Mobile Menu -->
