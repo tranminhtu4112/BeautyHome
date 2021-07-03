@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Tài khoản";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -52,7 +52,7 @@
                                class="nav-link btn btn-block btn-md btn-black-default-hover">Chi Tiết Tài Khoản</a>
                         </li>
                         <li>
-                            <a href="login.html"
+                            <a href="Account/Logout"
                                class="nav-link btn btn-block btn-md btn-black-default-hover">Đăng Xuất</a>
                         </li>
                     </ul>
@@ -100,10 +100,9 @@
                     <div class="tab-pane" id="address">
                         <p>Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.</p>
                         <h5 class="billing-address">Địa chỉ thanh toán</h5>
-                        <a href="#" class="view">Biên tập</a>
-                        <p><strong>Bobby Jackson</strong></p>
+                        
                         <address>
-                            Địa: Nhập địa chỉ của bạn ở đây.
+                            @Session["address"].ToString()
                         </address>
                     </div>
                     <div class="tab-pane fade" id="account-details">
@@ -111,41 +110,39 @@
                         <div class="login">
                             <div class="login_form_container">
                                 <div class="account_login_form">
-                                    <form action="#">
-                                        <p>Bạn có sẵn sàng tạo một tài khoản? <a href="#">Đăng nhập thay thế!</a></p>
-                                        <div class="input-radio">
-                                            <span class="custom-radio">
-                                                <input type="radio" value="1"
-                                                       name="id_gender"> Nam.
-                                            </span>
-                                            <span class="custom-radio">
-                                                <input type="radio" value="1"
-                                                       name="id_gender"> Nữ.
-                                            </span>
-                                        </div> <br>
+                                    <form action="Account/UpdateAccount" method="post">
+                                        <p>Bạn có sẵn sàng tạo một tài khoản? <a href="Login/Index">Đăng nhập thay thế!</a></p>
+                                        <input type="hidden" name="userid" value="@Session["userid"].ToString()">
                                         <div class="default-form-box mb-20">
-                                            <label>Họ</label>
-                                            <input type="text" name="first-name">
+                                            <label>Tên tài khoản</label>
+                                            <input type="text" name="username" value="@Session["username"].ToString()" readonly>
                                         </div>
+
                                         <div class="default-form-box mb-20">
-                                            <label>Tên</label>
-                                            <input type="text" name="last-name">
+                                            <label>Mật khẩu</label>
+                                            <input type="password" name="password" value="@Session["password"].ToString()">
                                         </div>
+
+                                        <div class="default-form-box mb-20">
+                                            <label>Tên đầy đủ</label>
+                                            <input type="text" name="fullname" value="@Session["fullname"].ToString()">
+                                        </div>
+
                                         <div class="default-form-box mb-20">
                                             <label>Email</label>
-                                            <input type="text" name="email-name">
+                                            <input type="text" name="email" value="@Session["email"].ToString()">
                                         </div>
+
                                         <div class="default-form-box mb-20">
-                                            <label>Mật Khẩu</label>
-                                            <input type="password" name="user-password">
+                                            <label>Địa chỉ</label>
+                                            <input type="text" name="address" value="@Session["address"].ToString()">
                                         </div>
+
                                         <div class="default-form-box mb-20">
-                                            <label>Ngày sinh</label>
-                                            <input type="date" name="birthday">
+                                            <label>Số điện thoại</label>
+                                            <input type="text" name="phone" value="@Session["phone"].ToString()">
                                         </div>
-                                        <span class="example">
-                                            (E.g.: 05/31/1970)
-                                        </span>
+
                                         <br>
                                         <label class="checkbox-default" for="offer">
                                             <input type="checkbox" id="offer">

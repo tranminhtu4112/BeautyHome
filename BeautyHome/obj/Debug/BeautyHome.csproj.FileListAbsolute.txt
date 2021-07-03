@@ -163,3 +163,7 @@ C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csp
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.dll
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.pdb
 >>>>>>> 2657d1c1cdf41935483a1de83c328a405bf7e846
+C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.dll
+C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.xml
+C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.xml

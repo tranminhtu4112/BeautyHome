@@ -53,7 +53,8 @@
     <Property Name="product_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="type_product_id" Type="Int64" />
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="descriptionDetails" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="evaluate" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
     <Property Name="amount" Type="Double" />
     <Property Name="price" Type="Double" />
@@ -77,11 +78,12 @@
       <PropertyRef Name="user_id" />
     </Key>
     <Property Name="user_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="user_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="password" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
     <Property Name="role" Type="Int32" Nullable="false" />
     <NavigationProperty Name="orders" Relationship="Self.FK__order__user_id__34C8D9D1" FromRole="user" ToRole="order" />
   </EntityType>

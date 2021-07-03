@@ -75,6 +75,7 @@ Create table [product]
 	evaluate Char(10) NULL,
 	amount Float NULL,
 	price Float NULL,
+	color Nvarchar(20) NULL,
 Primary Key (product_id)
 ) 
 go
