@@ -167,3 +167,5 @@ C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.dll
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.dll
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.xml
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\EntityFramework.SqlServer.xml
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.Properties.Resources.resources
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.GenerateResource.cache
