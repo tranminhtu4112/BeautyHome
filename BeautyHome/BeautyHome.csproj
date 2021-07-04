@@ -438,6 +438,7 @@
     <Content Include="Views\Checkout\Index.cshtml" />
     <Content Include="Views\Compare\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Shared\Admin_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

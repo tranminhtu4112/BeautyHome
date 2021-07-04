@@ -50,9 +50,10 @@
     <Property Name="name" Type="nvarchar" MaxLength="50" />
     <Property Name="descriptionDetails" Type="nvarchar" MaxLength="200" />
     <Property Name="description" Type="nvarchar" MaxLength="500" />
-    <Property Name="evaluate" Type="char" MaxLength="10" />
+    <Property Name="evaluate" Type="float" />
     <Property Name="amount" Type="float" />
     <Property Name="price" Type="float" />
+    <Property Name="color" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="type_product">
     <Key>
