@@ -1,0 +1,191 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row tm-content-row">
+        <div class="col-12 tm-block-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+                <h2 class="tm-block-title">Danh Sách Tài Khoản</h2>
+                <p class="text-white">Tài Khoản</p>
+                <select class="custom-select">
+                    <option value="0">Chọn Tài Khoản</option>
+                    <option value="1">Admin</option>
+                    <option value="2">Editor</option>
+                    <option value="3">Merchant</option>
+                    <option value="4">Customer</option>
+
+                </select>
+                <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
+                    <div class="tm-bg-primary-dark tm-block tm-block-products" style="width:1050px;">
+                        <div class="tm-product-table-container">
+                            <table class="table table-hover tm-table-small tm-product-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">&nbsp;</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">TÊN TÀI KHOẢN</th>
+                                        <th scope="col">EMAIL</th>
+                                        <th scope="col">SĐT</th>
+                                        <th scope="col">&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" /></th>
+                                        <td class="tm-product-name">Lorem Ipsum Product 1</td>
+                                        <td>1,450</td>
+                                        <td>550</td>
+                                        <td>28 March 2019</td>
+                                        <td>
+                                            <a href="#" class="tm-product-delete-link">
+                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" /></th>
+                                        <td class="tm-product-name">Lorem Ipsum Product 2</td>
+                                        <td>1,250</td>
+                                        <td>750</td>
+                                        <td>21 March 2019</td>
+                                        <td>
+                                            <a href="#" class="tm-product-delete-link">
+                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" /></th>
+                                        <td class="tm-product-name">Lorem Ipsum Product 3</td>
+                                        <td>1,100</td>
+                                        <td>900</td>
+                                        <td>18 Feb 2019</td>
+                                        <td>
+                                            <a href="#" class="tm-product-delete-link">
+                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" /></th>
+                                        <td class="tm-product-name">Lorem Ipsum Product 4</td>
+                                        <td>1,400</td>
+                                        <td>600</td>
+                                        <td>24 Feb 2019</td>
+                                        <td>
+                                            <a href="#" class="tm-product-delete-link">
+                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" /></th>
+                                        <td class="tm-product-name">Lorem Ipsum Product 5</td>
+                                        <td>1,800</td>
+                                        <td>200</td>
+                                        <td>22 Feb 2019</td>
+                                        <td>
+                                            <a href="#" class="tm-product-delete-link">
+                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" /></th>
+                                        <td class="tm-product-name">Lorem Ipsum Product 6</td>
+                                        <td>1,000</td>
+                                        <td>1,000</td>
+                                        <td>20 Feb 2019</td>
+                                        <td>
+                                            <a href="#" class="tm-product-delete-link">
+                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- row -->
+    <div class="row tm-content-row">
+        <div class="tm-block-col tm-col-avatar">
+            <div class="tm-bg-primary-dark tm-block tm-block-avatar">
+                <h2 class="tm-block-title">Đổi Ảnh Đại Diện</h2>
+                <div class="tm-avatar-container">
+                    <img src="~/admin_assets/img/avatar.png"
+                         alt="Avatar"
+                         class="tm-avatar img-fluid mb-4" />
+                    <a href="#" class="tm-avatar-delete-link">
+                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
+                    </a>
+                </div>
+                <button class="btn btn-primary btn-block text-uppercase">
+                    Thêm Ảnh Mới
+                </button>
+            </div>
+        </div>
+        <div class="tm-block-col tm-col-account-settings">
+            <div class="tm-bg-primary-dark tm-block tm-block-settings">
+                <h2 class="tm-block-title">Thiết Lập Tài Khoản</h2>
+                <form action="" class="tm-signup-form row">
+                    <div class="form-group col-lg-6">
+                        <label for="name">Tên Tài Khoản</label>
+                        <input id="name"
+                               name="name"
+                               type="text"
+                               class="form-control validate" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="email">Email</label>
+                        <input id="email"
+                               name="email"
+                               type="email"
+                               class="form-control validate" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="password">Mật Khẩu</label>
+                        <input id="password"
+                               name="password"
+                               type="password"
+                               class="form-control validate" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="password2">Nhập Lại Mật Khẩu</label>
+                        <input id="password2"
+                               name="password2"
+                               type="password"
+                               class="form-control validate" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="phone">Điện Thoại</label>
+                        <input id="phone"
+                               name="phone"
+                               type="tel"
+                               class="form-control validate" />
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label class="tm-hide-sm">&nbsp;</label>
+                        <button type="submit"
+                                class="btn btn-primary btn-block text-uppercase">
+                            Cập nhật hồ sơ của bạn
+                        </button>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit"
+                                class="btn btn-primary btn-block text-uppercase">
+                            Xóa tài khoản của bạn
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

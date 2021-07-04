@@ -167,6 +167,11 @@
     </Compile>
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin_AccountController.cs" />
+    <Compile Include="Controllers\Admin_AddproductController.cs" />
+    <Compile Include="Controllers\Admin_EditproductController.cs" />
+    <Compile Include="Controllers\Admin_HomeController.cs" />
+    <Compile Include="Controllers\Admin_ProductController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\CompareController.cs" />
@@ -186,6 +191,49 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin_assets\css\bootstrap.min.css" />
+    <Content Include="admin_assets\css\fontawesome.min.css" />
+    <Content Include="admin_assets\css\templatemo-style.css" />
+    <Content Include="admin_assets\img\arrow-down.png" />
+    <Content Include="admin_assets\img\avatar.png" />
+    <Content Include="admin_assets\img\check-mark.png" />
+    <Content Include="admin_assets\img\notification-01.jpg" />
+    <Content Include="admin_assets\img\notification-02.jpg" />
+    <Content Include="admin_assets\img\notification-03.jpg" />
+    <Content Include="admin_assets\img\product-image.jpg" />
+    <Content Include="admin_assets\jquery-ui-datepicker\AUTHORS.txt" />
+    <Content Include="admin_assets\jquery-ui-datepicker\external\jquery\jquery.js" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="admin_assets\jquery-ui-datepicker\index.html" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.css" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.js" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.min.css" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.min.js" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.structure.css" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.structure.min.css" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.theme.css" />
+    <Content Include="admin_assets\jquery-ui-datepicker\jquery-ui.theme.min.css" />
+    <Content Include="admin_assets\jquery-ui-datepicker\LICENSE.txt" />
+    <Content Include="admin_assets\js\bootstrap.min.js" />
+    <Content Include="admin_assets\js\Chart.min.js" />
+    <Content Include="admin_assets\js\jquery-3.3.1.min.js" />
+    <Content Include="admin_assets\js\moment.min.js" />
+    <Content Include="admin_assets\js\tooplate-scripts.js" />
+    <Content Include="admin_assets\webfonts\fa-brands-400.svg" />
+    <Content Include="admin_assets\webfonts\fa-regular-400.svg" />
+    <Content Include="admin_assets\webfonts\fa-solid-900.svg" />
     <Content Include="assets\css\plugins\animate.min.css" />
     <Content Include="assets\css\plugins\aos.min.css" />
     <Content Include="assets\css\plugins\jquery.lineProgressbar.css" />
@@ -399,6 +447,19 @@
     <Content Include="assets\fonts\simple-line-icon-fonts\Simple-Line-Iconsb26c.ttf" />
     <Content Include="assets\fonts\simple-line-icon-fonts\Simple-Line-Iconsb26c.woff" />
     <Content Include="assets\fonts\simple-line-icon-fonts\Simple-Line-Iconsb26c.woff2" />
+    <Content Include="admin_assets\jquery-ui-datepicker\package.json" />
+    <Content Include="admin_assets\webfonts\fa-brands-400.eot" />
+    <Content Include="admin_assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="admin_assets\webfonts\fa-brands-400.woff" />
+    <Content Include="admin_assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="admin_assets\webfonts\fa-regular-400.eot" />
+    <Content Include="admin_assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="admin_assets\webfonts\fa-regular-400.woff" />
+    <Content Include="admin_assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="admin_assets\webfonts\fa-solid-900.eot" />
+    <Content Include="admin_assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="admin_assets\webfonts\fa-solid-900.woff" />
+    <Content Include="admin_assets\webfonts\fa-solid-900.woff2" />
     <EntityDeploy Include="Context\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -439,6 +500,11 @@
     <Content Include="Views\Compare\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Shared\Admin_Layout.cshtml" />
+    <Content Include="Views\Admin_Home\Index.cshtml" />
+    <Content Include="Views\Admin_Product\Index.cshtml" />
+    <Content Include="Views\Admin_Editproduct\Index.cshtml" />
+    <Content Include="Views\Admin_Addproduct\Index.cshtml" />
+    <Content Include="Views\Admin_Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
