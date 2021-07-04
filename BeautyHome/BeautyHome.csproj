@@ -167,6 +167,7 @@
     </Compile>
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin_AccountController.cs" />
     <Compile Include="Controllers\Admin_AddproductController.cs" />
     <Compile Include="Controllers\Admin_EditproductController.cs" />
     <Compile Include="Controllers\Admin_HomeController.cs" />
@@ -503,6 +504,7 @@
     <Content Include="Views\Admin_Product\Index.cshtml" />
     <Content Include="Views\Admin_Editproduct\Index.cshtml" />
     <Content Include="Views\Admin_Addproduct\Index.cshtml" />
+    <Content Include="Views\Admin_Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
