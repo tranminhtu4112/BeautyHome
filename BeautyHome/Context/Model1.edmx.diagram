@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9e6bd3a6d3b44b9c83ef53709afe6b40" Name="Diagram1">
+      <Diagram DiagramId="bce5a0acfbf94478bf95f2621c187def" Name="Diagram1">
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.comment_product" Width="1.5" PointX="7.5" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.furniture" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.image_product" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
@@ -12,12 +12,12 @@
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.product" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.type_product" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.user" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="SQL_BeautyHomeModel.FK__comment_p__produ__32E0915F" ManuallyRouted="false" />
-        <AssociationConnector Association="SQL_BeautyHomeModel.FK__type_prod__furni__300424B4" ManuallyRouted="false" />
-        <AssociationConnector Association="SQL_BeautyHomeModel.FK__image_pro__produ__31EC6D26" ManuallyRouted="false" />
-        <AssociationConnector Association="SQL_BeautyHomeModel.FK__order__product_i__33D4B598" ManuallyRouted="false" />
-        <AssociationConnector Association="SQL_BeautyHomeModel.FK__order__user_id__34C8D9D1" ManuallyRouted="false" />
-        <AssociationConnector Association="SQL_BeautyHomeModel.FK__product__type_pr__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="SQL_BeautyHomeModel.FK__comment_p__produ__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="SQL_BeautyHomeModel.FK__type_prod__furni__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="SQL_BeautyHomeModel.FK__image_pro__produ__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="SQL_BeautyHomeModel.FK__order__product_i__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="SQL_BeautyHomeModel.FK__order__user_id__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="SQL_BeautyHomeModel.FK__product__type_pr__33D4B598" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
