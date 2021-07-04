@@ -20,7 +20,7 @@ namespace BeautyHome.Controllers
         //POST: Register
         [HttpPost]
 
-        public void Register(String username, string password, string fullname, string email, String address, string phone)
+        public ActionResult Register(String username, string password, string fullname, string email, String address, string phone)
         {
             if (ModelState.IsValid)
             {
@@ -39,16 +39,17 @@ namespace BeautyHome.Controllers
                     _user.role = 1; // set role la khach hang = 1
                     db.users.Add(_user);
                     db.SaveChanges();
-                    Response.Redirect("/Home/Index");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
                     ViewBag.error = "Tên đăng nhập đã tồn tại !";
-                    Response.Redirect("/Login/Index");
+                    return RedirectToAction("Index", "Login");
                 }
             }
-            Response.Redirect("/Login/Index");
+            return RedirectToAction("Index", "Login");
         }
+        // dang nhap
         [HttpPost]
         public ActionResult ReLogin(string username, string password)
         {
@@ -61,7 +62,7 @@ namespace BeautyHome.Controllers
                     //add session
                     Session["userid"] = data.FirstOrDefault().user_id;
                     Session["username"] = data.FirstOrDefault().user_name;
-                    Session["password"] = data.FirstOrDefault().password;
+                    Session["password"] = password;
                     Session["fullname"] = data.FirstOrDefault().full_name;
                     Session["email"] = data.FirstOrDefault().email;
                     Session["phone"] = data.FirstOrDefault().phone;
