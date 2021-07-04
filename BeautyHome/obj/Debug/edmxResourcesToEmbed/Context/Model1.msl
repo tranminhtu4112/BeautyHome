@@ -57,6 +57,7 @@
           <ScalarProperty Name="evaluate" ColumnName="evaluate" />
           <ScalarProperty Name="amount" ColumnName="amount" />
           <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="color" ColumnName="color" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

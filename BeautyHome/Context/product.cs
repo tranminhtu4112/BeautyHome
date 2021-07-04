@@ -26,9 +26,10 @@ namespace BeautyHome.Context
         public string name { get; set; }
         public string descriptionDetails { get; set; }
         public string description { get; set; }
-        public string evaluate { get; set; }
+        public Nullable<double> evaluate { get; set; }
         public Nullable<double> amount { get; set; }
         public Nullable<double> price { get; set; }
+        public string color { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<comment_product> comment_product { get; set; }
