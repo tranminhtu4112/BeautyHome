@@ -35,7 +35,7 @@ namespace BeautyHome.Controllers
                         Session["address"] = Convert.ToString(reader.GetValue(4));
                         Session["email"] = Convert.ToString(reader.GetValue(5));
                         Session["phone"] = Convert.ToString(reader.GetValue(6));
-
+                        Session["role"] = Convert.ToInt32(reader.GetValue(7));
                     }
                 }
             }

@@ -11,6 +11,15 @@ namespace BeautyHome.Controllers
         // GET: Admin_Account
         public ActionResult Index()
         {
+            try
+            {
+                if (Int32.Parse(Session["role"].ToString()) == 1)
+                    return RedirectToAction("Index", "Login");
+            }
+            catch
+            {
+                return RedirectToAction("Index", "Login");
+            }
             return View();
         }
     }
