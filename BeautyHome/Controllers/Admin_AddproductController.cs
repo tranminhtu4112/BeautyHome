@@ -9,11 +9,11 @@ namespace BeautyHome.Controllers
     public class Admin_AddproductController : Controller
     {
         // GET: Admin_Addproduct
-        public ActionResult Index()
+        public ActionResult Index(String fullname, String count, String address, String phone, String email)
         {
             try
             {
-                if (Int32.Parse(Session["role"].ToString()) == 1)
+                if (Convert.ToInt32(Session["role"].ToString()) == 1)
                     return RedirectToAction("Index", "Login");
             }
             catch
