@@ -18,6 +18,7 @@ namespace BeautyHome.Controllers
         public ActionResult Index()
         {
             string sql = "select * from [user] where user_id = " + Session["userid"].ToString();
+
             SqlCommand cmd = new SqlCommand();
             connection.Open();
             cmd.Connection = connection;
