@@ -13,7 +13,7 @@ namespace BeautyHome.Controllers
         {
             try
             {
-                if (Int32.Parse(Session["role"].ToString()) == 1)
+                if (Convert.ToInt32(Session["role"].ToString()) == 1)
                     return RedirectToAction("Index", "Login");
             }
             catch
