@@ -11,7 +11,7 @@ namespace BeautyHome.Controllers
     {
         public BeautyHomeEntities db = new BeautyHomeEntities();
         // GET: Admin_Addproduct
-        public ActionResult Index(String productId, String fullname, String count, String address, String phone, String email)
+        public ActionResult Index()
         {
             try
             {
