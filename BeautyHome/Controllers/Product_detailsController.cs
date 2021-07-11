@@ -21,7 +21,7 @@ namespace BeautyHome.Controllers
         {
             long userId = long.Parse(Session["userid"].ToString());
 
-            String SQLInsert = "INSERT INTO HOADON(HOADON.MAHOADON, HOADON.MANHANVIEN, HOADON.TENKHACHHANG, HOADON.NGAYLAPDON, HOADON.GIA) " +
+            /*String SQLInsert = "INSERT INTO HOADON(HOADON.MAHOADON, HOADON.MANHANVIEN, HOADON.TENKHACHHANG, HOADON.NGAYLAPDON, HOADON.GIA) " +
             "VALUES(@MAHOADON, @MANHANVIEN, @TENKHACHHANG, @NGAYLAPDON, @GIA)";
             try
             {
@@ -40,7 +40,7 @@ namespace BeautyHome.Controllers
             {
                 e.ToString();
                 return false;
-            }
+            }*/
             return View();
         }
     }

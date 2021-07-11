@@ -1,8 +1,5 @@
 ﻿using BeautyHome.Context;
-<<<<<<< HEAD
 using BeautyHome.Models;
-=======
->>>>>>> fe27e5e7b15610a2ba346cc517de9ef8ee44bff8
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -58,7 +55,9 @@ namespace BeautyHome.Controllers
             }
             objtypeProductView.listProductViews = listpr;
             return View(objtypeProductView);
-            }
         }
+
+
+
     }
 }
