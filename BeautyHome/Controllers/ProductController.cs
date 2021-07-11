@@ -1,5 +1,8 @@
 ﻿using BeautyHome.Context;
+<<<<<<< HEAD
 using BeautyHome.Models;
+=======
+>>>>>>> fe27e5e7b15610a2ba346cc517de9ef8ee44bff8
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -17,6 +20,7 @@ namespace BeautyHome.Controllers
         // GET: Product
         public ActionResult Index(long furId)
         {
+<<<<<<< HEAD
             var listtype = db.type_product.ToList();
             var listfur = db.furnitures.ToList();
 /*            var listpr = db.products.ToList();*/
@@ -30,6 +34,10 @@ namespace BeautyHome.Controllers
                 "where type_product.type_product_id = product.type_product_id " +
                 "and furniture.furniture_id = type_product.furniture_id and furniture.furniture_id = " + furId;
             List<ProductView> listpr = new List<ProductView>();
+=======
+            string sql = "";
+            
+>>>>>>> fe27e5e7b15610a2ba346cc517de9ef8ee44bff8
             SqlCommand cmd = new SqlCommand();
             connection.Open();
             cmd.Connection = connection;
@@ -40,6 +48,7 @@ namespace BeautyHome.Controllers
                 {
                     while (reader.Read())
                     {
+<<<<<<< HEAD
                         ProductView productView = new ProductView();
 
                         productView.productId = Convert.ToInt64(reader.GetValue(0));
@@ -56,6 +65,20 @@ namespace BeautyHome.Controllers
             }
             objtypeProductView.listProductViews = listpr;
             return View(objtypeProductView);
+=======
+                        Session["userid"] = Convert.ToInt64(reader.GetValue(0));
+                        Session["username"] = Convert.ToString(reader.GetValue(1));
+                        Session["password"] = Session["password"];
+                        Session["fullname"] = Convert.ToString(reader.GetValue(3));
+                        Session["address"] = Convert.ToString(reader.GetValue(4));
+                        Session["email"] = Convert.ToString(reader.GetValue(5));
+                        Session["phone"] = Convert.ToString(reader.GetValue(6));
+                        Session["role"] = Convert.ToInt32(reader.GetValue(7));
+                    }
+                }
+            }
+            return View();
+>>>>>>> fe27e5e7b15610a2ba346cc517de9ef8ee44bff8
         }
 
     }
