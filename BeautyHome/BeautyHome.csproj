@@ -507,6 +507,7 @@
     <Content Include="Views\Admin_Editproduct\Index.cshtml" />
     <Content Include="Views\Admin_Addproduct\Index.cshtml" />
     <Content Include="Views\Admin_Account\Index.cshtml" />
+    <Content Include="Views\Product\Type.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

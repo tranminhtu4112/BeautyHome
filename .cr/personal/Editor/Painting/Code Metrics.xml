@@ -2,5 +2,6 @@
 <Root Type="DevExpress.CodeAnalysis.Metrics.CodeMetricEngineOptions">
   <Options Language="Neutral">
     <Enabled>True</Enabled>
+    <ActiveMetric>MaintenanceComplexity</ActiveMetric>
   </Options>
 </Root>
