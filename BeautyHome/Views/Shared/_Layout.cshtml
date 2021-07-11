@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model BeautyHome.Models.TypeProductView
+
+<!DOCTYPE html>
 <html lang="zxx">
 
 
@@ -74,10 +76,12 @@
                                                 Sản Phẩm <i class="fa fa-angle-down"></i>
                                             </a>
                                             <ul class="sub-menu">
-                                                <li><a href="shop-grid-sidebar-left.html">Đèn</a></li>
-                                                <li><a href="shop-grid-sidebar-left.html">Ghế</a></li>
-                                                <li><a href="shop-grid-sidebar-left.html">Đồng Hồ</a></li>
-                                                <li><a href="shop-grid-sidebar-left.html">Ấm Đun</a></li>
+                                                @foreach (var item in Model.listfur)
+                                                {
+                                                    <li><a href="/Product/Index?furId=@item.furniture_id">@item.name</a></li>
+                                                }
+
+
                                             </ul>
                                         </li>
                                         <li>
@@ -566,8 +570,6 @@
         </div>
     </footer>
     <!-- End Footer Section -->
-
-
     <!-- Start Modal Add cart -->
     <div class="modal fade" id="modalAddcart" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog  modal-dialog-centered modal-xl" role="document">
@@ -817,8 +819,9 @@
     <!-- Main JS -->
     <script src="~/assets/js/main.js"></script>
 
-    <div class="zalo-chat-widget" data-oaid="579745863508352884" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="1" data-width="350" data-height="420"></div>
+    <div class="zalo-chat-widget" data-oaid="489162865109599099" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="1" data-width="350" data-height="420"></div>
 
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <script src="https://sp.zalo.me/plugins/sdk.js"></script>
 </body>
 

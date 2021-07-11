@@ -67,7 +67,11 @@ namespace BeautyHome.Controllers
                     Session["email"] = data.FirstOrDefault().email;
                     Session["phone"] = data.FirstOrDefault().phone;
                     Session["address"] = data.FirstOrDefault().address;
-
+                    Session["role"] = data.FirstOrDefault().role;
+                    if(Convert.ToInt32(data.FirstOrDefault().role.ToString()) == 0)
+                    {
+                        return RedirectToAction("Index", "Admin_Home");
+                    }
                     return RedirectToAction("Index", "Home");
                 }
                 else
