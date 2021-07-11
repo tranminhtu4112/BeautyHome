@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model BeautyHome.Models.TypeProductView
+
+<!DOCTYPE html>
 <html lang="zxx">
 
 
@@ -74,10 +76,12 @@
                                                 Sản Phẩm <i class="fa fa-angle-down"></i>
                                             </a>
                                             <ul class="sub-menu">
-                                                <li><a href="shop-grid-sidebar-left.html">Đèn</a></li>
-                                                <li><a href="shop-grid-sidebar-left.html">Ghế</a></li>
-                                                <li><a href="shop-grid-sidebar-left.html">Đồng Hồ</a></li>
-                                                <li><a href="shop-grid-sidebar-left.html">Ấm Đun</a></li>
+                                                @foreach (var item in Model.listfur)
+                                                {
+                                                    <li><a href="/Product/Index?furId=@item.furniture_id">@item.name</a></li>
+                                                }
+
+
                                             </ul>
                                         </li>
                                         <li>
