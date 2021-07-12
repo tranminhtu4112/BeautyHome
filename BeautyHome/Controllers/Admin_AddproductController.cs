@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeautyHome.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,9 @@ namespace BeautyHome.Controllers
 {
     public class Admin_AddproductController : Controller
     {
+        public BeautyHomeEntities db = new BeautyHomeEntities();
         // GET: Admin_Addproduct
-        public ActionResult Index(String fullname, String count, String address, String phone, String email)
+        public ActionResult Index()
         {
             try
             {
@@ -20,6 +22,7 @@ namespace BeautyHome.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+            order _order = new order();
             return View();
         }
     }

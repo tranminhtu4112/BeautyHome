@@ -17,10 +17,10 @@ namespace BeautyHome.Controllers
         // GET: Product
         public ActionResult Index(long furId)
         {
-            var listtype = db.type_product.ToList();
-            var listfur = db.furnitures.ToList();
-                 
+
             TypeProductView objtypeProductView = new TypeProductView();
+            var listtype = db.type_product.ToList();
+            var listfur = db.furnitures.ToList(); 
             objtypeProductView.listtype = listtype;
             objtypeProductView.listfur = listfur;
 
@@ -58,7 +58,7 @@ namespace BeautyHome.Controllers
             objtypeProductView.listProductViews = listpr;
             return View(objtypeProductView);
         }
-        public ActionResult Type(long typeprId)
+        public ActionResult Type(long typeId)
         {
             TypeProductView objtypeProductView = new TypeProductView();
             var listtype = db.type_product.ToList();
@@ -68,7 +68,7 @@ namespace BeautyHome.Controllers
             string sql = "select * " +
                 "from product, furniture, type_product " +
                 "where type_product.type_product_id = product.type_product_id " +
-                "and furniture.furniture_id = type_product.furniture_id and type_product.type_product_id = " + typeprId;
+                "and furniture.furniture_id = type_product.furniture_id and type_product.type_product_id = " + typeId;
 
             List<ProductView> listpr = new List<ProductView>();
             SqlCommand cmd = new SqlCommand();
@@ -98,6 +98,38 @@ namespace BeautyHome.Controllers
             objtypeProductView.listProductViews = listpr;
             return View(objtypeProductView);
         }
+        public ActionResult Typepr(long typeprId)
+        {
+            TypeProductView objtypeProductView = new TypeProductView();
+            var listtype = db.type_product.ToList();
+            var listfur = db.furnitures.ToList();
+            objtypeProductView.listtype = listtype;
+            objtypeProductView.listfur = listfur;
+            string sql = "select * " +
+                "from type_product, furniture" +
+                "where furniture.furniture_id = type_product.type_product_id and furniture.furniture_id =" + typeprId;
+
+            List<ProductView> listpr = new List<ProductView>();
+            SqlCommand cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
+            cmd.CommandText = sql;
+            using (DbDataReader reader = cmd.ExecuteReader())
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        type_product type_Product  = new type_product();
+                        type_Product.type_product_id = Convert.ToInt64(reader.GetValue(0));
+                        type_Product.name = Convert.ToString(reader.GetValue(1));
+
+                    }
+                }
+
+            objtypeProductView.listtype = listtype;
+            return View(objtypeProductView);
+        }
+
 
 
     }

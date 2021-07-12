@@ -42,7 +42,7 @@
                             <ul class="sidebar-menu">
                                 @foreach (var item in Model.listtype)
                                 {
-                                    <li><a href="/Product/Type?typeprId=@item.type_product_id">@item.name</a></li>
+                                    <li><a href="/Product/Type?typeId=@item.type_product_id">@item.name</a></li>
                                 }
 
 
@@ -182,7 +182,7 @@
                                                     <div class="product-default-single-item product-color--golden"
                                                          data-aos="fade-up" data-aos-delay="0">
                                                         <div class="image-box">
-                                                            <a href="product-details-default.html" class="image-link">
+                                                            <a href="/Product_details/Index?prId=@item.productId" class="image-link">
                                                                 <img src="~/assets/images/product/default/home-1/default-9.jpg"
                                                                      alt="">
                                                                 <img src="~/assets/images/product/default/home-1/default-10.jpg"

@@ -64,6 +64,16 @@
     <NavigationProperty Name="orders" Relationship="Self.FK__order__product_i__31EC6D26" FromRole="product" ToRole="order" />
     <NavigationProperty Name="type_product" Relationship="Self.FK__product__type_pr__33D4B598" FromRole="product" ToRole="type_product" />
   </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="type_product">
     <Key>
       <PropertyRef Name="type_product_id" />
@@ -166,6 +176,7 @@
     <EntitySet Name="image_product" EntityType="Self.image_product" />
     <EntitySet Name="orders" EntityType="Self.order" />
     <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="type_product" EntityType="Self.type_product" />
     <EntitySet Name="users" EntityType="Self.user" />
     <AssociationSet Name="FK__comment_p__produ__300424B4" Association="Self.FK__comment_p__produ__300424B4">
