@@ -57,7 +57,5 @@ namespace BeautyHome.Controllers
             return View(objtypeProductView);
         }
 
-
-
     }
 }
