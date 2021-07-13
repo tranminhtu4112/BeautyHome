@@ -1,4 +1,5 @@
 ﻿using BeautyHome.Context;
+using BeautyHome.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,6 +18,12 @@ namespace BeautyHome.Controllers
         // GET: Account
         public ActionResult Index()
         {
+            var listtype = db.type_product.ToList();
+            var listfur = db.furnitures.ToList();
+            TypeProductView objtypeProductView = new TypeProductView();
+            objtypeProductView.listtype = listtype;
+            objtypeProductView.listfur = listfur;
+
             string sql = "select * from [user] where user_id = " + Session["userid"].ToString();
 
             SqlCommand cmd = new SqlCommand();
@@ -40,7 +47,7 @@ namespace BeautyHome.Controllers
                     }
                 }
             }
-                        return View();
+                        return View(objtypeProductView);
         }
         [HttpPost]
         public ActionResult UpdateAccount(String userid ,String username, string password, string fullname, string email, String address, string phone)

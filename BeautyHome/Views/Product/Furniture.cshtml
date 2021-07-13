@@ -173,14 +173,14 @@
                                     <!-- Start Grid View Product -->
                                     <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
                                         <div class="row">
-                                            @foreach (var item in Model.listProduct)
+                                            @foreach (var item in Model.listProductViews)
                                             {
                                                 <div class="col-xl-4 col-sm-6 col-12">
                                                     <!-- Start Product Default Single Item -->
                                                     <div class="product-default-single-item product-color--golden"
                                                          data-aos="fade-up" data-aos-delay="0">
                                                         <div class="image-box">
-                                                            <a href="/Product_details/Index?prId=@item.product_id" class="image-link">
+                                                            <a href="/Product_details/Index?prId=@item.productId" class="image-link">
                                                                 <img src="~/assets/images/product/default/home-1/default-9.jpg"
                                                                      alt="">
                                                                 <img src="~/assets/images/product/default/home-1/default-10.jpg"
@@ -188,7 +188,7 @@
                                                             </a>
                                                             <div class="action-link">
                                                                 <div class="action-link-left">
-                                                                    <a href="/Cart/AddCart?productId=@item.product_id">
+                                                                    <a href="/Cart/AddCart?productId=@item.productId">
                                                                         + Giỏ hàng
                                                                     </a>
                                                                 </div>
@@ -210,7 +210,7 @@
                                                             <div class="content-left">
                                                                 <h6 class="title">
                                                                     <a href="product-details-default.html">
-                                                                     @item.name
+                                                                        @item.name
                                                                     </a>
                                                                 </h6>
                                                                 <ul class="review-star">
@@ -548,5 +548,3 @@
     </div>
 </div> <!-- ...:::: End Shop Section:::... -->
 <!-- Start Footer Section -->
-
-

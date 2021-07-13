@@ -18,7 +18,6 @@ namespace BeautyHome.Controllers
         {
             var listtype = db.type_product.ToList();
             var listfur = db.furnitures.ToList();
-
             TypeProductView objtypeProductView = new TypeProductView();
             objtypeProductView.listtype = listtype;
             objtypeProductView.listfur = listfur;

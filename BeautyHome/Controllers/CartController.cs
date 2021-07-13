@@ -24,5 +24,21 @@ namespace BeautyHome.Controllers
             objtypeProductView.listfur = listfur;
             return View(objtypeProductView);
         }
+        public ActionResult AddCart(String productId)
+        {
+            List<long> listProductId;
+            if (Session["listProductId"] == null)
+            {
+                listProductId = new List<long>();
+                listProductId.Add(long.Parse(productId));
+                Session["listProductId"] = listProductId;
+                return RedirectToAction("Index", "Product", new { CountCart = listProductId.Count });
+            }
+            listProductId = (List<long>)Session["listProductId"];
+            listProductId.Add(long.Parse(productId));
+            Session["listProductId"] = listProductId;
+
+            return RedirectToAction("Index", "Product", new { CountCart = listProductId.Count });
+        }
     }
 }
