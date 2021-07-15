@@ -159,9 +159,6 @@
     <Compile Include="Context\product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Context\sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Context\type_product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

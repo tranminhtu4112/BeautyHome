@@ -15,17 +15,18 @@ namespace BeautyHome.Context
     public partial class order
     {
         public long order_id { get; set; }
-        public Nullable<long> product_id { get; set; }
+        public long product_id { get; set; }
         public Nullable<long> user_id { get; set; }
         public string full_name { get; set; }
         public string address { get; set; }
+        public string phone { get; set; }
         public string mail { get; set; }
         public string product_name { get; set; }
+        public Nullable<int> amount { get; set; }
         public Nullable<double> price { get; set; }
         public Nullable<System.DateTime> date_order { get; set; }
         public Nullable<System.DateTime> datereceived { get; set; }
         public Nullable<int> status { get; set; }
-    
         public virtual product product { get; set; }
         public virtual user user { get; set; }
     }
