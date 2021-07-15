@@ -1,4 +1,4 @@
-﻿
+﻿@model BeautyHome.Models.AdminProductView
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
@@ -14,8 +14,10 @@
                     </div>
                 </div>
                 <div class="row tm-edit-product-row">
+                    
                     <div class="col-xl-6 col-lg-6 col-md-12">
-                        <form action="" class="tm-edit-product-form">
+                        <form action="/Admin_Addproduct/Add" method="POST" enctype="multipart/form-data" class="tm-edit-product-form">
+
                             <div class="form-group mb-3">
                                 <label for="name">
                                     Tên Sản Phẩm
@@ -30,60 +32,162 @@
                                 <label for="description">Mô Tả</label>
                                 <textarea class="form-control validate"
                                           rows="3"
+                                          name="description"
                                           required></textarea>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="category">Danh Mục</label>
+                                <label for="descriptionDetails">Thông Tin Chi Tiết</label>
+                                <textarea class="form-control validate"
+                                          rows="3"
+                                          name="descriptionDetails"
+                                          required></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="type_product_id">Danh Mục</label>
                                 <select class="custom-select tm-select-accounts"
-                                        id="category">
+                                        id="type_product" name="type_product_id">
                                     <option selected>Chọn Danh Mục</option>
-                                    <option value="1">New Arrival</option>
-                                    <option value="2">Most Popular</option>
-                                    <option value="3">Trending</option>
+                                    @foreach (var item in Model.listtype)
+                                    {
+                                        <option value="@item.type_product_id">@item.name</option>
+                                    }
                                 </select>
                             </div>
                             <div class="row">
                                 <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="expire_date">
-                                        Hạn sử dụng
-                                    </label>
-                                    <input id="expire_date"
-                                           name="expire_date"
-                                           type="text"
-                                           class="form-control validate"
-                                           data-large-mode="true" />
-                                </div>
-                                <div class="form-group mb-3 col-xs-12 col-sm-6">
-                                    <label for="stock">
-                                        Giá
+                                    <label for="amount">
+                                        Số Lượng
                                     </label>
                                     <input id="stock"
-                                           name="stock"
+                                           name="amount"
+                                           type="text"
+                                           class="form-control validate"
+                                           required />
+                                </div>
+                                <div class="form-group mb-3 col-xs-12 col-sm-6">
+                                    <label for="evaluate">
+                                        Số Sao
+                                    </label>
+                                    <input id="stock"
+                                           name="evaluate"
                                            type="text"
                                            class="form-control validate"
                                            required />
                                 </div>
                             </div>
 
+                            <div class="form-group mb-3">
+                                <label for="price">
+                                    Giá Sản Phẩm
+                                </label>
+                                <input id="stock"
+                                       name="price"
+                                       type="text"
+                                       class="form-control validate"
+                                       required />
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-block text-uppercase">Thêm Sản Phẩm</button>
+                            </div>
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">
-                        <div class="tm-product-img-dummy mx-auto">
-                            <i class="fas fa-cloud-upload-alt tm-upload-icon"
-                               onclick="document.getElementById('fileInput').click();"></i>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Hình ảnh 1</span>
+                            </div>
+                            <div class="custom-file">
+                                <label class="custom-file-label"
+                                       for="inputGroupFile01">
+                                    Chọn từ máy
+                                    bạn
+                                </label>
+                                <input type="file" class="custom-file-input"
+                                       accept="image/*" onchange="loadFile1(event)"
+                                       name="url_Image1" required>
+                            </div>
+                            <div class="input-group mb-3 mt-3"
+                                 style="margin-left: 145px;">
+                                <img class="img-thumbnail" id="output1" width="500px"
+                                     height="250px" />
+                            </div>
+                            <script>
+                                var loadFile1 = function (event) {
+                                    var reader = new FileReader();
+                                    reader.onload = function () {
+                                        var output = document.getElementById('output1');
+                                        output.src = reader.result;
+                                    };
+                                    reader.readAsDataURL(event.target.files[0]);
+                                };
+                            </script>
+
                         </div>
-                        <div class="custom-file mt-3 mb-3">
-                            <input id="fileInput" type="file" style="display:none;" />
-                            <input type="button"
-                                   class="btn btn-primary btn-block mx-auto"
-                                   value="UPLOAD PRODUCT IMAGE"
-                                   onclick="document.getElementById('fileInput').click();" />
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Hình ảnh 2</span>
+                            </div>
+                            <div class="custom-file">
+                                <label class="custom-file-label"
+                                       for="inputGroupFile01">
+                                    Chọn từ máy
+                                    bạn
+                                </label>
+                                <input type="file" class="custom-file-input"
+                                       accept="image/*" onchange="loadFile2(event)"
+                                       name="url_Image2" required>
+                            </div>
+                            <div class="input-group mb-3 mt-3"
+                                 style="margin-left: 145px;">
+                                <img class="img-thumbnail" id="output2" width="500px"
+                                     height="250px" />
+                            </div>
+                            <script>
+                                var loadFile2 = function (event) {
+                                    var reader = new FileReader();
+                                    reader.onload = function () {
+                                        var output = document.getElementById('output2');
+                                        output.src = reader.result;
+                                    };
+                                    reader.readAsDataURL(event.target.files[0]);
+                                };
+                            </script>
+
                         </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Hình ảnh 3</span>
+                            </div>
+                            <div class="custom-file">
+                                <label class="custom-file-label"
+                                       for="inputGroupFile01">
+                                    Chọn từ máy
+                                    bạn
+                                </label>
+                                <input type="file" class="custom-file-input"
+                                       accept="image/*" onchange="loadFile3(event)"
+                                       name="url_Image3" required>
+                            </div>
+                            <div class="input-group mb-3 mt-3"
+                                 style="margin-left: 145px;">
+                                <img class="img-thumbnail" id="output3" width="500px"
+                                     height="250px" />
+                            </div>
+                            <script>
+                                var loadFile3 = function (event) {
+                                    var reader = new FileReader();
+                                    reader.onload = function () {
+                                        var output = document.getElementById('output3');
+                                        output.src = reader.result;
+                                    };
+                                    reader.readAsDataURL(event.target.files[0]);
+                                };
+                            </script>
+                        </div>
+                        </form>
                     </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary btn-block text-uppercase">Thêm Sản Phẩm</button>
-                    </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>

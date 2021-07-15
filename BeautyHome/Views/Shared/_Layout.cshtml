@@ -85,14 +85,12 @@
                                             <ul class="sub-menu">
                                                 @foreach (var item in Model.listfur)
                                                 {
-                                                    <li><a href="/Product/Index?furId=@item.furniture_id">@item.name</a></li>
+                                                    <li><a href="/Product/Furniture?furId=@item.furniture_id">@item.name</a></li>
                                                 }
-
-
                                             </ul>
                                         </li>
                                         <li>
-                                            @Html.ActionLink("Giỏ Hàng", "Index", "Cart")
+                                            <a href="/Cart/Index"> Giỏ Hàng (@ViewBag.countCart)</a>
                                         </li>
                                         <li>
                                             @Html.ActionLink("Liên Hệ", "Index", "Contact")

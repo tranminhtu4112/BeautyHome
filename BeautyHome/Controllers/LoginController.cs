@@ -1,4 +1,5 @@
 ﻿using BeautyHome.Context;
+using BeautyHome.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,12 @@ namespace BeautyHome.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            return View();
+            var listtype = db.type_product.ToList();
+            var listfur = db.furnitures.ToList();
+            TypeProductView objtypeProductView = new TypeProductView();
+            objtypeProductView.listtype = listtype;
+            objtypeProductView.listfur = listfur;
+            return View(objtypeProductView);
         }
         //POST: Register
         [HttpPost]

@@ -433,6 +433,7 @@
                                                             <form action="#">
                                                                 <h3>Chi tiết đặt hàng</h3>
                                                                 <div class="row">
+
                                                                     <div class="col-lg-6">
                                                                         <div class="default-form-box">
                                                                             <label>Tên đầy đủ <span>*</span></label>
@@ -440,6 +441,7 @@
                                                                             <input type="hidden" value="idproduct" name="fullname">
                                                                         </div>
                                                                     </div>
+
                                                                     <div class="col-lg-6">
                                                                         <div class="default-form-box">
                                                                             <label>Số lượng <span>*</span></label>
@@ -460,104 +462,14 @@
                                                                             <input value="" type="text" placeholder="Số điện thoại" name="phone">
                                                                         </div>
                                                                     </div>
+
                                                                     <div class="col-lg-12">
                                                                         <div class="default-form-box">
                                                                             <label> Địa chỉ Email <span>*</span></label>
-                                                                            <input value="" type="text" placeholder="Địa chỉ nhận hàng" name="email">
+                                                                            <input value="" type="text" placeholder="Email" name="email">
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-12">
-                                                                        <label class="checkbox-default" for="newAccount" data-bs-toggle="collapse" data-bs-target="#newAccountPassword">
-                                                                            <input type="checkbox" id="newAccount">
-                                                                            <span>Tạo một tài khoản?</span>
-                                                                        </label>
-                                                                        <div id="newAccountPassword" class="collapse mt-3" data-parent="#newAccountPassword">
-                                                                            <div class="card-body1 default-form-box">
-                                                                                <label> Mật khẩu tài khoản <span>*</span></label>
-                                                                                <input placeholder="password" type="password">
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12">
-                                                                        <label class="checkbox-default" for="newShipping" data-bs-toggle="collapse" data-bs-target="#anotherShipping">
-                                                                            <input type="checkbox" id="newShipping">
-                                                                            <span>Gửi đến một địa chỉ khác?</span>
-                                                                        </label>
-
-                                                                        <div id="anotherShipping" class="collapse mt-3" data-parent="#anotherShipping">
-                                                                            <div class="row">
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>Họ <span>*</span></label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>Tên <span>*</span></label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-12">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>Tên Cty</label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-12">
-                                                                                    <div class="select_form_select default-form-box">
-                                                                                        <label for="countru_name">Quê Quán <span>*</span></label>
-                                                                                        <select class="niceselect_option wide" name="cuntry" id="countru_name" style="display: none;">
-                                                                                            <option value="2">Tây Ninh</option>
-                                                                                            <option value="3">Thành Phó HCM</option>
-                                                                                            <option value="4">Hà Nội</option>
-                                                                                            <option value="5">Đà Nẵng</option>
-                                                                                            <option value="6">Hải Phòng</option>
-                                                                                            <option value="7">Long An</option>
-                                                                                            <option value="8">Cần Thơ</option>
-                                                                                            <option value="9">Nha Trang</option>
-                                                                                        </select><div class="nice-select niceselect_option wide" tabindex="0"><span class="current">Tây Ninh</span><ul class="list"><li data-value="2" class="option selected">Tây Ninh</li><li data-value="3" class="option">Thành Phó HCM</li><li data-value="4" class="option">Hà Nội</li><li data-value="5" class="option">Đà Nẵng</li><li data-value="6" class="option">Hải Phòng</li><li data-value="7" class="option">Long An</li><li data-value="8" class="option">Cần Thơ</li><li data-value="9" class="option">Nha Trang</li></ul></div>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                                <div class="col-12">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>Địa chỉ <span>*</span></label>
-                                                                                        <input placeholder="House number and street name" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-12">
-                                                                                    <div class="default-form-box">
-                                                                                        <input placeholder="Apartment, suite, unit etc. (optional)" type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-12">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>Tỉnh/ Thành Phố <span>*</span></label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-12">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>Quân/ Huyện <span>*</span></label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="default-form-box">
-                                                                                        <label>SĐT<span>*</span></label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="col-lg-6">
-                                                                                    <div class="default-form-box">
-                                                                                        <label> Địa Chỉ Email <span>*</span></label>
-                                                                                        <input type="text">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                                    
                                                                     <div class="col-12 mt-3">
                                                                         <div class="order-notes">
                                                                             <label for="order_note">Ghi chú đơn hàng</label>
@@ -570,7 +482,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
-                                                        <button type="button" class="btn btn-primary">Đặt ngay</button>
+                                                        <button type="submit"        class="btn btn-primary">Đặt ngay</button>
                                                     </div>
                                                 </div>
                                             </div>

@@ -15,7 +15,20 @@ namespace BeautyHome.Controllers
         public BeautyHomeEntities db = new BeautyHomeEntities();
         SqlConnection connection = DBUtils.GetDBConnection();
         // GET: Product
-        public ActionResult Index(long furId)
+
+        public ActionResult Index(String CountCart)
+        {
+            TypeProductView objtypeProductView = new TypeProductView();
+            var listtype = db.type_product.ToList();
+            var listfur = db.furnitures.ToList();
+            var listpr = db.products.ToList();
+            objtypeProductView.listtype = listtype;
+            objtypeProductView.listfur = listfur;
+            objtypeProductView.listProduct = listpr;
+            ViewBag.CountCart = CountCart;
+            return View(objtypeProductView);
+        }
+            public ActionResult Furniture(long furId)
         {
 
             TypeProductView objtypeProductView = new TypeProductView();
@@ -129,8 +142,6 @@ namespace BeautyHome.Controllers
             objtypeProductView.listtype = listtype;
             return View(objtypeProductView);
         }
-
-
 
     }
 }
