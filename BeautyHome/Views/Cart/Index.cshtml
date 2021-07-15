@@ -1,4 +1,4 @@
-﻿
+﻿@model BeautyHome.Models.TypeProductView
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -48,79 +48,34 @@
                                     </tr>
                                 </thead> <!-- End Cart Table Head -->
                                 <tbody>
-                                    <!-- Start Cart Single Item-->
-                                    <tr>
-                                        <td class="product_remove">
-                                            <a href="#"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                        <td class="product_thumb">
-                                            <a href="product-details-default.html">
-                                                <img src="~/assets/images/product/default/home-1/default-1.jpg"
-                                                     alt="">
-                                            </a>
-                                        </td>
-                                        <td class="product_name">
-                                            <a href="product-details-default.html">
-                                                Handbag
-                                                fringilla
-                                            </a>
-                                        </td>
-                                        <td class="product-price">$65.00</td>
-                                        <td class="product_quantity">
-                                            <label>Quantity</label> <input min="1"
-                                                                           max="100" value="1" type="number">
-                                        </td>
-                                        <td class="product_total">$130.00</td>
-                                    </tr> <!-- End Cart Single Item-->
-                                    <!-- Start Cart Single Item-->
-                                    <tr>
-                                        <td class="product_remove">
-                                            <a href="#"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                        <td class="product_thumb">
-                                            <a href="product-details-default.html">
-                                                <img src="~/assets/images/product/default/home-1/default-2.jpg"
-                                                     alt="">
-                                            </a>
-                                        </td>
-                                        <td class="product_name">
-                                            <a href="product-details-default.html">
-                                                Handbags
-                                                justo
-                                            </a>
-                                        </td>
-                                        <td class="product-price">$90.00</td>
-                                        <td class="product_quantity">
-                                            <label>Quantity</label> <input min="1"
-                                                                           max="100" value="1" type="number">
-                                        </td>
-                                        <td class="product_total">$180.00</td>
-                                    </tr> <!-- End Cart Single Item-->
-                                    <!-- Start Cart Single Item-->
-                                    <tr>
-                                        <td class="product_remove">
-                                            <a href="#"><i class="fa fa-trash-o"></i></a>
-                                        </td>
-                                        <td class="product_thumb">
-                                            <a href="product-details-default.html">
-                                                <img src="~/assets/images/product/default/home-1/default-3.jpg"
-                                                     alt="">
-                                            </a>
-                                        </td>
-                                        <td class="product_name">
-                                            <a href="product-details-default.html">
-                                                Handbag
-                                                elit
-                                            </a>
-                                        </td>
-                                        <td class="product-price">$80.00</td>
-                                        <td class="product_quantity">
-                                            <label>Quantity</label> <input min="1"
-                                                                           max="100" value="1" type="number">
-                                        </td>
-                                        <td class="product_total">$160.00</td>
-                                    </tr> <!-- End Cart Single Item-->
-                                </tbody>
+                                    @foreach (var item in Model.listProductViews)
+                                    {
+                                        <!-- Start Cart Single Item-->
+                                        <tr>
+                                            <td class="product_remove">
+                                                <a href="/Cart/DeleteCart?productId=@item.productId"><i class="fa fa-trash-o"></i></a>
+                                            </td>
+                                            <td class="product_thumb">
+                                                <a href="product-details-default.html">
+                                                    <img src="~/assets/images/product/default/home-1/default-1.jpg"
+                                                         alt="">
+                                                </a>
+                                            </td>
+                                            <td class="product_name">
+                                                <a href="/Product_details/Index?prId=@item.productId">
+                                                    @item.name
+                                                </a>
+                                            </td>
+                                            <td class="product-price">@item.price VND</td>
+                                            <td class="product_quantity">
+                                                <label>Số lượng </label> 
+                                                <input min="1" max="100" value="1" type="number" name="countProduct">
+                                            </td>
+                                            <td class="product_total">@item.price <span>VND</span></td>
+                                        </tr>
+                                        <!-- End Cart Single Item-->
+                                    }
+                                    </tbody>
                             </table>
                         </div>
                         <div class="cart_submit">
@@ -137,96 +92,87 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="coupon_code left" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Coupon</h3>
+                        <h3>Mã giảm giá</h3>
                         <div class="coupon_inner">
-                            <p>Enter your coupon code if you have one.</p>
-                            <input class="mb-2" placeholder="Coupon code" type="text">
-                            <button type="submit" class="btn btn-md btn-golden">Thêm Coupon</button>
+                            <p>Nhập mã phiếu giảm giá của bạn nếu bạn có.</p>
+                            <input class="mb-2" placeholder="Mã giảm giá" type="text">
+                            <button type="submit" class="btn btn-md btn-golden">Thêm mã giảm giá</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="coupon_code right" data-aos="fade-up" data-aos-delay="400">
-                        <h3>Cart Totals</h3>
+                        <h3>Tổng giỏ hàng</h3>
                         <div class="coupon_inner">
                             <div class="cart_subtotal">
-                                <p>Subtotal</p>
-                                <p class="cart_amount">$215.00</p>
-                            </div>
-                            <div class="cart_subtotal ">
-                                <p>Shipping</p>
-                                <p class="cart_amount"><span>Flat Rate:</span> $255.00</p>
-                            </div>
-                            <a href="#">Calculate shipping</a>
-
-                            <div class="cart_subtotal">
-                                <p>Total</p>
-                                <p class="cart_amount">$215.00</p>
+                                <p>Tổng tiền</p>
+                                <p class="cart_amount">@ViewBag.totalPrice <span>VND</span></p>
                             </div>
                             <div class="checkout_btn">
                                 <a href="#" data-target="#exampleModal" data-toggle="modal" class="btn btn-md btn-golden">Hoàn thành thanh toán</a>
                             </div>
                             <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">ĐẶT HÀNG</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <form action="#">
-                                                                <h3>Chi tiết đặt hàng</h3>
-                                                                <div class="row">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">ĐẶT HÀNG</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="col-lg-6 col-md-6">
+                                                <form action="/Cart/PayCart" method="post">
+                                                    <h3>Chi tiết đặt hàng</h3>
+                                                    <div class="row">
 
-                                                                    <div class="col-lg-12">
-                                                                        <div class="default-form-box">
-                                                                            <label>Tên đầy đủ <span>*</span></label>
-                                                                            <input type="text" value="" placeholder="Tên đầy đủ" name="fullname">
-                                                                            <input type="hidden" value="idproduct" name="fullname">
-                                                                        </div>
-                                                                    </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="default-form-box">
+                                                                <label>Tên đầy đủ <span>*</span></label>
+                                                                <input type="text" value="@Session["fullname"].ToString()" placeholder="Tên đầy đủ" name="full_name">
+                                                                <input type="hidden" value="@Session["userid"].ToString()" name="user_id">
+                                                            </div>
+                                                        </div>
 
-                                                                    <div class="col-12">
-                                                                        <div class="default-form-box">
-                                                                            <label>Địa chỉ nhận hàng <span>*</span></label>
-                                                                            <input value="" placeholder="Địa chỉ nhận hàng" type="text" name="address">
-                                                                        </div>
-                                                                    </div>
+                                                        <div class="col-12">
+                                                            <div class="default-form-box">
+                                                                <label>Địa chỉ nhận hàng <span>*</span></label>
+                                                                <input value="@Session["address"].ToString()" placeholder="Địa chỉ nhận hàng" type="text" name="address">
+                                                            </div>
+                                                        </div>
 
-                                                                    <div class="col-lg-12">
-                                                                        <div class="default-form-box">
-                                                                            <label>SĐT<span>*</span></label>
-                                                                            <input value="" type="text" placeholder="Số điện thoại" name="phone">
-                                                                        </div>
-                                                                    </div>  
+                                                        <div class="col-lg-12">
+                                                            <div class="default-form-box">
+                                                                <label>SĐT<span>*</span></label>
+                                                                <input value="@Session["phone"].ToString()" type="text" placeholder="Số điện thoại" name="phone">
+                                                            </div>
+                                                        </div>
 
-                                                                    <div class="col-lg-12">
-                                                                        <div class="default-form-box">
-                                                                            <label> Địa chỉ Email <span>*</span></label>
-                                                                            <input value="" type="text" placeholder="Email" name="email">
-                                                                        </div>
-                                                                    </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="default-form-box">
+                                                                <label>Email <span>*</span></label>
+                                                                <input value="@Session["email"].ToString()" type="text" placeholder="Email" name="mail">
+                                                            </div>
+                                                        </div>
 
-                                                                    <div class="col-12 mt-3">
-                                                                        <div class="order-notes">
-                                                                            <label for="order_note">Ghi chú đơn hàng</label>
-                                                                            <textarea id="order_note" placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: những lưu ý đặc biệt khi giao hàng."></textarea>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="order-notes">
+                                                                <label for="order_note">Ghi chú đơn hàng</label>
+                                                                <textarea id="order_note" placeholder="Ghi chú về đơn đặt hàng của bạn, ví dụ: những lưu ý đặc biệt khi giao hàng."></textarea>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
-                                                        <button type="submit" class="btn btn-primary">Đặt ngay</button>
-                                                    </div>
-                                                </div>
+
                                             </div>
                                         </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
+                                            <button type="submit" class="btn btn-primary">Đặt ngay</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

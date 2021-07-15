@@ -28,14 +28,17 @@
   <EntityType Name="order">
     <Key>
       <PropertyRef Name="order_id" />
+      <PropertyRef Name="product_id" />
     </Key>
     <Property Name="order_id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="product_id" Type="bigint" />
+    <Property Name="product_id" Type="bigint" Nullable="false" />
     <Property Name="user_id" Type="bigint" />
     <Property Name="full_name" Type="nvarchar" MaxLength="50" />
     <Property Name="address" Type="nvarchar" MaxLength="200" />
+    <Property Name="phone" Type="varchar" MaxLength="11" />
     <Property Name="mail" Type="varchar" MaxLength="50" />
     <Property Name="product_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="amount" Type="int" />
     <Property Name="price" Type="float" />
     <Property Name="date_order" Type="datetime" />
     <Property Name="datereceived" Type="datetime" />
@@ -54,16 +57,6 @@
     <Property Name="amount" Type="float" />
     <Property Name="price" Type="float" />
     <Property Name="color" Type="nvarchar" MaxLength="20" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="type_product">
     <Key>
@@ -111,7 +104,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__order__product_i__31EC6D26">
-    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="1" />
     <End Role="order" Type="Self.order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="product">
@@ -164,7 +157,6 @@
     <EntitySet Name="image_product" EntityType="Self.image_product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="type_product" EntityType="Self.type_product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__comment_p__produ__300424B4" Association="Self.FK__comment_p__produ__300424B4">
