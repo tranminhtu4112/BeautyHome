@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -20,5 +21,6 @@ namespace BeautyHome.Models
         public string url_image2 { get; set; }
         public string url_image3 { get; set; }
         public ArrayList listIdUserCmt { get; set; }
+
     }
 }

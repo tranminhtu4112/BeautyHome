@@ -25,9 +25,9 @@ namespace BeautyHome.Controllers
             objtypeProductView.listfur = listfur;
 
             string sql = "select * " +
-                "from product, furniture, type_product " +
+                "from product, furniture, type_product, image_product " +
                 "where type_product.type_product_id = product.type_product_id " +
-                "and furniture.furniture_id = type_product.furniture_id and product.product_id = " + prId;
+                "and furniture.furniture_id = type_product.furniture_id and product.product_id = image_product.product_id and product.product_id = " + prId;
 
 
             List<ProductView> listpr = new List<ProductView>();
@@ -51,6 +51,9 @@ namespace BeautyHome.Controllers
                         productView.amount = Convert.ToDouble(reader.GetValue(6));
                         productView.price = Convert.ToDouble(reader.GetValue(7));
                         productView.color = Convert.ToString(reader.GetValue(8));
+                        productView.url_image1 = Convert.ToString(reader.GetValue(15));
+                        productView.url_image2 = Convert.ToString(reader.GetValue(16));
+                        productView.url_image3 = Convert.ToString(reader.GetValue(17));
                         listpr.Add(productView);
                     }
                 }

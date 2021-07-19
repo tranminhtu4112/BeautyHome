@@ -63,7 +63,7 @@ namespace BeautyHome.Controllers
                     totalPrice += item.price;
                 }
 
-                ViewBag.totalPrice = totalPrice;
+                ViewBag.totalPrice = totalPrice.ToString();
             }
             connection.Close();
             return View(objtypeProductView);
