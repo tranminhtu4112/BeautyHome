@@ -79,6 +79,13 @@ namespace BeautyHome.Controllers
                 return RedirectToAction("Index", "Product", new { CountCart = listProductId.Count });
             }
             listProductId = (List<long>)Session["listProductId"];
+            for(int i = 0; i < listProductId.Count; i++)
+            {
+                if(long.Parse(productId) == listProductId[i])
+                {
+                    return RedirectToAction("Index", "Product", new { CountCart = listProductId.Count });
+                }
+            }
             listProductId.Add(long.Parse(productId));
             Session["listProductId"] = listProductId;
 
@@ -90,11 +97,65 @@ namespace BeautyHome.Controllers
             List<long> listProductId = (List<long>)Session["listProductId"];
             if (listProductId.Count > 0)
             {
-                var productItem = db.products.Where(n => n.product_id == listProductId[0]).FirstOrDefault();
+                var idProduct = listProductId[0];
+                var productItem = db.products.Where(n => n.product_id == idProduct).FirstOrDefault();
                 order.product_id = listProductId[0];
                 order.user_id = Convert.ToInt64(Session["userid"]);
+                order.product_name = productItem.name;
+                order.amount = 1;
+                order.price = productItem.price;
+                DateTime dateNow = DateTime.Now;
+                order.date_order = dateNow;
+                order.datereceived = dateNow;
+                order.status = 0;
+                db.orders.Add(order);
+                db.SaveChanges();
+                var maxOrderId = db.orders.Max(x => x.order_id);
+                if(listProductId.Count > 1)
+                {
+                    for(int i = 1; i < listProductId.Count; i++)
+                    {
+                        idProduct = listProductId[i];
+                        productItem = db.products.Where(n => n.product_id == idProduct).FirstOrDefault();
+                        order.order_id = maxOrderId;
+                        order.product_id = listProductId[i];
+                        order.user_id = Convert.ToInt64(Session["userid"]);
+                        order.product_name = productItem.name;
+                        order.amount = 1;
+                        order.price = productItem.price;
+                        order.date_order = dateNow;
+                        order.datereceived = dateNow;
+                        order.status = 0;
+                        var orderItem = order;
+
+                        string SqlAdd = "SET IDENTITY_INSERT [order] ON; INSERT into [order](order_id,product_id,user_id,full_name," +
+                            "address,phone,mail,product_name,amount,price,date_order,datereceived,status)" +
+                         " VALUES(@order_id, @product_id, @user_id, @full_name, @address, @phone, @mail ,@product_name , @amount, @price," +
+                         " @date_order, @datereceived, @status); SET IDENTITY_INSERT [order] OFF";
+                        SqlCommand cmd = new SqlCommand();
+                        connection.Open();
+                        cmd.Connection = connection;
+                        cmd.CommandText = SqlAdd;
+                        SqlCommand sqlCommand = new SqlCommand(SqlAdd, connection);
+                        sqlCommand.Parameters.AddWithValue("order_id", orderItem.order_id);
+                        sqlCommand.Parameters.AddWithValue("product_id", orderItem.product_id);
+                        sqlCommand.Parameters.AddWithValue("user_id", orderItem.user_id);
+                        sqlCommand.Parameters.AddWithValue("full_name", orderItem.full_name);
+                        sqlCommand.Parameters.AddWithValue("address", orderItem.address);
+                        sqlCommand.Parameters.AddWithValue("phone", orderItem.phone);
+                        sqlCommand.Parameters.AddWithValue("mail", orderItem.mail);
+                        sqlCommand.Parameters.AddWithValue("product_name", orderItem.product_name);
+                        sqlCommand.Parameters.AddWithValue("amount", orderItem.amount);
+                        sqlCommand.Parameters.AddWithValue("price", orderItem.price);
+                        sqlCommand.Parameters.AddWithValue("date_order", orderItem.date_order);
+                        sqlCommand.Parameters.AddWithValue("datereceived", orderItem.datereceived);
+                        sqlCommand.Parameters.AddWithValue("status", orderItem.status);
+                        sqlCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                }
             }
-            return null;
+            return RedirectToAction("Index", "Account", new { alert = "Đặt hàng thành công !" });
         }
         public ActionResult DeleteCart(String productId)
         {
@@ -106,6 +167,5 @@ namespace BeautyHome.Controllers
             }
             return RedirectToAction("Index", "Cart");
         }
-        
     }
 }
