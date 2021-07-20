@@ -37,7 +37,7 @@ function calcRoute() {
 
             //Xác nhận khoảng cách và thời gian
             const output = document.querySelector('#output');
-            output.innerHTML = "<div class='alert-info'>From: " + document.getElementById("from").value + ".<br />To: " + document.getElementById("to").value + ".<br /> Driving distance <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Duration <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
+            output.innerHTML = "<div class='alert-info'>Từ: " + document.getElementById("from").value + ".<br />Đến: " + document.getElementById("to").value + ".<br /> Đoạn đường phải đi <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Thời gian <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
 
             //Lộ trình hiển thị
             directionsDisplay.setDirections(result);
