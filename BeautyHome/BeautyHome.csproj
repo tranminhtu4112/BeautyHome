@@ -159,6 +159,9 @@
     <Compile Include="Context\product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Context\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Context\type_product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -237,102 +240,12 @@
     <Content Include="admin_assets\webfonts\fa-brands-400.svg" />
     <Content Include="admin_assets\webfonts\fa-regular-400.svg" />
     <Content Include="admin_assets\webfonts\fa-solid-900.svg" />
-    <Content Include="App_Data\uploads\10h1.jpg" />
-    <Content Include="App_Data\uploads\10h2.jpg" />
-    <Content Include="App_Data\uploads\10h3.jpg" />
-    <Content Include="App_Data\uploads\11h1.png" />
-    <Content Include="App_Data\uploads\11h2.png" />
-    <Content Include="App_Data\uploads\11h3.png" />
-    <Content Include="App_Data\uploads\12h1.jpg" />
-    <Content Include="App_Data\uploads\12h2.jpg" />
-    <Content Include="App_Data\uploads\12h3.jpg" />
-    <Content Include="App_Data\uploads\13h1.jpg" />
-    <Content Include="App_Data\uploads\13h2.jpg" />
-    <Content Include="App_Data\uploads\13h3.jpg" />
-    <Content Include="App_Data\uploads\14h1.jpg" />
-    <Content Include="App_Data\uploads\14h2.jpg" />
-    <Content Include="App_Data\uploads\14h3.jpg" />
-    <Content Include="App_Data\uploads\15h1.jpg" />
-    <Content Include="App_Data\uploads\15h2.jpg" />
-    <Content Include="App_Data\uploads\15h3.jpg" />
-    <Content Include="App_Data\uploads\16h1.jpg" />
-    <Content Include="App_Data\uploads\16h2.jpg" />
-    <Content Include="App_Data\uploads\16h3.jpg" />
-    <Content Include="App_Data\uploads\18h1.jpg" />
-    <Content Include="App_Data\uploads\18h2.jpg" />
-    <Content Include="App_Data\uploads\18h3.png" />
-    <Content Include="App_Data\uploads\19h1.jpg" />
-    <Content Include="App_Data\uploads\19h2.jpg" />
-    <Content Include="App_Data\uploads\19h3.jpg" />
-    <Content Include="App_Data\uploads\20h1.jpg" />
-    <Content Include="App_Data\uploads\20h2.jpg" />
-    <Content Include="App_Data\uploads\20h3.jpg" />
-    <Content Include="App_Data\uploads\21h1.jpg" />
-    <Content Include="App_Data\uploads\21h2.jpg" />
-    <Content Include="App_Data\uploads\21h3.jpg" />
-    <Content Include="App_Data\uploads\22h1.jpg" />
-    <Content Include="App_Data\uploads\22h2.jpg" />
-    <Content Include="App_Data\uploads\22h3.jpg" />
-    <Content Include="App_Data\uploads\23h1.jpg" />
-    <Content Include="App_Data\uploads\23h2.png" />
-    <Content Include="App_Data\uploads\23h3.jpg" />
-    <Content Include="App_Data\uploads\24h1.jpg" />
-    <Content Include="App_Data\uploads\24h2.jpg" />
-    <Content Include="App_Data\uploads\24h3.jpg" />
-    <Content Include="App_Data\uploads\25h1.jpg" />
-    <Content Include="App_Data\uploads\25h2.jpg" />
-    <Content Include="App_Data\uploads\25h3.jpg" />
-    <Content Include="App_Data\uploads\26h1.jpg" />
-    <Content Include="App_Data\uploads\26h2.jpg" />
-    <Content Include="App_Data\uploads\26h3.jpg" />
-    <Content Include="App_Data\uploads\27h1.jpg" />
-    <Content Include="App_Data\uploads\27h2.jpg" />
-    <Content Include="App_Data\uploads\27h3.jpg" />
-    <Content Include="App_Data\uploads\28h1.jpg" />
-    <Content Include="App_Data\uploads\28h2.jpg" />
-    <Content Include="App_Data\uploads\28h3.jpg" />
-    <Content Include="App_Data\uploads\29h1.jpg" />
-    <Content Include="App_Data\uploads\29h2.jpg" />
-    <Content Include="App_Data\uploads\29h3.jpg" />
-    <Content Include="App_Data\uploads\30h1.jpg" />
-    <Content Include="App_Data\uploads\30h2.jpg" />
-    <Content Include="App_Data\uploads\30h3.jpg" />
-    <Content Include="App_Data\uploads\31h1.png" />
-    <Content Include="App_Data\uploads\31h2.png" />
-    <Content Include="App_Data\uploads\31h3.png" />
-    <Content Include="App_Data\uploads\32h1.png" />
-    <Content Include="App_Data\uploads\32h2.png" />
-    <Content Include="App_Data\uploads\32h3.png" />
-    <Content Include="App_Data\uploads\33h1.jpg" />
-    <Content Include="App_Data\uploads\33h2.jpg" />
-    <Content Include="App_Data\uploads\33h3.jpg" />
-    <Content Include="App_Data\uploads\34h1.png" />
-    <Content Include="App_Data\uploads\34h2.png" />
-    <Content Include="App_Data\uploads\34h3.png" />
-    <Content Include="App_Data\uploads\35h1.jpg" />
-    <Content Include="App_Data\uploads\35h2.jpg" />
-    <Content Include="App_Data\uploads\35h3.jpg" />
-    <Content Include="App_Data\uploads\36h1.jpg" />
-    <Content Include="App_Data\uploads\36h2.jpg" />
-    <Content Include="App_Data\uploads\36h3.jpg" />
-    <Content Include="App_Data\uploads\37h1.jpg" />
-    <Content Include="App_Data\uploads\37h2.jpg" />
-    <Content Include="App_Data\uploads\37h3.jpg" />
-    <Content Include="App_Data\uploads\38h1.jpg" />
-    <Content Include="App_Data\uploads\38h2.jpg" />
-    <Content Include="App_Data\uploads\38h3.jpg" />
-    <Content Include="App_Data\uploads\6h1.png" />
-    <Content Include="App_Data\uploads\6h2.png" />
-    <Content Include="App_Data\uploads\6h3.png" />
-    <Content Include="App_Data\uploads\7h1.jpg" />
-    <Content Include="App_Data\uploads\7h2.jpg" />
-    <Content Include="App_Data\uploads\7h3.jpg" />
-    <Content Include="App_Data\uploads\8h1.jpg" />
-    <Content Include="App_Data\uploads\8h2.jpg" />
-    <Content Include="App_Data\uploads\8h3.jpg" />
-    <Content Include="App_Data\uploads\9h1.jpg" />
-    <Content Include="App_Data\uploads\9h2.jpg" />
-    <Content Include="App_Data\uploads\9h3.jpg" />
+    <Content Include="assets\css\App.css" />
+    <Content Include="assets\Content\bootstrap-theme.css" />
+    <Content Include="assets\Content\bootstrap-theme.min.css" />
+    <Content Include="assets\Content\bootstrap.css" />
+    <Content Include="assets\Content\bootstrap.min.css" />
+    <Content Include="assets\css\appmap\Main.js" />
     <Content Include="assets\css\plugins\animate.min.css" />
     <Content Include="assets\css\plugins\aos.min.css" />
     <Content Include="assets\css\plugins\jquery.lineProgressbar.css" />
@@ -354,6 +267,7 @@
     <Content Include="assets\css\vendor\simple-line-icons.css" />
     <Content Include="assets\css\vendor\vendor.min.css" />
     <Content Include="assets\fonts\font-awesome\fontawesome-webfont3e6e.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\fonts\ionicon-fonts\ionicons28b5.svg" />
     <Content Include="assets\fonts\simple-line-icon-fonts\Simple-Line-Iconsb26c.svg" />
     <Content Include="assets\images\about\img-about.jpg" />
@@ -488,6 +402,7 @@
     <Content Include="assets\images\product\default\home-4\default-7.jpg" />
     <Content Include="assets\images\product\default\home-4\default-8.jpg" />
     <Content Include="assets\images\product\default\home-4\default-9.jpg" />
+    <Content Include="assets\images\road.jpg" />
     <Content Include="assets\images\team\leader1.png" />
     <Content Include="assets\images\team\leader2.png" />
     <Content Include="assets\images\team\leader3.png" />
@@ -496,6 +411,7 @@
     <Content Include="assets\images\user\image-2.png" />
     <Content Include="assets\images\user\image-3.png" />
     <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\Map.js" />
     <Content Include="assets\js\plugins\ajax-mail.js" />
     <Content Include="assets\js\plugins\aos.min.js" />
     <Content Include="assets\js\plugins\jquery.instagramFeed.js" />
@@ -662,6 +578,14 @@
     <Content Include="Context\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="assets\Content\bootstrap-theme.css.map" />
+    <Content Include="assets\Content\bootstrap-theme.min.css.map" />
+    <Content Include="assets\Content\bootstrap.css.map" />
+    <Content Include="assets\Content\bootstrap.min.css.map" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -687,7 +611,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product_details\Index.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
@@ -702,8 +625,11 @@
     <Content Include="Views\Admin_Account\Index.cshtml" />
     <Content Include="Views\Product\Type.cshtml" />
     <Content Include="Views\Product\Furniture.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

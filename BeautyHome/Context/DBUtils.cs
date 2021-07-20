@@ -8,7 +8,7 @@ namespace BeautyHome.Context
     {
         public static SqlConnection GetDBConnection()
         {
-            string connString = @"data source=LAPTOP-85HDK6US\SQLEXPRESS;initial catalog=SQL_BeautyHome;integrated security=True;MultipleActiveResultSets=True";
+            string connString = @"data source=DESKTOP-U2LCGG2\SQLEXPRESS;initial catalog=SQL_BeautyHome;integrated security=True;MultipleActiveResultSets=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
