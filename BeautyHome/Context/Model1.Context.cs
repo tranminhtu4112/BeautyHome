@@ -30,7 +30,11 @@ namespace BeautyHome.Context
         public virtual DbSet<image_product> image_product { get; set; }
         public virtual DbSet<order> orders { get; set; }
         public virtual DbSet<product> products { get; set; }
+<<<<<<< HEAD
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+=======
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
         public virtual DbSet<type_product> type_product { get; set; }
         public virtual DbSet<user> users { get; set; }
     }

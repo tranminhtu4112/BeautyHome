@@ -254,7 +254,11 @@
           <NavigationProperty Name="image_product" Relationship="Self.FK__image_pro__produ__30F848ED" FromRole="product" ToRole="image_product" />
           <NavigationProperty Name="type_product" Relationship="Self.FK__product__type_pr__32E0915F" FromRole="product" ToRole="type_product" />
         </EntityType>
+<<<<<<< HEAD
         <EntityType Name="sysdiagram">
+=======
+        <EntityType Name="sysdiagrams">
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
@@ -272,7 +276,7 @@
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="furniture_id" Type="Int64" />
           <NavigationProperty Name="furniture" Relationship="Self.FK__type_prod__furni__33D4B598" FromRole="type_product" ToRole="furniture" />
-          <NavigationProperty Name="products" Relationship="Self.FK__product__type_pr__32E0915F" FromRole="type_product" ToRole="product" />
+          <NavigationProperty Name="product" Relationship="Self.FK__product__type_pr__32E0915F" FromRole="type_product" ToRole="product" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -286,7 +290,7 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="orders" Relationship="Self.FK__order__user_id__31EC6D26" FromRole="user" ToRole="order" />
+          <NavigationProperty Name="order" Relationship="Self.FK__order__user_id__31EC6D26" FromRole="user" ToRole="order" />
         </EntityType>
         <Association Name="FK__comment_p__produ__300424B4">
           <End Role="product" Type="Self.product" Multiplicity="0..1" />
@@ -350,32 +354,38 @@
         </Association>
         <EntityContainer Name="BeautyHomeEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="comment_product" EntityType="Self.comment_product" />
-          <EntitySet Name="furnitures" EntityType="Self.furniture" />
+          <EntitySet Name="furniture" EntityType="Self.furniture" />
           <EntitySet Name="image_product" EntityType="Self.image_product" />
+<<<<<<< HEAD
           <EntitySet Name="orders" EntityType="Self.order" />
           <EntitySet Name="products" EntityType="Self.product" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+=======
+          <EntitySet Name="order" EntityType="Self.order" />
+          <EntitySet Name="product" EntityType="Self.product" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
           <EntitySet Name="type_product" EntityType="Self.type_product" />
-          <EntitySet Name="users" EntityType="Self.user" />
+          <EntitySet Name="user" EntityType="Self.user" />
           <AssociationSet Name="FK__comment_p__produ__300424B4" Association="Self.FK__comment_p__produ__300424B4">
-            <End Role="product" EntitySet="products" />
+            <End Role="product" EntitySet="product" />
             <End Role="comment_product" EntitySet="comment_product" />
           </AssociationSet>
           <AssociationSet Name="FK__type_prod__furni__33D4B598" Association="Self.FK__type_prod__furni__33D4B598">
-            <End Role="furniture" EntitySet="furnitures" />
+            <End Role="furniture" EntitySet="furniture" />
             <End Role="type_product" EntitySet="type_product" />
           </AssociationSet>
           <AssociationSet Name="FK__image_pro__produ__30F848ED" Association="Self.FK__image_pro__produ__30F848ED">
-            <End Role="product" EntitySet="products" />
+            <End Role="product" EntitySet="product" />
             <End Role="image_product" EntitySet="image_product" />
           </AssociationSet>
           <AssociationSet Name="FK__order__user_id__31EC6D26" Association="Self.FK__order__user_id__31EC6D26">
-            <End Role="user" EntitySet="users" />
-            <End Role="order" EntitySet="orders" />
+            <End Role="user" EntitySet="user" />
+            <End Role="order" EntitySet="order" />
           </AssociationSet>
           <AssociationSet Name="FK__product__type_pr__32E0915F" Association="Self.FK__product__type_pr__32E0915F">
             <End Role="type_product" EntitySet="type_product" />
-            <End Role="product" EntitySet="products" />
+            <End Role="product" EntitySet="product" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -394,7 +404,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="furnitures">
+          <EntitySetMapping Name="furniture">
             <EntityTypeMapping TypeName="SQL_BeautyHomeModel.furniture">
               <MappingFragment StoreEntitySet="furniture">
                 <ScalarProperty Name="furniture_id" ColumnName="furniture_id" />
@@ -412,7 +422,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="orders">
+          <EntitySetMapping Name="order">
             <EntityTypeMapping TypeName="SQL_BeautyHomeModel.order">
               <MappingFragment StoreEntitySet="order">
                 <ScalarProperty Name="order_id" ColumnName="order_id" />
@@ -431,7 +441,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="products">
+          <EntitySetMapping Name="product">
             <EntityTypeMapping TypeName="SQL_BeautyHomeModel.product">
               <MappingFragment StoreEntitySet="product">
                 <ScalarProperty Name="product_id" ColumnName="product_id" />
@@ -447,7 +457,11 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
+<<<<<<< HEAD
             <EntityTypeMapping TypeName="SQL_BeautyHomeModel.sysdiagram">
+=======
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.sysdiagrams">
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -466,7 +480,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="users">
+          <EntitySetMapping Name="user">
             <EntityTypeMapping TypeName="SQL_BeautyHomeModel.user">
               <MappingFragment StoreEntitySet="user">
                 <ScalarProperty Name="user_id" ColumnName="user_id" />
@@ -494,7 +508,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

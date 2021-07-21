@@ -162,7 +162,11 @@
     <Compile Include="Context\product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Context\sysdiagram.cs">
+=======
+    <Compile Include="Context\sysdiagrams.cs">
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\type_product.cs">
@@ -243,6 +247,7 @@
     <Content Include="admin_assets\webfonts\fa-brands-400.svg" />
     <Content Include="admin_assets\webfonts\fa-regular-400.svg" />
     <Content Include="admin_assets\webfonts\fa-solid-900.svg" />
+<<<<<<< HEAD
     <Content Include="App_Data\uploads\10h1.jpg" />
     <Content Include="App_Data\uploads\10h2.jpg" />
     <Content Include="App_Data\uploads\10h3.jpg" />
@@ -340,6 +345,14 @@
     <Content Include="App_Data\uploads\9h2.jpg" />
     <Content Include="App_Data\uploads\9h3.jpg" />
     <Content Include="assets\css\bootstrap-social.css" />
+=======
+    <Content Include="assets\css\App.css" />
+    <Content Include="assets\Content\bootstrap-theme.css" />
+    <Content Include="assets\Content\bootstrap-theme.min.css" />
+    <Content Include="assets\Content\bootstrap.css" />
+    <Content Include="assets\Content\bootstrap.min.css" />
+    <Content Include="assets\css\appmap\Main.js" />
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
     <Content Include="assets\css\plugins\animate.min.css" />
     <Content Include="assets\css\plugins\aos.min.css" />
     <Content Include="assets\css\plugins\jquery.lineProgressbar.css" />
@@ -361,6 +374,7 @@
     <Content Include="assets\css\vendor\simple-line-icons.css" />
     <Content Include="assets\css\vendor\vendor.min.css" />
     <Content Include="assets\fonts\font-awesome\fontawesome-webfont3e6e.svg" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="assets\fonts\ionicon-fonts\ionicons28b5.svg" />
     <Content Include="assets\fonts\simple-line-icon-fonts\Simple-Line-Iconsb26c.svg" />
     <Content Include="assets\images\about\img-about.jpg" />
@@ -495,6 +509,7 @@
     <Content Include="assets\images\product\default\home-4\default-7.jpg" />
     <Content Include="assets\images\product\default\home-4\default-8.jpg" />
     <Content Include="assets\images\product\default\home-4\default-9.jpg" />
+    <Content Include="assets\images\road.jpg" />
     <Content Include="assets\images\team\leader1.png" />
     <Content Include="assets\images\team\leader2.png" />
     <Content Include="assets\images\team\leader3.png" />
@@ -503,6 +518,7 @@
     <Content Include="assets\images\user\image-2.png" />
     <Content Include="assets\images\user\image-3.png" />
     <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\Map.js" />
     <Content Include="assets\js\plugins\ajax-mail.js" />
     <Content Include="assets\js\plugins\aos.min.js" />
     <Content Include="assets\js\plugins\jquery.instagramFeed.js" />
@@ -669,6 +685,14 @@
     <Content Include="Context\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="assets\Content\bootstrap-theme.css.map" />
+    <Content Include="assets\Content\bootstrap-theme.min.css.map" />
+    <Content Include="assets\Content\bootstrap.css.map" />
+    <Content Include="assets\Content\bootstrap.min.css.map" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -694,7 +718,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
     <Content Include="Views\Product_details\Index.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
@@ -709,8 +732,11 @@
     <Content Include="Views\Admin_Account\Index.cshtml" />
     <Content Include="Views\Product\Type.cshtml" />
     <Content Include="Views\Product\Furniture.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

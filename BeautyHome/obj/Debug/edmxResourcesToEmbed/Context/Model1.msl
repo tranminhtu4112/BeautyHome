@@ -11,7 +11,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="furnitures">
+    <EntitySetMapping Name="furniture">
       <EntityTypeMapping TypeName="SQL_BeautyHomeModel.furniture">
         <MappingFragment StoreEntitySet="furniture">
           <ScalarProperty Name="furniture_id" ColumnName="furniture_id" />
@@ -29,7 +29,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="orders">
+    <EntitySetMapping Name="order">
       <EntityTypeMapping TypeName="SQL_BeautyHomeModel.order">
         <MappingFragment StoreEntitySet="order">
           <ScalarProperty Name="order_id" ColumnName="order_id" />
@@ -48,7 +48,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="products">
+    <EntitySetMapping Name="product">
       <EntityTypeMapping TypeName="SQL_BeautyHomeModel.product">
         <MappingFragment StoreEntitySet="product">
           <ScalarProperty Name="product_id" ColumnName="product_id" />
@@ -64,7 +64,11 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
+<<<<<<< HEAD
       <EntityTypeMapping TypeName="SQL_BeautyHomeModel.sysdiagram">
+=======
+      <EntityTypeMapping TypeName="SQL_BeautyHomeModel.sysdiagrams">
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -83,7 +87,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="users">
+    <EntitySetMapping Name="user">
       <EntityTypeMapping TypeName="SQL_BeautyHomeModel.user">
         <MappingFragment StoreEntitySet="user">
           <ScalarProperty Name="user_id" ColumnName="user_id" />

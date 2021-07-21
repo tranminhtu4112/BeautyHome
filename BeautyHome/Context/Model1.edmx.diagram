@@ -4,13 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="f1d4aa615ea24b2fb8fbfb998dc366e1" Name="Diagram1">
+=======
+      <Diagram DiagramId="971466569c5249c0a72cc826c7e3a00c" Name="Diagram1">
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.comment_product" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.furniture" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.image_product" Width="1.5" PointX="7.5" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.order" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.product" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+<<<<<<< HEAD
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.sysdiagram" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+=======
+        <EntityTypeShape EntityType="SQL_BeautyHomeModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+>>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.type_product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
         <EntityTypeShape EntityType="SQL_BeautyHomeModel.user" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
         <AssociationConnector Association="SQL_BeautyHomeModel.FK__comment_p__produ__300424B4" ManuallyRouted="false" />
