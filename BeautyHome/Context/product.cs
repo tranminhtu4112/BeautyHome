@@ -18,7 +18,6 @@ namespace BeautyHome.Context
         public product()
         {
             this.comment_product = new HashSet<comment_product>();
-            this.orders = new HashSet<order>();
         }
     
         public long product_id { get; set; }
@@ -34,8 +33,6 @@ namespace BeautyHome.Context
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<comment_product> comment_product { get; set; }
         public virtual image_product image_product { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<order> orders { get; set; }
         public virtual type_product type_product { get; set; }
     }
 }

@@ -63,6 +63,16 @@
           <Property Name="price" Type="float" />
           <Property Name="color" Type="nvarchar" MaxLength="20" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="type_product">
           <Key>
             <PropertyRef Name="type_product_id" />
@@ -108,19 +118,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__order__product_i__31EC6D26">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="order" Type="Self.order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_id" />
-            </Principal>
-            <Dependent Role="order">
-              <PropertyRef Name="product_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__order__user_id__32E0915F">
+        <Association Name="FK__order__user_id__31EC6D26">
           <End Role="user" Type="Self.user" Multiplicity="0..1" />
           <End Role="order" Type="Self.order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -132,7 +130,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__product__type_pr__33D4B598">
+        <Association Name="FK__product__type_pr__32E0915F">
           <End Role="type_product" Type="Self.type_product" Multiplicity="0..1" />
           <End Role="product" Type="Self.product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -144,7 +142,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__type_prod__furni__34C8D9D1">
+        <Association Name="FK__type_prod__furni__33D4B598">
           <End Role="furniture" Type="Self.furniture" Multiplicity="0..1" />
           <End Role="type_product" Type="Self.type_product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -162,6 +160,7 @@
           <EntitySet Name="image_product" EntityType="Self.image_product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="order" EntityType="Self.order" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="type_product" EntityType="Self.type_product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__comment_p__produ__300424B4" Association="Self.FK__comment_p__produ__300424B4">
@@ -172,19 +171,15 @@
             <End Role="product" EntitySet="product" />
             <End Role="image_product" EntitySet="image_product" />
           </AssociationSet>
-          <AssociationSet Name="FK__order__product_i__31EC6D26" Association="Self.FK__order__product_i__31EC6D26">
-            <End Role="product" EntitySet="product" />
-            <End Role="order" EntitySet="order" />
-          </AssociationSet>
-          <AssociationSet Name="FK__order__user_id__32E0915F" Association="Self.FK__order__user_id__32E0915F">
+          <AssociationSet Name="FK__order__user_id__31EC6D26" Association="Self.FK__order__user_id__31EC6D26">
             <End Role="user" EntitySet="user" />
             <End Role="order" EntitySet="order" />
           </AssociationSet>
-          <AssociationSet Name="FK__product__type_pr__33D4B598" Association="Self.FK__product__type_pr__33D4B598">
+          <AssociationSet Name="FK__product__type_pr__32E0915F" Association="Self.FK__product__type_pr__32E0915F">
             <End Role="type_product" EntitySet="type_product" />
             <End Role="product" EntitySet="product" />
           </AssociationSet>
-          <AssociationSet Name="FK__type_prod__furni__34C8D9D1" Association="Self.FK__type_prod__furni__34C8D9D1">
+          <AssociationSet Name="FK__type_prod__furni__33D4B598" Association="Self.FK__type_prod__furni__33D4B598">
             <End Role="furniture" EntitySet="furniture" />
             <End Role="type_product" EntitySet="type_product" />
           </AssociationSet>
@@ -210,7 +205,7 @@
           </Key>
           <Property Name="furniture_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="type_product" Relationship="Self.FK__type_prod__furni__34C8D9D1" FromRole="furniture" ToRole="type_product" />
+          <NavigationProperty Name="type_product" Relationship="Self.FK__type_prod__furni__33D4B598" FromRole="furniture" ToRole="type_product" />
         </EntityType>
         <EntityType Name="image_product">
           <Key>
@@ -240,8 +235,7 @@
           <Property Name="date_order" Type="DateTime" Precision="3" />
           <Property Name="datereceived" Type="DateTime" Precision="3" />
           <Property Name="status" Type="Int32" />
-          <NavigationProperty Name="product" Relationship="Self.FK__order__product_i__31EC6D26" FromRole="order" ToRole="product" />
-          <NavigationProperty Name="user" Relationship="Self.FK__order__user_id__32E0915F" FromRole="order" ToRole="user" />
+          <NavigationProperty Name="user" Relationship="Self.FK__order__user_id__31EC6D26" FromRole="order" ToRole="user" />
         </EntityType>
         <EntityType Name="product">
           <Key>
@@ -258,8 +252,17 @@
           <Property Name="color" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="comment_product" Relationship="Self.FK__comment_p__produ__300424B4" FromRole="product" ToRole="comment_product" />
           <NavigationProperty Name="image_product" Relationship="Self.FK__image_pro__produ__30F848ED" FromRole="product" ToRole="image_product" />
-          <NavigationProperty Name="orders" Relationship="Self.FK__order__product_i__31EC6D26" FromRole="product" ToRole="order" />
-          <NavigationProperty Name="type_product" Relationship="Self.FK__product__type_pr__33D4B598" FromRole="product" ToRole="type_product" />
+          <NavigationProperty Name="type_product" Relationship="Self.FK__product__type_pr__32E0915F" FromRole="product" ToRole="type_product" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="type_product">
           <Key>
@@ -268,8 +271,8 @@
           <Property Name="type_product_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="furniture_id" Type="Int64" />
-          <NavigationProperty Name="furniture" Relationship="Self.FK__type_prod__furni__34C8D9D1" FromRole="type_product" ToRole="furniture" />
-          <NavigationProperty Name="products" Relationship="Self.FK__product__type_pr__33D4B598" FromRole="type_product" ToRole="product" />
+          <NavigationProperty Name="furniture" Relationship="Self.FK__type_prod__furni__33D4B598" FromRole="type_product" ToRole="furniture" />
+          <NavigationProperty Name="products" Relationship="Self.FK__product__type_pr__32E0915F" FromRole="type_product" ToRole="product" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -283,7 +286,7 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="phone" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="orders" Relationship="Self.FK__order__user_id__32E0915F" FromRole="user" ToRole="order" />
+          <NavigationProperty Name="orders" Relationship="Self.FK__order__user_id__31EC6D26" FromRole="user" ToRole="order" />
         </EntityType>
         <Association Name="FK__comment_p__produ__300424B4">
           <End Role="product" Type="Self.product" Multiplicity="0..1" />
@@ -297,7 +300,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__type_prod__furni__34C8D9D1">
+        <Association Name="FK__type_prod__furni__33D4B598">
           <End Role="furniture" Type="Self.furniture" Multiplicity="0..1" />
           <End Role="type_product" Type="Self.type_product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -321,19 +324,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__order__product_i__31EC6D26">
-          <End Role="product" Type="Self.product" Multiplicity="1" />
-          <End Role="order" Type="Self.order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="product">
-              <PropertyRef Name="product_id" />
-            </Principal>
-            <Dependent Role="order">
-              <PropertyRef Name="product_id" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__order__user_id__32E0915F">
+        <Association Name="FK__order__user_id__31EC6D26">
           <End Role="user" Type="Self.user" Multiplicity="0..1" />
           <End Role="order" Type="Self.order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -345,7 +336,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__product__type_pr__33D4B598">
+        <Association Name="FK__product__type_pr__32E0915F">
           <End Role="type_product" Type="Self.type_product" Multiplicity="0..1" />
           <End Role="product" Type="Self.product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -363,13 +354,14 @@
           <EntitySet Name="image_product" EntityType="Self.image_product" />
           <EntitySet Name="orders" EntityType="Self.order" />
           <EntitySet Name="products" EntityType="Self.product" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="type_product" EntityType="Self.type_product" />
           <EntitySet Name="users" EntityType="Self.user" />
           <AssociationSet Name="FK__comment_p__produ__300424B4" Association="Self.FK__comment_p__produ__300424B4">
             <End Role="product" EntitySet="products" />
             <End Role="comment_product" EntitySet="comment_product" />
           </AssociationSet>
-          <AssociationSet Name="FK__type_prod__furni__34C8D9D1" Association="Self.FK__type_prod__furni__34C8D9D1">
+          <AssociationSet Name="FK__type_prod__furni__33D4B598" Association="Self.FK__type_prod__furni__33D4B598">
             <End Role="furniture" EntitySet="furnitures" />
             <End Role="type_product" EntitySet="type_product" />
           </AssociationSet>
@@ -377,15 +369,11 @@
             <End Role="product" EntitySet="products" />
             <End Role="image_product" EntitySet="image_product" />
           </AssociationSet>
-          <AssociationSet Name="FK__order__product_i__31EC6D26" Association="Self.FK__order__product_i__31EC6D26">
-            <End Role="product" EntitySet="products" />
-            <End Role="order" EntitySet="orders" />
-          </AssociationSet>
-          <AssociationSet Name="FK__order__user_id__32E0915F" Association="Self.FK__order__user_id__32E0915F">
+          <AssociationSet Name="FK__order__user_id__31EC6D26" Association="Self.FK__order__user_id__31EC6D26">
             <End Role="user" EntitySet="users" />
             <End Role="order" EntitySet="orders" />
           </AssociationSet>
-          <AssociationSet Name="FK__product__type_pr__33D4B598" Association="Self.FK__product__type_pr__33D4B598">
+          <AssociationSet Name="FK__product__type_pr__32E0915F" Association="Self.FK__product__type_pr__32E0915F">
             <End Role="type_product" EntitySet="type_product" />
             <End Role="product" EntitySet="products" />
           </AssociationSet>
@@ -455,6 +443,17 @@
                 <ScalarProperty Name="amount" ColumnName="amount" />
                 <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="color" ColumnName="color" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="SQL_BeautyHomeModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

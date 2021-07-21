@@ -1,7 +1,9 @@
-﻿using BeautyHome.Context;
+﻿  using BeautyHome.Context;
 using BeautyHome.Models;
+using Facebook;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -12,6 +14,17 @@ namespace BeautyHome.Controllers
 {
     public class LoginController : Controller
     {
+        private Uri RedirectUri
+        {
+            get
+            {
+                var uriBuilder = new UriBuilder(Request.Url);
+                uriBuilder.Query = null;
+                uriBuilder.Fragment = null;
+                uriBuilder.Path = Url.Action("FacebookCallback");
+                return uriBuilder.Uri;
+            }
+        }
         public BeautyHomeEntities db = new BeautyHomeEntities();
         // GET: Login
         public ActionResult Index()
@@ -22,6 +35,32 @@ namespace BeautyHome.Controllers
             objtypeProductView.listtype = listtype;
             objtypeProductView.listfur = listfur;
             return View(objtypeProductView);
+        }
+
+        public ActionResult LoginFB()
+        {
+            var fb = new FacebookClient();
+            var loginUrl = fb.GetLoginUrl(new
+            {
+                client_id = ConfigurationManager.AppSettings["FbAppId"],
+                client_secret = ConfigurationManager.AppSettings["FbAppSecret"],
+                redirect_uri = RedirectUri.AbsoluteUri,
+                response_type = "code",
+                scope = "email"
+            });
+            return Redirect(loginUrl.AbsoluteUri);
+        }
+        public ActionResult FacebookCallback(string code)
+        {
+            var fb = new FacebookClient();
+            dynamic result = fb.Post("oauth/access_token", new
+            {
+                client_id = ConfigurationManager.AppSettings["FbAppId"],
+                client_secret = ConfigurationManager.AppSettings["FbAppSecret"],
+                redirect_uri = RedirectUri.AbsoluteUri,
+                code = code
+            });
+
         }
         //POST: Register
         [HttpPost]
@@ -103,5 +142,7 @@ namespace BeautyHome.Controllers
             }
             return byte2String;
         }
+
+        
     }
 }

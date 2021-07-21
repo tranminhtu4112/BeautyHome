@@ -16,7 +16,7 @@ namespace BeautyHome.Controllers
         public BeautyHomeEntities db = new BeautyHomeEntities();
         SqlConnection connection = DBUtils.GetDBConnection();
         // GET: Account
-        public ActionResult Index()
+        public ActionResult Index(String alert)
         {
             var listtype = db.type_product.ToList();
             var listfur = db.furnitures.ToList();
@@ -47,7 +47,9 @@ namespace BeautyHome.Controllers
                     }
                 }
             }
-                        return View(objtypeProductView);
+
+            ViewBag.alert = alert;
+            return View(objtypeProductView);
         }
         [HttpPost]
         public ActionResult UpdateAccount(String userid ,String username, string password, string fullname, string email, String address, string phone)

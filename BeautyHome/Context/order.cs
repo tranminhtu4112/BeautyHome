@@ -27,7 +27,7 @@ namespace BeautyHome.Context
         public Nullable<System.DateTime> date_order { get; set; }
         public Nullable<System.DateTime> datereceived { get; set; }
         public Nullable<int> status { get; set; }
-        public virtual product product { get; set; }
+    
         public virtual user user { get; set; }
     }
 }
