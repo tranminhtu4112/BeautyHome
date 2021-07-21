@@ -171,3 +171,7 @@ C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.Properties
 C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.GenerateResource.cache
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.Properties.Resources.resources
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.Mvc.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.xml
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.Mvc.xml
