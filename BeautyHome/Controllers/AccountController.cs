@@ -48,11 +48,38 @@ namespace BeautyHome.Controllers
                 }
             }
 
+            String sqlOrder = " select [order].order_id, FORMAT ([order].date_order, 'dd/MM/yyyy') as [dateOrder] , " +
+                "[order].status, SUM([order].price)  from[order] where[order].user_id = " + Session["userid"].ToString() +
+                " group by[order].order_id, " +
+                "FORMAT([order].date_order, 'dd/MM/yyyy'), [order].status";
+
+            cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = sqlOrder;
+            List<OrderView> listOrderView = new List<OrderView>();
+            using (DbDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        OrderView orderView = new OrderView();
+
+                        orderView.orderId = Convert.ToInt64(reader.GetValue(0));
+                        orderView.dateOrder = Convert.ToString(reader.GetValue(1));
+                        orderView.status = Convert.ToInt32(reader.GetValue(2));
+                        orderView.totalPrice = Convert.ToDouble(reader.GetValue(3));
+
+                        listOrderView.Add(orderView);
+                    }
+                }
+            }
+            objtypeProductView.listOrderViews = listOrderView;
             ViewBag.alert = alert;
             return View(objtypeProductView);
         }
         [HttpPost]
-        public ActionResult UpdateAccount(String userid ,String username, string password, string fullname, string email, String address, string phone)
+        public ActionResult UpdateAccount(String userid, String username, string password, string fullname, string email, String address, string phone)
         {
             connection.Open();
             try
@@ -73,7 +100,7 @@ namespace BeautyHome.Controllers
 
                 int rowCount = cmd.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

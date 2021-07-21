@@ -50,7 +50,7 @@ namespace BeautyHome.Controllers
             });
             return Redirect(loginUrl.AbsoluteUri);
         }
-        public ActionResult FacebookCallback(string code)
+/*        public ActionResult FacebookCallback(string code)
         {
             var fb = new FacebookClient();
             dynamic result = fb.Post("oauth/access_token", new
@@ -61,7 +61,7 @@ namespace BeautyHome.Controllers
                 code = code
             });
 
-        }
+        }*/
         //POST: Register
         [HttpPost]
 

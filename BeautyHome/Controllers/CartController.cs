@@ -17,6 +17,10 @@ namespace BeautyHome.Controllers
         // GET: Cart
         public ActionResult Index()
         {
+            if(Session["userid"] == null)
+            {
+                return RedirectToAction("Index", "Login");
+            }
             var listtype = db.type_product.ToList();
             var listfur = db.furnitures.ToList();
             TypeProductView objtypeProductView = new TypeProductView();

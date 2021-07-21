@@ -162,11 +162,7 @@
     <Compile Include="Context\product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Context\sysdiagram.cs">
-=======
-    <Compile Include="Context\sysdiagrams.cs">
->>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Context\type_product.cs">
@@ -194,6 +190,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminProductView.cs" />
+    <Compile Include="Models\OrderView.cs" />
     <Compile Include="Models\ProductView.cs" />
     <Compile Include="Models\TypeProductView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,7 +244,6 @@
     <Content Include="admin_assets\webfonts\fa-brands-400.svg" />
     <Content Include="admin_assets\webfonts\fa-regular-400.svg" />
     <Content Include="admin_assets\webfonts\fa-solid-900.svg" />
-<<<<<<< HEAD
     <Content Include="App_Data\uploads\10h1.jpg" />
     <Content Include="App_Data\uploads\10h2.jpg" />
     <Content Include="App_Data\uploads\10h3.jpg" />
@@ -345,14 +341,12 @@
     <Content Include="App_Data\uploads\9h2.jpg" />
     <Content Include="App_Data\uploads\9h3.jpg" />
     <Content Include="assets\css\bootstrap-social.css" />
-=======
     <Content Include="assets\css\App.css" />
     <Content Include="assets\Content\bootstrap-theme.css" />
     <Content Include="assets\Content\bootstrap-theme.min.css" />
     <Content Include="assets\Content\bootstrap.css" />
     <Content Include="assets\Content\bootstrap.min.css" />
     <Content Include="assets\css\appmap\Main.js" />
->>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
     <Content Include="assets\css\plugins\animate.min.css" />
     <Content Include="assets\css\plugins\aos.min.css" />
     <Content Include="assets\css\plugins\jquery.lineProgressbar.css" />
@@ -678,13 +672,6 @@
     <Content Include="admin_assets\webfonts\fa-solid-900.ttf" />
     <Content Include="admin_assets\webfonts\fa-solid-900.woff" />
     <Content Include="admin_assets\webfonts\fa-solid-900.woff2" />
-    <EntityDeploy Include="Context\Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Context\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
     <Content Include="assets\Content\bootstrap-theme.css.map" />
     <Content Include="assets\Content\bootstrap-theme.min.css.map" />
     <Content Include="assets\Content\bootstrap.css.map" />
@@ -693,6 +680,13 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <EntityDeploy Include="Context\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Context\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -734,9 +728,7 @@
     <Content Include="Views\Product\Furniture.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

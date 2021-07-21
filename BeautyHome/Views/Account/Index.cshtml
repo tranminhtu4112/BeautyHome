@@ -1,4 +1,4 @@
-﻿
+﻿@model BeautyHome.Models.TypeProductView
 @{
     ViewBag.Title = "Tài khoản";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,7 +8,7 @@
 
 <!-- ...:::: Start Breadcrumb Section:::... -->
 <div class="breadcrumb-section breadcrumb-bg-color--golden">
-   
+
     <div class="breadcrumb-wrapper">
         <div class="alert alert-success alert-dismissible fade show" role="alert" style="width: 282px; position: absolute; right: 0;">
             <strong>@ViewBag.alert</strong> Bản có thể kiểm tra đơn hàng.
@@ -73,33 +73,36 @@
                         <p>Từ trang tổng quan tài khoản của bạn. bạn có thể dễ dàng kiểm tra &amp; xem <a href="#">đơn đặt hàng</a>, của bản <a href="#">địa chỉ giao hàng và thanh toán</a> và <a href="#"> Chỉnh sửa mật khẩu và chi tiết tài khoản của bạn</a></p>
                     </div>
                     <div class="tab-pane fade" id="orders">
-                        <h4>Orders</h4>
+                        <h4>Đơn Hàng</h4>
                         <div class="table_page table-responsive">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th>Đơn Hàng</th>
-                                        <th>Ngày</th>
+                                        <th>Mã Đơn Hàng</th>
+                                        <th>Ngày Đặt</th>
                                         <th>Trang Thái</th>
                                         <th>Tổng Tiền</th>
-                                        <th>Đang Tiến Hành</th>
+                                        <th>Chỉ Tiết Đơn Hàng</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>May 10, 2018</td>
-                                        <td><span class="success">Completed</span></td>
-                                        <td>$25.00 for 1 item </td>
-                                        <td><a href="cart.html" class="view">view</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>May 10, 2018</td>
-                                        <td>Processing</td>
-                                        <td>$17.00 for 1 item </td>
-                                        <td><a href="cart.html" class="view">view</a></td>
-                                    </tr>
+                                    @foreach (var item in Model.listOrderViews)
+                                    {
+                                        <tr>
+                                            <td>@item.orderId</td>
+                                            <td>@item.dateOrder</td>
+                                            @if (@item.status == 0)
+                                            {
+                                                <td><span class="success">Đang giao</span></td>
+                                            }
+                                            else
+                                            {
+                                                <td><span class="success">Đã giao</span></td>
+                                            }
+                                            <td>@item.totalPrice VND </td>
+                                            <td><a href="cart.html" class="view">Xem chi tiết</a></td>
+                                        </tr>
+                                    }
                                 </tbody>
                             </table>
                         </div>
@@ -107,7 +110,7 @@
                     <div class="tab-pane" id="address">
                         <p>Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.</p>
                         <h5 class="billing-address">Địa chỉ thanh toán</h5>
-                        
+
                         <address>
                             @Session["address"].ToString()
                         </address>
