@@ -88,20 +88,20 @@
                                 <tbody>
                                     @foreach (var item in Model.listOrderViews)
                                     {
-                                    <tr>
-                                        <td>@item.orderId</td>
-                                        <td>@item.dateOrder</td>
-                                        @if (@item.status == 0)
-                                        {
-                                            <td><span class="success">Đang giao</span></td>
-                                        }
-                                        else
-                                        {
-                                             <td><span class="success">Đã giao</span></td>
-                                        }
-                                        <td>@item.totalPrice VND </td>
-                                        <td><a href="cart.html" class="view">Xem chi tiết</a></td>
-                                    </tr>
+                                        <tr>
+                                            <td>@item.orderId</td>
+                                            <td>@item.dateOrder</td>
+                                            @if (@item.status == 0)
+                                            {
+                                                <td><span class="success">Đang giao</span></td>
+                                            }
+                                            else
+                                            {
+                                                <td><span class="success">Đã giao</span></td>
+                                            }
+                                            <td>@item.totalPrice VND </td>
+                                            <td><a href="cart.html" class="view">Xem chi tiết</a></td>
+                                        </tr>
                                     }
                                 </tbody>
                             </table>

@@ -49,7 +49,7 @@ namespace BeautyHome.Controllers
             }
 
             String sqlOrder = " select [order].order_id, FORMAT ([order].date_order, 'dd/MM/yyyy') as [dateOrder] , " +
-                "[order].status, SUM([order].price)  from[order] where[order].user_id = " + Session["userid"].ToString() + 
+                "[order].status, SUM([order].price)  from[order] where[order].user_id = " + Session["userid"].ToString() +
                 " group by[order].order_id, " +
                 "FORMAT([order].date_order, 'dd/MM/yyyy'), [order].status";
 
@@ -79,7 +79,7 @@ namespace BeautyHome.Controllers
             return View(objtypeProductView);
         }
         [HttpPost]
-        public ActionResult UpdateAccount(String userid ,String username, string password, string fullname, string email, String address, string phone)
+        public ActionResult UpdateAccount(String userid, String username, string password, string fullname, string email, String address, string phone)
         {
             connection.Open();
             try
@@ -100,7 +100,7 @@ namespace BeautyHome.Controllers
 
                 int rowCount = cmd.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
             }

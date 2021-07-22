@@ -29,7 +29,6 @@ namespace BeautyHome.Controllers
                 "where type_product.type_product_id = product.type_product_id " +
                 "and furniture.furniture_id = type_product.furniture_id and product.product_id = image_product.product_id and product.product_id = " + prId;
 
-
             List<ProductView> listpr = new List<ProductView>();
             SqlCommand cmd = new SqlCommand();
             connection.Open();
@@ -59,7 +58,69 @@ namespace BeautyHome.Controllers
                 }
             }
             objtypeProductView.listProductViews = listpr;
+
+            string sqlcomment = "select [comment_product].* ,  [user].full_name from [comment_product], [user] " +
+                                "where[user].user_id = [comment_product].user_id and[comment_product].product_id = " + prId;
+
+            List<UserComment> listUserComment = new List<UserComment>();
+            cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = sqlcomment;
+            using (DbDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        UserComment cmt = new UserComment();
+
+                        cmt.comment_puduct_id = Convert.ToInt64(reader.GetValue(0));
+                        cmt.product_id = Convert.ToInt64(reader.GetValue(1));
+                       
+                        cmt.txt_comment = Convert.ToString(reader.GetValue(3));
+                        try
+                        {
+                            if (Session["userid"].ToString().Equals(Convert.ToString(reader.GetValue(2))))
+                            {
+                                cmt.fullname = "Bạn";
+                            }
+                            else
+                            {
+                                cmt.fullname = Convert.ToString(reader.GetValue(4));
+                            }
+                        }
+                        catch
+                        {
+                            cmt.fullname = Convert.ToString(reader.GetValue(4));
+                        }
+                        
+                        listUserComment.Add(cmt);
+                    }
+                }
+            }
+            objtypeProductView.listUserComment = listUserComment;
+
             return View(objtypeProductView);
+        }
+        [HttpPost]
+        public ActionResult addComment(long productId, String commentContent)
+        {
+            long userId = 0;
+            try
+            {
+                userId = Convert.ToInt64(@Session["userid"].ToString());
+            }
+            catch
+            {
+                return RedirectToAction("Index", "Login");
+            }
+                comment_product comment = new comment_product();
+                comment.user_id = userId;
+                comment.product_id = productId;
+                comment.txt_comment = commentContent;
+                db.comment_product.Add(comment);
+                db.SaveChanges();
+                return RedirectToAction("Index", "Product_details", new { prId = productId });
         }
     }
 }

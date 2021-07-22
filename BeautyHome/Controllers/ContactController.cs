@@ -23,6 +23,16 @@ namespace BeautyHome.Controllers
             objtypeProductView.listtype = listtype;
             objtypeProductView.listfur = listfur;
             objtypeProductView.listProduct = listpr;
+
+            try
+            {
+                ViewBag.address =  @Session["address"].ToString();
+            }
+            catch
+            {
+                ViewBag.address = "Từ";
+            }
+            
             return View(objtypeProductView);
         }
     }
