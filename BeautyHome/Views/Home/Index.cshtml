@@ -24,7 +24,7 @@
                                 <div class="hero-slider-content">
                                     <h4 class="subtitle">Bộ Sưu Tập mới</h4><br />
                                     <h2 class="title">GHẾ LÔNG THÚ </h2>
-                                    <a href="product-details-default.html"
+                                    <a href="/Product_details/Index?prId=39"
                                        class="btn btn-lg btn-outline-golden">Mua Ngay</a>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@
                                 <div class="hero-slider-content">
                                     <h4 class="subtitle">Sản phẩm mới</h4>
                                     <h2 class="title">Ghế luxy <br> Giải thưởng Thiết kế  </h2>
-                                    <a href="product-details-default.html"
+                                    <a href="/Product_details/Index?prId=40"
                                        class="btn btn-lg btn-outline-golden">Mua ngay</a>
                                 </div>
                             </div>
@@ -190,14 +190,13 @@
                                     <!-- Start Product Default Single Item -->
                                     <div class="product-default-single-item product-color--golden swiper-slide">
                                         <div class="image-box">
-                                            <a href="product-details-default.html" class="image-link">
+                                            <a href="/Product_details/Index?prId=@item.productId" class="image-link">
                                                 <img src="~/dbimages/uploads/@item.url_image1" alt="">
                                                 <img src="~/dbimages/uploads/@item.url_image2" alt="">
                                             </a>
                                             <div class="action-link">
                                                 <div class="action-link-left">
-                                                    <a href="/Cart/AddCart?productId=@item.productId" data-bs-toggle="modal"
-                                                       data-bs-target="#modalAddcart">+Giỏ hàng</a>
+                                                    <a href="/Cart/AddCart?productId=@item.productId">+Giỏ hàng</a>
                                                 </div>
                                                 <div class="action-link-right">
                                                     <a href="#" data-bs-toggle="modal"
@@ -212,7 +211,7 @@
                                         <div class="content">
                                             <div class="content-left">
                                                 <h6 class="title">
-                                                    <a href="product-details-default.html">
+                                                    <a href="/Product_details/Index?prId=@item.productId">
                                                         @item.name
                                                     </a>
                                                 </h6>

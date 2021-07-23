@@ -98,9 +98,12 @@ namespace BeautyHome.Controllers
                         productView.amount = Convert.ToDouble(reader.GetValue(6));
                         productView.price = Convert.ToDouble(reader.GetValue(7));
                         productView.color = Convert.ToString(reader.GetValue(8));
+                        productView.url_image3 = Convert.ToString(reader.GetValue(10));
+                        productView.nametype = Convert.ToString(reader.GetValue(11));
                         productView.url_image1 = Convert.ToString(reader.GetValue(15));
                         productView.url_image2 = Convert.ToString(reader.GetValue(16));
                         productView.url_image3 = Convert.ToString(reader.GetValue(17));
+
                         listpr.Add(productView);
                     }
                 }

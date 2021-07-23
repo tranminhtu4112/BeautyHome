@@ -189,6 +189,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdminAccount.cs" />
     <Compile Include="Models\AdminProductView.cs" />
     <Compile Include="Models\OrderView.cs" />
     <Compile Include="Models\ProductView.cs" />
@@ -632,6 +633,12 @@
     <Content Include="dbimages\uploads\38h1.jpg" />
     <Content Include="dbimages\uploads\38h2.jpg" />
     <Content Include="dbimages\uploads\38h3.jpg" />
+    <Content Include="dbimages\uploads\39h1.jpg" />
+    <Content Include="dbimages\uploads\39h2.jpg" />
+    <Content Include="dbimages\uploads\39h3.jpg" />
+    <Content Include="dbimages\uploads\40h1.jpg" />
+    <Content Include="dbimages\uploads\40h2.jpg" />
+    <Content Include="dbimages\uploads\40h3.jpg" />
     <Content Include="dbimages\uploads\6h1.png" />
     <Content Include="dbimages\uploads\6h2.png" />
     <Content Include="dbimages\uploads\6h3.png" />

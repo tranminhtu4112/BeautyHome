@@ -1,4 +1,4 @@
-﻿
+﻿@model BeautyHome.Models.AdminAccount
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
@@ -23,88 +23,34 @@
                         <div class="tm-product-table-container">
                             <table class="table table-hover tm-table-small tm-product-table">
                                 <thead>
-                                    <tr>
-                                        <th scope="col">&nbsp;</th>
+                                    <tr>                                       
                                         <th scope="col">ID</th>
                                         <th scope="col">TÊN TÀI KHOẢN</th>
+                                        <th scope="col">HỌ VÀ TÊN</th>
+                                        <th scope="col">ĐỊA CHỈ</th>
                                         <th scope="col">EMAIL</th>
                                         <th scope="col">SĐT</th>
                                         <th scope="col">&nbsp;</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach (var item in Model.listAccount)
+                                    {
                                     <tr>
-                                        <th scope="row"><input type="checkbox" /></th>
-                                        <td class="tm-product-name">Lorem Ipsum Product 1</td>
-                                        <td>1,450</td>
-                                        <td>550</td>
-                                        <td>28 March 2019</td>
+                                        <td>@item.user_id</td>
+                                        <td>@item.user_name</td>
+                                        <td>@item.full_name</td>
+                                        <td class="tm-product-name">@item.address</td>
+                                        <td>@item.email</td>
+                                        <td>@item.phone</td>
                                         <td>
                                             <a href="#" class="tm-product-delete-link">
                                                 <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                             </a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" /></th>
-                                        <td class="tm-product-name">Lorem Ipsum Product 2</td>
-                                        <td>1,250</td>
-                                        <td>750</td>
-                                        <td>21 March 2019</td>
-                                        <td>
-                                            <a href="#" class="tm-product-delete-link">
-                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" /></th>
-                                        <td class="tm-product-name">Lorem Ipsum Product 3</td>
-                                        <td>1,100</td>
-                                        <td>900</td>
-                                        <td>18 Feb 2019</td>
-                                        <td>
-                                            <a href="#" class="tm-product-delete-link">
-                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" /></th>
-                                        <td class="tm-product-name">Lorem Ipsum Product 4</td>
-                                        <td>1,400</td>
-                                        <td>600</td>
-                                        <td>24 Feb 2019</td>
-                                        <td>
-                                            <a href="#" class="tm-product-delete-link">
-                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" /></th>
-                                        <td class="tm-product-name">Lorem Ipsum Product 5</td>
-                                        <td>1,800</td>
-                                        <td>200</td>
-                                        <td>22 Feb 2019</td>
-                                        <td>
-                                            <a href="#" class="tm-product-delete-link">
-                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" /></th>
-                                        <td class="tm-product-name">Lorem Ipsum Product 6</td>
-                                        <td>1,000</td>
-                                        <td>1,000</td>
-                                        <td>20 Feb 2019</td>
-                                        <td>
-                                            <a href="#" class="tm-product-delete-link">
-                                                <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    }
+
                                 </tbody>
                             </table>
                         </div>
@@ -115,38 +61,23 @@
     </div>
     <!-- row -->
     <div class="row tm-content-row">
-        <div class="tm-block-col tm-col-avatar">
-            <div class="tm-bg-primary-dark tm-block tm-block-avatar">
-                <h2 class="tm-block-title">Đổi Ảnh Đại Diện</h2>
-                <div class="tm-avatar-container">
-                    <img src="~/admin_assets/img/avatar.png"
-                         alt="Avatar"
-                         class="tm-avatar img-fluid mb-4" />
-                    <a href="#" class="tm-avatar-delete-link">
-                        <i class="far fa-trash-alt tm-product-delete-icon"></i>
-                    </a>
-                </div>
-                <button class="btn btn-primary btn-block text-uppercase">
-                    Thêm Ảnh Mới
-                </button>
-            </div>
-        </div>
+        
         <div class="tm-block-col tm-col-account-settings">
             <div class="tm-bg-primary-dark tm-block tm-block-settings">
-                <h2 class="tm-block-title">Thiết Lập Tài Khoản</h2>
-                <form action="" class="tm-signup-form row">
+                <h2 class="tm-block-title">Thêm Tài Khoản</h2>
+                <form action="/Admin_Account/AddAccount" class="tm-signup-form row" method="post">
                     <div class="form-group col-lg-6">
                         <label for="name">Tên Tài Khoản</label>
                         <input id="name"
-                               name="name"
+                               name="user_name"
                                type="text"
                                class="form-control validate" />
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="email">Email</label>
-                        <input id="email"
-                               name="email"
-                               type="email"
+                        <label for="full_name">Họ Và Tên</label>
+                        <input id="full_name"
+                               name="full_name"
+                               type="text"
                                class="form-control validate" />
                     </div>
                     <div class="form-group col-lg-6">
@@ -157,30 +88,35 @@
                                class="form-control validate" />
                     </div>
                     <div class="form-group col-lg-6">
-                        <label for="password2">Nhập Lại Mật Khẩu</label>
-                        <input id="password2"
-                               name="password2"
-                               type="password"
+                        <label for="email">Email</label>
+                        <input id="email"
+                               name="email"
+                               type="text"
                                class="form-control validate" />
                     </div>
+
+                    
+
+                    <div class="form-group col-lg-6">
+                        <label for="address">Địa Chỉ</label>
+                        <input id="address"
+                               name="address"
+                               type="text"
+                               class="form-control validate" />
+                    </div>
+
                     <div class="form-group col-lg-6">
                         <label for="phone">Điện Thoại</label>
                         <input id="phone"
                                name="phone"
-                               type="tel"
+                               type="text"
                                class="form-control validate" />
                     </div>
-                    <div class="form-group col-lg-6">
-                        <label class="tm-hide-sm">&nbsp;</label>
-                        <button type="submit"
-                                class="btn btn-primary btn-block text-uppercase">
-                            Cập nhật hồ sơ của bạn
-                        </button>
-                    </div>
+
                     <div class="col-12">
                         <button type="submit"
                                 class="btn btn-primary btn-block text-uppercase">
-                            Xóa tài khoản của bạn
+                            Thêm Tài Khoản
                         </button>
                     </div>
                 </form>
