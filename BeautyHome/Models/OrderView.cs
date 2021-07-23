@@ -8,6 +8,7 @@ namespace BeautyHome.Models
     public class OrderView
     {
         public long orderId { get; set; }
+
         public String dateOrder { get; set; }
         public int status { get; set; }
         public double totalPrice { get; set; }

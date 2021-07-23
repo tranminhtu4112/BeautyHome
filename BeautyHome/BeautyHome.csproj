@@ -193,6 +193,7 @@
     <Compile Include="Models\OrderView.cs" />
     <Compile Include="Models\ProductView.cs" />
     <Compile Include="Models\TypeProductView.cs" />
+    <Compile Include="Models\UserComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -418,6 +419,7 @@
     <Content Include="assets\images\company-logo\company-logo-7.png" />
     <Content Include="assets\images\company-logo\company-logo-8.png" />
     <Content Include="assets\images\company-logo\payment.png" />
+    <Content Include="assets\images\default-user-icon-3.jpg" />
     <Content Include="assets\images\emprt-cart\empty-cart.png" />
     <Content Include="assets\images\favicon.ico" />
     <Content Include="assets\images\hero-slider\home-1\hero-slider-1.jpg" />
@@ -449,6 +451,7 @@
     <Content Include="assets\images\instagram\instagram-4.jpg" />
     <Content Include="assets\images\instagram\instagram-5.jpg" />
     <Content Include="assets\images\instagram\instagram-6.jpg" />
+    <Content Include="assets\images\Logo-BeautyHome.png" />
     <Content Include="assets\images\logo\logo_black.png" />
     <Content Include="assets\images\logo\logo_white.png" />
     <Content Include="assets\images\product\default\home-1\default-1.jpg" />

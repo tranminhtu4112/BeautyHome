@@ -13,5 +13,7 @@ namespace BeautyHome.Models
         public List<product> listProduct { get; set; }
         public List<ProductView> listProductViews { get; set; }
         public List<OrderView> listOrderViews { get; set; }
+        public List<ProductView> listGioHang { get; set; }
+        public List<UserComment> listUserComment { get; set; }
     }
 }

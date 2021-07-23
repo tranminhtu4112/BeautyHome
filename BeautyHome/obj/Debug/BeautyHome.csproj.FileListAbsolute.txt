@@ -171,6 +171,11 @@ C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.Properties
 C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.GenerateResource.cache
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.Properties.Resources.resources
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.Mvc.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.xml
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\PagedList.Mvc.xml
+>>>>>>> f6be87e6c6ae4bab63a1a970e21d126b9b6df40d
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\Facebook.dll
 C:\Users\DELL\OneDrive\Máy tính\BeautyHome\BeautyHome\bin\Facebook.xml
 C:\Users\admin\Desktop\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.AssemblyReference.cache
@@ -259,3 +264,6 @@ C:\Users\admin\Desktop\BeautyHome\BeautyHome\bin\Antlr3.Runtime.pdb
 C:\Users\admin\Desktop\BeautyHome\BeautyHome\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\admin\Desktop\BeautyHome\BeautyHome\obj\Debug\BeautyHome.csproj.CopyComplete
 >>>>>>> e256d1c6938dfa3494ce87e2d21a1a06053196f2
+>>>>>>> 54b1a6e587526ac59784bad955ede8605d681db4
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\Facebook.dll
+C:\Users\ASUS\source\repos\BeautyHome\BeautyHome\bin\Facebook.xml

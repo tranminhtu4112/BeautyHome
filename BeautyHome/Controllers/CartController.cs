@@ -34,7 +34,7 @@ namespace BeautyHome.Controllers
                 connection.Open();
                 for (int i = 0; i < listProductId.Count; i++)
                 {
-                    string sql = "select * from product where product.product_id = " + listProductId[i];
+                    string sql = "select * from product, image_product where product.product_id = image_product.product_id and product.product_id = " + listProductId[i];
                     SqlCommand cmd = new SqlCommand();
 
                     cmd.Connection = connection;
@@ -55,6 +55,9 @@ namespace BeautyHome.Controllers
                                 productView.amount = Convert.ToDouble(reader.GetValue(6));
                                 productView.price = Convert.ToDouble(reader.GetValue(7));
                                 productView.color = Convert.ToString(reader.GetValue(8));
+                                productView.url_image1 = Convert.ToString(reader.GetValue(10));
+                                productView.url_image2 = Convert.ToString(reader.GetValue(11));
+                                productView.url_image3 = Convert.ToString(reader.GetValue(12));
                                 listpr.Add(productView);
                             }
                         }

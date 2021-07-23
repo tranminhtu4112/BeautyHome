@@ -58,6 +58,7 @@ namespace BeautyHome.Controllers
             }
             objtypeProductView.listProductViews = listpr;
             ViewBag.CountCart = CountCart;
+
             return View(objtypeProductView);
         }
             public ActionResult Furniture(long furId)
