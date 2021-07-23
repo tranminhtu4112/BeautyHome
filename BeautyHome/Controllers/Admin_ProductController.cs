@@ -37,7 +37,9 @@ namespace BeautyHome.Controllers
         }
         public ActionResult Delete(String productId)
         {
-            String SQLDeleteImg = "delete from image_product where product_id =  " + productId;
+
+
+           String SQLDeleteImg = "delete from image_product where product_id =  " + productId;
             connection.Open();
             SqlCommand sqlCommand = new SqlCommand(SQLDeleteImg, connection);
             sqlCommand.ExecuteNonQuery();
@@ -59,12 +61,49 @@ namespace BeautyHome.Controllers
 
             return RedirectToAction("Index", "Admin_Product");
         }
-/*        public ActionResult DeleteType(String typeId)
+        public ActionResult DeleteType(String typeId)
         {
-            String SQLDelete = " delete from type_product where type_product_id = " + typeId;
+            string Sql = "select product.product_id " +
+            "from type_product, product " +
+             "where type_product.type_product_id = product.product_id and product.type_product_id =" + typeId;
 
+            List<long> list = new List<long>();
+            long Id = 0;
             connection.Open();
-            SqlCommand sqlCommand = new SqlCommand(SQLDelete, connection);
+            SqlCommand cmd = new SqlCommand();
+            cmd = new SqlCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = Sql;
+            using (DbDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        Id = Convert.ToInt64(reader.GetValue(0));
+                        list.Add(Id);
+
+                    }
+                }
+            }
+            SqlCommand sqlCommand;
+            for (int i = 0; i < list.Count; i++)
+            {
+                string sqlimg = " delete from  image_product where product_id = " + list[i];
+                sqlCommand = new SqlCommand(sqlimg, connection);
+                sqlCommand.ExecuteNonQuery();
+            }
+            for (int i = 0; i < list.Count; i++)
+            {
+                string SQLDeleteProduct = "delete from product where product_id = " + list[i];
+                sqlCommand = new SqlCommand(SQLDeleteProduct, connection);
+                sqlCommand.ExecuteNonQuery();
+            }
+
+
+            string SQLDelete = " delete from type_product where type_product_id = " + typeId;
+
+            sqlCommand = new SqlCommand(SQLDelete, connection);
             sqlCommand.ExecuteNonQuery();
             connection.Close();
 
@@ -77,6 +116,7 @@ namespace BeautyHome.Controllers
             objadminProductView.listProduct = listpr;
 
             return RedirectToAction("Index", "Admin_Product");
-        }*/
+        }
+
     }
 }

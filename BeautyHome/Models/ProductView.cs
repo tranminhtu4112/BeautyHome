@@ -21,6 +21,8 @@ namespace BeautyHome.Models
         public string url_image2 { get; set; }
         public string url_image3 { get; set; }
         public ArrayList listIdUserCmt { get; set; }
+        public long type_product_id { get; set; }
+        public string nametype { get; set; }
 
     }
 }

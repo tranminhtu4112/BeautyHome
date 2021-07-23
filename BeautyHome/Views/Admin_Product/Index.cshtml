@@ -47,7 +47,7 @@
                                 <tr>
                                     <td class="tm-product-name">@item.name</td>
                                     <td class="text-center">
-                                        <a href="/Admin_Product/Delete?typeId=@item.type_product_id" class="tm-product-delete-link">
+                                        <a href="/Admin_Product/DeleteType?typeId=@item.type_product_id" class="tm-product-delete-link">
                                             <i class="far fa-trash-alt tm-product-delete-icon"></i>
                                         </a>
                                     </td>
@@ -85,7 +85,7 @@
                                     <th scope="row"><input type="checkbox" /></th>
                                     <td>@item.product_id</td>
                                     <td class="tm-product-name">
-                                        <a href="/Admin_Editproduct/Index" style="color:white">@item.name</a>
+                                        <a href="/Admin_Editproduct/Index?prId=@item.product_id" style="color:white">@item.name</a>
                                     </td>
                                     <td>@item.amount</td>
                                     <td>@item.price VND</td>

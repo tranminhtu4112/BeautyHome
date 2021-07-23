@@ -86,15 +86,15 @@ namespace BeautyHome.Controllers
             connection.Close();
 
             var fileName1 = Path.GetFileName(url_Image1.FileName);
-            var path1 = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName1);
+            var path1 = Path.Combine(Server.MapPath("~/dbimages/uploads"), fileName1);
             url_Image1.SaveAs(path1);
 
             var fileName2 = Path.GetFileName(url_Image2.FileName);
-            var path2 = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName2);
+            var path2 = Path.Combine(Server.MapPath("~/dbimages/uploads"), fileName2);
             url_Image2.SaveAs(path2);
 
             var fileName3 = Path.GetFileName(url_Image3.FileName);
-            var path3 = Path.Combine(Server.MapPath("~/App_Data/uploads"), fileName3);
+            var path3 = Path.Combine(Server.MapPath("~/dbimages/uploads"), fileName3);
             url_Image3.SaveAs(path3);
 
             return RedirectToAction("Index", "Admin_Product");
