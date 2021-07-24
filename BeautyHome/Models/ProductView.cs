@@ -24,5 +24,10 @@ namespace BeautyHome.Models
         public long type_product_id { get; set; }
         public string nametype { get; set; }
 
+        internal object ToPagedList()
+        {
+            throw new NotFiniteNumberException();
+        }
+
     }
 }

@@ -1,4 +1,6 @@
 ﻿@model BeautyHome.Models.TypeProductView
+@using PagedList;
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -173,7 +175,7 @@
                                     <!-- Start Grid View Product -->
                                     <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
                                         <div class="row">
-                                            @foreach (var item in Model.listProductViews)
+                                            @foreach (var item in ViewBag.ListProduct)
                                             {
                                                 <div class="col-xl-4 col-sm-6 col-12">
                                                     <!-- Start Product Default Single Item -->
@@ -536,12 +538,9 @@
                 </div> <!-- End Tab Wrapper -->
                 <!-- Start Pagination -->
                 <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">
-                    <ul>
-                        <li><a class="active" href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="ion-ios-skipforward"></i></a></li>
-                    </ul>
+                    <br />
+                    Trang @(ViewBag.ListProduct.PageCount < ViewBag.ListProduct.PageNumber ? 0 : ViewBag.ListProduct.PageNumber) / @ViewBag.ListProduct.PageCount
+                    @Html.PagedListPager((IPagedList)ViewBag.ListProduct, page => Url.Action("Type", new { page }))
                 </div> <!-- End Pagination -->
             </div>
         </div>
