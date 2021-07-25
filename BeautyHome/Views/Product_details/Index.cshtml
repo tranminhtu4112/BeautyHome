@@ -106,9 +106,15 @@
                                 </ul>
                                 <a href="#" class="customer-review ml-2">(Khách hàng đánh giá )</a>
                             </div>
-                            <div class="price">@item.price VND</div>
+                            <div class="price" id="tien">@item.price</div>
+                            <script>
+                                            var x = document.getElementById("tien").innerHTML;
+                                            x = parseInt(x);
+                                            x = x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+                                            document.getElementById("tien").innerHTML = x;
+                            </script>
                             <p>
-                             @item.description
+                                @item.description
                             </p>
                         </div> <!-- End  Product Details Text Area-->
                         <!-- Start Product Variable Area -->

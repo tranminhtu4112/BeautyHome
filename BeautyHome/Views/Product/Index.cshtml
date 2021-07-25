@@ -175,7 +175,7 @@
                                 <div class="tab-content tab-animate-zoom">
                                     <!-- Start Grid View Product -->
                                     <div class="tab-pane active show sort-layout-single" id="layout-3-grid">
-                                        <div class="row">
+                                        <div class="row" id="myTable">
                                             @foreach (var item in ViewBag.ListProduct)
                                             {
                                                 <div class="col-xl-4 col-sm-6 col-12" id="tr">
@@ -224,7 +224,13 @@
                                                                 </ul>
                                                             </div>
                                                             <div class="content-right">
-                                                                <span class="price">@item.price VND</span>
+                                                                <span class="price" id="tien-@item.productId">@item.price VND</span>
+                                                                <script>
+                                                                        var x = document.getElementById("tien-@item.productId").innerHTML;
+                                                                        x = parseInt(x);
+                                                                        x = x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+                                                                        document.getElementById("tien-@item.productId").innerHTML = x;
+                                                                </script>
                                                             </div>
 
                                                         </div>

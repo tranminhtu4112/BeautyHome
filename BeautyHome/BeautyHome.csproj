@@ -202,6 +202,7 @@
     <Compile Include="Models\DetailsOrder.cs" />
     <Compile Include="Models\OrderView.cs" />
     <Compile Include="Models\ProductView.cs" />
+    <Compile Include="Models\Statistical.cs" />
     <Compile Include="Models\TypeProductView.cs" />
     <Compile Include="Models\UserComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -748,6 +749,7 @@
     <Content Include="Views\Product\Furniture.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Admin_Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

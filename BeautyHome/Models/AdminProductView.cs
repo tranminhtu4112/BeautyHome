@@ -13,5 +13,6 @@ namespace BeautyHome.Models
         public List<product> listProduct { get; set; }
         public List<ProductView> listProductViews { get; set; }
         public List<AdminOrder> listAdminOrder { get; set; }
+        public Statistical statistical { get; set; }
     }
 }
