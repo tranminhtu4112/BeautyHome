@@ -21,8 +21,8 @@ namespace BeautyHome.Controllers
                 var uriBuilder = new UriBuilder(Request.Url);
                 uriBuilder.Query = null;
                 uriBuilder.Fragment = null;
-                uriBuilder.Path = Url.Action("FacebookCallback");
-                return uriBuilder.Uri;
+                uriBuilder.Path = Url.Action("");
+                return uriBuilder.Uri; 
             }
         }
         public BeautyHomeEntities db = new BeautyHomeEntities();
@@ -46,21 +46,28 @@ namespace BeautyHome.Controllers
                 client_secret = ConfigurationManager.AppSettings["FbAppSecret"],
                 redirect_uri = RedirectUri.AbsoluteUri,
                 response_type = "code",
-                scope = "email"
+                scope = "email",
             });
             return Redirect(loginUrl.AbsoluteUri);
         }
-/*        public ActionResult FacebookCallback(string code)
+        /*public ActionResult Login(string code)
         {
             var fb = new FacebookClient();
-            dynamic result = fb.Post("oauth/access_token", new
+            dynamic result = fb.Post("oauth/access_token", new 
             {
                 client_id = ConfigurationManager.AppSettings["FbAppId"],
                 client_secret = ConfigurationManager.AppSettings["FbAppSecret"],
                 redirect_uri = RedirectUri.AbsoluteUri,
                 code = code
             });
-
+            var accessToken = result;
+            if (!string.IsNullOrEmpty(accessToken))
+            {
+                dynamic me = fb.Get("me?fields=first_name,middle_name,last_name,id,email");
+                String email = me.emaiil;
+                return RedirectToAction("Index", "Login");
+            }
+            return RedirectToAction("Index", "Login");
         }*/
         //POST: Register
         [HttpPost]
