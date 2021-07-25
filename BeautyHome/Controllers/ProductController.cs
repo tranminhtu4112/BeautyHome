@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace BeautyHome.Controllers
 {
@@ -16,7 +18,7 @@ namespace BeautyHome.Controllers
         SqlConnection connection = DBUtils.GetDBConnection();
         // GET: Product
 
-        public ActionResult Index(String CountCart)
+        public ActionResult Index(String CountCart, int page =1,int  pagesize =12)
         {
             TypeProductView objtypeProductView = new TypeProductView();
             var listtype = db.type_product.ToList();
@@ -59,9 +61,11 @@ namespace BeautyHome.Controllers
             objtypeProductView.listProductViews = listpr;
             ViewBag.CountCart = CountCart;
 
+            ViewBag.ListProduct = listpr.ToPagedList(page, pagesize); 
+
             return View(objtypeProductView);
         }
-            public ActionResult Furniture(long furId)
+            public ActionResult Furniture(long furId, int page = 1, int pagesize = 12)
         {
 
             TypeProductView objtypeProductView = new TypeProductView();
@@ -101,14 +105,23 @@ namespace BeautyHome.Controllers
                         productView.url_image1 = Convert.ToString(reader.GetValue(15));
                         productView.url_image2 = Convert.ToString(reader.GetValue(16));
                         productView.url_image3 = Convert.ToString(reader.GetValue(17));
+
                         listpr.Add(productView);
                     }
                 }
             }
             objtypeProductView.listProductViews = listpr;
+
+            ViewBag.ListProduct = listpr.ToPagedList(page, pagesize);
+
             return View(objtypeProductView);
+
+            
         }
-        public ActionResult Type(long typeId)
+
+     
+
+        public ActionResult Type(long typeId, int page = 1, int pagesize = 12)
         {
             TypeProductView objtypeProductView = new TypeProductView();
             var listtype = db.type_product.ToList();
@@ -149,6 +162,7 @@ namespace BeautyHome.Controllers
                 }
             }
             objtypeProductView.listProductViews = listpr;
+            ViewBag.ListProduct = listpr.ToPagedList(page, pagesize);
             return View(objtypeProductView);
         }
     }
