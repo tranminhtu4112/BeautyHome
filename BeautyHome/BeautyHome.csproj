@@ -212,9 +212,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin_assets\css\App.css" />
+    <Content Include="admin_assets\css\appmap\Main.js" />
+    <Content Include="admin_assets\css\bootstrap-social.css" />
     <Content Include="admin_assets\css\bootstrap.min.css" />
     <Content Include="admin_assets\css\fontawesome.min.css" />
+    <Content Include="admin_assets\css\plugins\animate.min.css" />
+    <Content Include="admin_assets\css\plugins\aos.min.css" />
+    <Content Include="admin_assets\css\plugins\jquery.lineProgressbar.css" />
+    <Content Include="admin_assets\css\plugins\nice-select.css" />
+    <Content Include="admin_assets\css\plugins\plugins.min.css" />
+    <Content Include="admin_assets\css\plugins\swiper-bundle.min.css" />
+    <Content Include="admin_assets\css\plugins\venobox.min.css" />
+    <Content Include="admin_assets\css\style.css" />
+    <Content Include="admin_assets\css\style.min.css" />
     <Content Include="admin_assets\css\templatemo-style.css" />
+    <Content Include="admin_assets\css\vendor\font-awesome.min.css" />
+    <Content Include="admin_assets\css\vendor\images\ui-icons_444444_256x240.png" />
+    <Content Include="admin_assets\css\vendor\images\ui-icons_555555_256x240.png" />
+    <Content Include="admin_assets\css\vendor\images\ui-icons_777620_256x240.png" />
+    <Content Include="admin_assets\css\vendor\images\ui-icons_777777_256x240.png" />
+    <Content Include="admin_assets\css\vendor\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="admin_assets\css\vendor\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="admin_assets\css\vendor\ionicons.css" />
+    <Content Include="admin_assets\css\vendor\jquery-ui.min.css" />
+    <Content Include="admin_assets\css\vendor\simple-line-icons.css" />
+    <Content Include="admin_assets\css\vendor\vendor.min.css" />
     <Content Include="admin_assets\img\arrow-down.png" />
     <Content Include="admin_assets\img\avatar.png" />
     <Content Include="admin_assets\img\check-mark.png" />
