@@ -18,6 +18,12 @@ namespace BeautyHome
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Details",
+                url: "{controller}/{action}/{orderId}/{userId}",
+                defaults: new { controller = "Admin_Home", action = "Details", orderId = UrlParameter.Optional, userId = UrlParameter.Optional }
+            );
         }
     }
 }

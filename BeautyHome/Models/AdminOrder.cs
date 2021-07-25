@@ -8,6 +8,7 @@ namespace BeautyHome.Models
     public class AdminOrder
     {
         public long orderId { get; set; }
+        public long userId { get; set; }
         public String fullName { get; set; }
         public String dateOrder { get; set; }
         public String address { get; set; }

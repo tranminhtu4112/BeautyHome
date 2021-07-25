@@ -44,27 +44,27 @@
             @{int i = 0;}
             @foreach (var item in Model.listDetailsOrder)
             {
-            <tr>
-                <th scope="row">1</th>
-                @{i++;
-                }
-                <td>
-                    <img src="~/dbimages/uploads/@item.url_image1" width="176px" height="176px"
-                         alt="">
-                </td>
-                <td>@item.name</td>
-                <td>@item.amount</td>
-                <td id="tien-@item.productId">@item.price VND</td>
-                <script>
+                <tr>
+                    <th scope="row">1</th>
+                    @{i++;
+                    }
+                    <td>
+                        <img src="~/dbimages/uploads/@item.url_image1" width="176px" height="176px"
+                             alt="">
+                    </td>
+                    <td>@item.name</td>
+                    <td>@item.amount</td>
+                    <td id="tien-@item.productId">@item.price VND</td>
+                    <script>
                                             var x = document.getElementById("tien-@item.productId").innerHTML;
                                             x = parseInt(x);
                                             x = x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
                                             document.getElementById("tien-@item.productId").innerHTML = x;
-                </script>
-                <th scope="col">
-                    <a href="/Product_details/Index?prId=@item.productId" class="view">Chi tiết sản phẩm</a>
-                </th>
-            </tr>
+                    </script>
+                    <th scope="col">
+                        <a href="/Product_details/Index?prId=@item.productId" class="view">Chi tiết sản phẩm</a>
+                    </th>
+                </tr>
             }
         </tbody>
     </table>
