@@ -1,0 +1,69 @@
+﻿@model BeautyHome.Models.TypeProductView
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ...:::: Start Breadcrumb Section:::... -->
+<div class="breadcrumb-section breadcrumb-bg-color--golden">
+
+    <div class="breadcrumb-wrapper">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="breadcrumb-title">Chi tiết đơn hàng</h3>
+                    <div class="breadcrumb-nav breadcrumb-nav-color--black breadcrumb-nav-hover-color--golden">
+                        <nav aria-label="breadcrumb">
+                            <ul>
+                                <li><a href="index.html">Trang chủ</a></li>
+                                <li><a href="shop-grid-sidebar-left.html">Đơn hàng</a></li>
+                                <li class="active" aria-current="page">Chi tiết đơn hàng</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- ...:::: End Breadcrumb Section:::... -->
+<div class="col-sm-12 col-md-9 col-lg-9" style="margin:auto;">
+    <h4>Chi Tiết Đơn Hàng</h4>
+    <table class="table ">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Số thứ tự</th>
+                <th scope="col">Hình ảnh</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Giá</th>
+                <th scope="col">Chi tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{int i = 0;}
+            @foreach (var item in Model.listDetailsOrder)
+            {
+            <tr>
+                <th scope="row">1</th>
+                @{i++;
+                }
+            <td>
+                <img src="~/dbimages/uploads/@item.url_image1" width="176px" height="176px"
+                     alt="">
+            </td>
+                <td>@item.name</td>
+                <td>@item.amount</td>
+                <td>@item.price</td>
+                <th scope="col">
+                    <a href="/Product_details/Index?prId=@item.productId" class="view">Chi tiết sản phẩm</a>
+                </th>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+

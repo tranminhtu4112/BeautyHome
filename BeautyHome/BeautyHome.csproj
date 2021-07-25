@@ -197,7 +197,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminAccount.cs" />
+    <Compile Include="Models\AdminOrder.cs" />
     <Compile Include="Models\AdminProductView.cs" />
+    <Compile Include="Models\DetailsOrder.cs" />
     <Compile Include="Models\OrderView.cs" />
     <Compile Include="Models\ProductView.cs" />
     <Compile Include="Models\TypeProductView.cs" />
@@ -519,6 +521,7 @@
     <Content Include="assets\images\team\leader2.png" />
     <Content Include="assets\images\team\leader3.png" />
     <Content Include="assets\images\team\leader4.png" />
+    <Content Include="assets\images\thiet-ke-noi-that-chung-cu-1-1231x800.jpg" />
     <Content Include="assets\images\user\image-1.png" />
     <Content Include="assets\images\user\image-2.png" />
     <Content Include="assets\images\user\image-3.png" />
@@ -744,6 +747,7 @@
     <Content Include="Views\Product\Type.cshtml" />
     <Content Include="Views\Product\Furniture.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

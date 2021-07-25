@@ -12,8 +12,6 @@ namespace BeautyHome.Controllers
     public class Admin_AccountController : Controller
     {
         public BeautyHomeEntities db = new BeautyHomeEntities();
-        
-
         SqlConnection connection = DBUtils.GetDBConnection();
         // GET: Admin_Account
         public ActionResult Index()

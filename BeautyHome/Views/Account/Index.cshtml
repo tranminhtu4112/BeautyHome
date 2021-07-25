@@ -88,6 +88,7 @@
                                 <tbody>
                                     @foreach (var item in Model.listOrderViews)
                                     {
+                                       
                                         <tr>
                                             <td>@item.orderId</td>
                                             <td>@item.dateOrder</td>
@@ -100,7 +101,9 @@
                                                 <td><span class="success">Đã giao</span></td>
                                             }
                                             <td>@item.totalPrice VND </td>
-                                            <td><a href="cart.html" class="view">Xem chi tiết</a></td>
+                                            <td>
+                                                <a href="/Account/Details?orderId=@item.orderId" class="view">Xem chi tiết</a>
+                                            </td>
                                         </tr>
                                     }
                                 </tbody>
@@ -110,7 +113,6 @@
                     <div class="tab-pane" id="address">
                         <p>Các địa chỉ sau sẽ được sử dụng trên trang thanh toán theo mặc định.</p>
                         <h5 class="billing-address">Địa chỉ thanh toán</h5>
-
                         <address>
                             @Session["address"].ToString()
                         </address>

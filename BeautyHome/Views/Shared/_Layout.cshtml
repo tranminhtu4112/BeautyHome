@@ -311,7 +311,7 @@
                         <li class="offcanvas-cart-item-single">
                             <div class="offcanvas-cart-item-block">
                                 <a href="/Cart/DeleteCart?productId=@item.productId" class="offcanvas-cart-item-image-link">
-                                     <img src="~/dbimages/uploads/@item.url_image1" class="offcanvas-cart-image" />
+                                    <img src="~/dbimages/uploads/@item.url_image1" class="offcanvas-cart-image" />
                                 </a>
                                 <div class="offcanvas-cart-item-content">
                                     <a href="#" class="offcanvas-cart-item-link">@item.name</a>
@@ -327,7 +327,7 @@
                         </li>
                     }
                 }
-                </ul>
+            </ul>
             <div class="offcanvas-cart-total-price">
                 <span class="offcanvas-cart-total-price-text">Tổng Tiền :</span>
                 <span class="offcanvas-cart-total-price-value">@ViewBag.totalPrice VND</span>
@@ -414,10 +414,11 @@
     <div id="search" class="search-modal">
         <button type="button" class="close">×</button>
         <form>
-            <input type="search" placeholder="Nhập thông tin tại đây" />
+            <input id="myInput" onkeyup="myFunction()" type="search" placeholder="Nhập thông tin tại đây" />
             <button type="submit" class="btn btn-lg btn-golden">Tìm Kiếm</button>
         </form>
     </div>
+
     <!-- End Offcanvas Search Bar Section -->
     <!-- Offcanvas Overlay -->
     <div class="offcanvas-overlay"></div>
@@ -528,7 +529,7 @@
                             <div class="footer-copyright">
                                 <p class="copyright-text">
                                     &copy; 2021 <a href="index.html">BeautyHome</a>. Made with <i class="fa fa-heart text-danger"></i> by <a href="https://therankme.com/"
-                                                                                                                                            target="_blank">BeautyHome</a>
+                                                                                                                                             target="_blank">BeautyHome</a>
                                 </p>
 
                             </div>
@@ -800,6 +801,34 @@
 
     <script src="https://sp.zalo.me/plugins/sdk.js"></script>
     <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("div");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("a")[5];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
+
+
 </body>
 
 

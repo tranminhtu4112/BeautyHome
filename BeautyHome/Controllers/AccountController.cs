@@ -118,5 +118,45 @@ namespace BeautyHome.Controllers
             Session.Clear();//remove session
             return RedirectToAction("Index", "Home");
         }
+        public ActionResult Details(String orderId)
+        {
+            var listtype = db.type_product.ToList();
+            var listfur = db.furnitures.ToList();
+            TypeProductView objtypeProductView = new TypeProductView();
+            objtypeProductView.listtype = listtype;
+            objtypeProductView.listfur = listfur;
+
+            string sql = "select product.product_id, image_product.url_Image1, product.name, [order].amount, product.price " +
+                         "from[order], product, image_product " +
+                         "where[order].order_id =  " + orderId + 
+                         " and[order].user_id =  " + Session["userid"].ToString() + 
+                         " and[order].product_id = product.product_id and image_product.product_id = product.product_id";
+
+            List<DetailsOrder> listDetailsOrder = new List<DetailsOrder>();
+            SqlCommand cmd = new SqlCommand();
+            connection.Open();
+            cmd.Connection = connection;
+            cmd.CommandText = sql;
+            using (DbDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        DetailsOrder detailsOrder = new DetailsOrder();
+
+                        detailsOrder.productId = Convert.ToInt64(reader.GetValue(0));
+                        detailsOrder.url_image1 = Convert.ToString(reader.GetValue(1));
+                        detailsOrder.name = Convert.ToString(reader.GetValue(2));
+                        detailsOrder.amount = Convert.ToInt32(reader.GetValue(3));
+                        detailsOrder.price = Convert.ToDouble(reader.GetValue(4));
+
+                        listDetailsOrder.Add(detailsOrder);
+                    }
+                }
+            }
+            objtypeProductView.listDetailsOrder = listDetailsOrder;
+            return View(objtypeProductView);
+        }
     }
 }
