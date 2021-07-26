@@ -1,4 +1,6 @@
 ﻿@model BeautyHome.Models.AdminProductView
+@using PagedList;
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/Admin_Layout.cshtml";
@@ -34,7 +36,7 @@
     </div>
 </div>
 <div class="container mt-5">
-    
+
     <div class="row tm-content-row">
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
             <div class="tm-bg-primary-dark tm-block tm-block-product-categories">
@@ -79,7 +81,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach (var item in Model.listProduct)
+                            @foreach (var item in ViewBag.ListProductadmin)
                             {
                                 <tr>
                                     <th scope="row"><input type="checkbox" /></th>
@@ -101,14 +103,19 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- table container -->
-                <a href="/Admin_Addproduct/Index"
-                   class="btn btn-primary btn-block text-uppercase mb-3">Thêm Mới Sản Phẩm</a>
-                <button class="btn btn-primary btn-block text-uppercase">
-                    Xóa các sản phẩm đã chọn
-                </button>
+                <div class="page-pagination text-center" data-aos="fade-up" data-aos-delay="0">
+                    @Html.PagedListPager((IPagedList)ViewBag.ListProductadmin, page => Url.Action("Index", new { page }))
+                </div>
+
+
+                    <!-- table container -->
+                    <a href="/Admin_Addproduct/Index"
+                       class="btn btn-primary btn-block text-uppercase mb-3">Thêm Mới Sản Phẩm</a>
+                    <button class="btn btn-primary btn-block text-uppercase">
+                        Xóa các sản phẩm đã chọn
+                    </button>
+                </div>
             </div>
-        </div>
     </div>
 </div>im
 

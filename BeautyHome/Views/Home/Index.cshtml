@@ -224,7 +224,14 @@
                                                 </ul>
                                             </div>
                                             <div class="content-right">
-                                                <span class="price">@item.price VND</span>
+                                                <span class="price" id="tien-@item.productId">@item.price</span>
+
+                                                <script>
+                                                                        var x = document.getElementById("tien-@item.productId").innerHTML;
+                                                                        x = parseInt(x);
+                                                                        x = x.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+                                                                        document.getElementById("tien-@item.productId").innerHTML = x;
+                                                </script>
                                             </div>
                                         </div>
                                     </div>

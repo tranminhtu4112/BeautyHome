@@ -7,6 +7,8 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace BeautyHome.Controllers
 {
@@ -15,7 +17,7 @@ namespace BeautyHome.Controllers
         // GET: Admin_Product
         public BeautyHomeEntities db = new BeautyHomeEntities();
         SqlConnection connection = DBUtils.GetDBConnection();
-        public ActionResult Index()
+        public ActionResult Index(int page = 1, int pagesize = 12)
         {
             AdminProductView objadminProductView = new AdminProductView();
             var listtype = db.type_product.ToList();
@@ -33,6 +35,8 @@ namespace BeautyHome.Controllers
             {
                 return RedirectToAction("Index", "Login");
             }
+
+            ViewBag.ListProductadmin = listpr.ToPagedList(page, pagesize);
             return View(objadminProductView);
         }
         public ActionResult Delete(String productId)

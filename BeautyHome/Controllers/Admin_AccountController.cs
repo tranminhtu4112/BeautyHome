@@ -55,5 +55,15 @@ namespace BeautyHome.Controllers
 
 
         }
+        public ActionResult DeleteAccount(string userId)
+        {
+            String SQLDeleteAccount = "delete from [user] where user_id = " + userId;
+            connection.Open();
+            SqlCommand sqlCommand = new SqlCommand(SQLDeleteAccount, connection);
+            sqlCommand.ExecuteNonQuery();
+            connection.Close();
+            return RedirectToAction("Index", "Admin_Account");
+
+        }
     }
 }
